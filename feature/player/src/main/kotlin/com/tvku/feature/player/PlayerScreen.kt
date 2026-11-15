@@ -1,7 +1,6 @@
 package com.tvku.feature.player
 
 import android.content.res.Configuration
-import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -45,7 +44,6 @@ import androidx.compose.ui.res.painterResource
 fun PlayerRoute(channelId: String, onBack: () -> Unit, viewModel: PlayerViewModel = hiltViewModel()) {
     LaunchedEffect(channelId) { viewModel.load(channelId) }
     val state by viewModel.state.collectAsStateWithLifecycle()
-    BackHandler(onBack = onBack)
     PlayerScreen(state = state, onStatus = viewModel::onStatus, onRetry = viewModel::retry, onBack = onBack)
 }
 
