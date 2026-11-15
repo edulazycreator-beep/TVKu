@@ -28,6 +28,7 @@ import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.liveRegion
 import androidx.compose.ui.semantics.LiveRegionMode
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -112,8 +113,10 @@ internal fun PlayerScreen(
         player(Modifier.fillMaxWidth().aspectRatio(16f / 9f))
         Column(Modifier.padding(TvkuTheme.spacing.pageMargin)) {
             Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(TvkuTheme.spacing.sm)) {
+                // The title yields space so the LIVE badge is never squeezed by a long channel name.
                 Text(channel.name, style = TvkuTheme.typography.headlineMedium, color = TvkuTheme.colors.textPrimary,
-                    modifier = Modifier.semantics { heading() })
+                    maxLines = 2, overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f, fill = false).semantics { heading() })
                 if (state.showLiveBadge) LiveBadge()
             }
             Spacer(Modifier.height(TvkuTheme.spacing.xs))
@@ -155,6 +158,6 @@ private fun LiveBadge() {
         horizontalArrangement = Arrangement.spacedBy(5.dp),
     ) {
         Box(Modifier.size(6.dp).background(androidx.compose.ui.graphics.Color.White, CircleShape))
-        Text(label, style = TvkuTheme.typography.labelSmall, color = androidx.compose.ui.graphics.Color.White)
+        Text(label, style = TvkuTheme.typography.labelSmall, color = androidx.compose.ui.graphics.Color.White, maxLines = 1, softWrap = false)
     }
 }
