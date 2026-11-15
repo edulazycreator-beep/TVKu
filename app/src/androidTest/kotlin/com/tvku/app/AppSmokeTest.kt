@@ -7,8 +7,6 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.By
 import androidx.test.uiautomator.UiDevice
-import androidx.test.uiautomator.UiScrollable
-import androidx.test.uiautomator.UiSelector
 import androidx.test.uiautomator.Until
 import org.junit.Assert.fail
 import org.junit.Rule
@@ -93,7 +91,13 @@ class AppSmokeTest {
         }
 
         // Official YouTube channel (KompasTV), scrolled into view.
-        runCatching { UiScrollable(UiSelector().scrollable(true)).scrollTextIntoView("KompasTV") }
+        var swipes = 0
+        while (device.findObject(By.text("KompasTV")) == null && swipes < 80) {
+            device.swipe(device.displayWidth / 2, device.displayHeight * 3 / 4, device.displayWidth / 2, device.displayHeight / 4, 12)
+            SystemClock.sleep(250)
+            swipes++
+        }
+        Log.i(TAG, "scrolled $swipes times to reach KompasTV")
         if (!clickText("KompasTV")) fail("KompasTV not found. Visible: ${visibleTexts()}")
         SystemClock.sleep(20_000)
         shot("05-youtube-player")

@@ -1,6 +1,6 @@
 # D3 — Kandidat Channel untuk Review Izin
 
-Versi 3 · 15 November 2026 · Sumber: iptv-org (`index.m3u` + database) dan daftar kurasi TVKu
+Versi 4 · 15 November 2026 · Sumber: iptv-org (`index.m3u` + database) dan daftar kurasi TVKu
 Skrip: `scripts/stream-discovery/discover_iptv_org.py` → `scripts/database-import/build_candidate_seed.py`
 
 > **Penting.** Isinya adalah **petunjuk untuk direview**, bukan channel yang sudah disetujui. Semua kandidat masuk ke database sebagai `DISCOVERED` / `UNREVIEWED`, dengan channel dalam keadaan nonaktif. Tes otomatis (`test_candidate_seed.sql`) memastikan tidak satu pun kandidat yang tampil di aplikasi. Channel baru muncul setelah lolos pemeriksaan **dan** izinnya Anda setujui.
@@ -110,3 +110,33 @@ Ada stasiun TV lokal bernama **TVKU** di Semarang (`tvku.tv`). Sebelum rilis di 
 2. **Pemeriksaan otomatis** sesuai jenis sumber (bagian 1). Status `VERIFIED` hanya diberikan berdasarkan bukti.
 3. **Review izin** oleh Anda dengan catatan bukti.
 4. **Aktifkan** channel → tampil di aplikasi.
+
+---
+
+## 8. Channel IPTV di aplikasi (15 November 2026)
+
+Atas permintaan pemilik ("Buatkan yang dari iptv saja"), stream iptv-org kini diputar langsung di TVKu dengan Media3. Alurnya berjalan otomatis lewat workflow **Stream validation** (manual, plus jadwal mingguan):
+
+1. **Discovery** dari data iptv-org → 1.000 kandidat.
+2. **Kebijakan publikasi** (`scripts/stream-validation/publication_policy.json`), dengan 602 kandidat lolos:
+   - Diterima: host stream di domain resmi penyiar atau domain pemerintah.
+   - Domain bermerek hanya diterima untuk channel yang disetujui satu per satu (Jogja TV, Rodja TV, DAAI TV, Lingkar TV, Rinjani TV).
+   - Ditolak:
+     - 93 non-HTTPS.
+     - 249 domain bermerek yang belum disetujui.
+     - 25 feed khusus mitra distribusi (Samsung TV Plus, Pluto, dll.).
+     - 31 karena kebijakan sanksi (IRIB/Press TV, NTV/Gazprom, VGTRK, MRTV, Krimea).
+3. **Tier A** (probe manifest, dari runner AS): 602 diperiksa, 430 berhasil, 45 dibatasi wilayah, 62 gagal permanen, 65 gagal sementara.
+4. **Tier B** (emulator Android API 34, konfigurasi Media3 yang sama dengan aplikasi):
+   - Kriteria: setiap stream diputar ≥ 60 detik, video dan audio terdekode, dan reconnect berhasil.
+   - Hasil: **392 dari 430 lolos**, 33 gagal sementara, 3 gagal permanen, 1 dibatasi wilayah, 1 format tidak didukung.
+5. **Katalog** hanya memuat stream yang lolos Tier B: 406 channel, terdiri dari 390 dengan stream terverifikasi, 4 YouTube resmi, dan 12 tautan platform.
+   - Indonesia mendapat 36 stream terverifikasi.
+6. **Tes end-to-end aplikasi** di emulator: stream terverifikasi tampil di Home dan benar-benar diputar di player TVKu (status "Playing", resolusi 720p terukur).
+
+Bukti per stream ada di rilis `stream-validation` (`validation-report.json`, `tier-a.json`, `policy-report.json`, `verified-streams.json`).
+
+**Batasan yang perlu diketahui:**
+- Domain resmi adalah bukti asal stream, **bukan lisensi**. Penyiar dapat meminta penghapusan kapan saja; channel tersebut cukup ditambahkan ke daftar pengecualian di kebijakan.
+- Pengujian dilakukan dari server di AS. Ada stream yang lolos di sana tetapi bisa dibatasi wilayah di negara lain, atau sebaliknya. Karena itu aplikasi menampilkan status yang jujur ("dibatasi wilayah" atau "offline") dan tidak pernah menampilkan LIVE palsu.
+- Stream bisa mati sewaktu-waktu. Validasi ulang mingguan menghapus stream yang tidak lagi lolos.
