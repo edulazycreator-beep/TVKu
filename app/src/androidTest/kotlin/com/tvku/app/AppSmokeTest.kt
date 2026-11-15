@@ -9,9 +9,11 @@ import androidx.test.uiautomator.By
 import androidx.test.uiautomator.UiDevice
 import androidx.test.uiautomator.Until
 import org.junit.Assert.fail
+import org.junit.Rule
 import org.junit.Test
+import org.junit.rules.TestWatcher
+import org.junit.runner.Description
 import org.junit.runner.RunWith
-import java.io.File
 import java.util.regex.Pattern
 
 /**
@@ -24,10 +26,19 @@ class AppSmokeTest {
     private val instrumentation = InstrumentationRegistry.getInstrumentation()
     private val device = UiDevice.getInstance(instrumentation)
     private val context = instrumentation.targetContext
-    private val shots = File(context.getExternalFilesDir(null), "smoke").apply { mkdirs() }
 
+    /** Screenshots go to /data/local/tmp (shell-owned) so they survive the app being uninstalled after the run. */
     private fun shot(name: String) {
-        device.takeScreenshot(File(shots, "$name.png"))
+        device.executeShellCommand("mkdir -p $SHOTS")
+        device.executeShellCommand("screencap -p $SHOTS/$name.png")
+    }
+
+    @get:Rule
+    val watcher = object : TestWatcher() {
+        override fun failed(e: Throwable, description: Description) {
+            Log.e(TAG, "SMOKE FAILED: ${e.message}", e)
+            runCatching { shot("99-failure") }
+        }
     }
 
     private fun visibleTexts(): List<String> =
@@ -73,5 +84,6 @@ class AppSmokeTest {
 
     private companion object {
         const val TAG = "TVKuSmoke"
+        const val SHOTS = "/data/local/tmp/tvku-smoke"
     }
 }

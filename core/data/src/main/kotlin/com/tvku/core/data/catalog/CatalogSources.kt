@@ -14,9 +14,10 @@ import javax.inject.Inject
 import javax.inject.Qualifier
 import javax.net.ssl.HttpsURLConnection
 
+/** Ordered catalog locations: primary first, then mirrors. */
 @Qualifier
 @Retention(AnnotationRetention.RUNTIME)
-annotation class CatalogUrl
+annotation class CatalogUrls
 
 interface CatalogFetcher {
     /** @throws IOException on network or HTTP failure. */
@@ -28,13 +29,28 @@ interface CatalogCache {
     suspend fun write(text: String)
 }
 
-/** HTTPS-only download with timeouts and a size cap. No extra HTTP library needed. */
+/**
+ * HTTPS-only download with timeouts and a size cap, trying each mirror in
+ * order (some networks block one host but not another). No extra HTTP library.
+ */
 class HttpsCatalogFetcher @Inject constructor(
-    @param:CatalogUrl private val url: String,
+    @param:CatalogUrls private val urls: List<String>,
     @param:Dispatcher(TvkuDispatchers.IO) private val io: CoroutineDispatcher,
 ) : CatalogFetcher {
-    override suspend fun fetch(): String = withContext(io) {
-        require(url.startsWith("https://")) { "catalog URL must be https" }
+    override suspend fun fetch(): String {
+        require(urls.isNotEmpty() && urls.all { it.startsWith("https://") }) { "catalog URLs must be https" }
+        val failures = mutableListOf<String>()
+        for (url in urls) {
+            try {
+                return fetchOne(url)
+            } catch (e: IOException) {
+                failures += "${URL(url).host}: ${e.javaClass.simpleName}${e.message?.let { ": " + it.take(80) } ?: ""}"
+            }
+        }
+        throw IOException(failures.joinToString(" | "))
+    }
+
+    private suspend fun fetchOne(url: String): String = withContext(io) {
         var target = URL(url)
         repeat(MAX_REDIRECTS + 1) {
             val conn = (target.openConnection() as HttpsURLConnection).apply {

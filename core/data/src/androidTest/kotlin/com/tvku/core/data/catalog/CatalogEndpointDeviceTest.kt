@@ -15,7 +15,7 @@ class CatalogEndpointDeviceTest {
     @Test
     fun publishedCatalogDownloadsAndParsesOnAndroid() = runBlocking {
         val text = try {
-            HttpsCatalogFetcher(URL, Dispatchers.IO).fetch()
+            HttpsCatalogFetcher(listOf(URL), Dispatchers.IO).fetch()
         } catch (e: Exception) {
             Log.e("TVKuDeviceTest", "fetch failed", e)
             fail("fetch failed: ${e.javaClass.name}: ${e.message} / cause: ${e.cause}")
@@ -32,7 +32,24 @@ class CatalogEndpointDeviceTest {
         assertTrue("expected official links", channels.count { it.officialLink != null } >= 10)
     }
 
+    @Test
+    fun everyMirrorServesAValidCatalog() = runBlocking {
+        for (mirror in MIRRORS) {
+            val text = try {
+                HttpsCatalogFetcher(listOf(mirror), Dispatchers.IO).fetch()
+            } catch (e: Exception) {
+                fail("mirror $mirror failed: ${e.javaClass.name}: ${e.message}")
+                return@runBlocking
+            }
+            assertTrue("mirror $mirror has channels", CatalogParser.parse(text).isNotEmpty())
+        }
+    }
+
     private companion object {
         const val URL = "https://github.com/edulazycreator-beep/TVKu/releases/download/catalog/catalog-v1.json"
+        val MIRRORS = listOf(
+            "https://raw.githubusercontent.com/edulazycreator-beep/TVKu/catalog-data/catalog-v1.json",
+            "https://cdn.jsdelivr.net/gh/edulazycreator-beep/TVKu@catalog-data/catalog-v1.json",
+        )
     }
 }

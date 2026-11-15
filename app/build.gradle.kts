@@ -10,13 +10,18 @@ android {
 
     defaultConfig {
         applicationId = "com.tvku.app"
-        versionCode = 2
-        versionName = "0.2.0"
-        // Interim public catalog published by .github/workflows/catalog.yml (until Supabase is online).
+        versionCode = 3
+        versionName = "0.2.1"
+        // Interim public catalog published by .github/workflows/catalog.yml (until Supabase is online):
+        // release asset first, then two mirrors of the same file.
         buildConfigField(
-            "String",
-            "CATALOG_URL",
-            "\"https://github.com/edulazycreator-beep/TVKu/releases/download/catalog/catalog-v1.json\"",
+            "String[]",
+            "CATALOG_URLS",
+            "{" + listOf(
+                "https://github.com/edulazycreator-beep/TVKu/releases/download/catalog/catalog-v1.json",
+                "https://raw.githubusercontent.com/edulazycreator-beep/TVKu/catalog-data/catalog-v1.json",
+                "https://cdn.jsdelivr.net/gh/edulazycreator-beep/TVKu@catalog-data/catalog-v1.json",
+            ).joinToString(",") { "\"$it\"" } + "}",
         )
     }
 

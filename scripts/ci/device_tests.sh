@@ -8,7 +8,8 @@ status=0
 mkdir -p device-evidence
 adb logcat -d > device-evidence/logcat.txt || true
 echo "----- relevant logcat -----"
-grep -E "TVKu|AndroidRuntime|FATAL|chromium" device-evidence/logcat.txt | tail -n 300 || true
-adb pull /sdcard/Android/data/com.tvku.app.debug/files/smoke device-evidence/ || true
+grep -E "TVKu|TestRunner|AndroidRuntime|FATAL|chromium" device-evidence/logcat.txt | tail -n 400 || true
+mkdir -p device-evidence/smoke
+adb pull /data/local/tmp/tvku-smoke/. device-evidence/smoke/ || true
 ls -la device-evidence device-evidence/smoke 2>/dev/null || true
 exit $status
