@@ -1,6 +1,6 @@
 # TVKu — Arsitektur & Roadmap Pengembangan
 
-Versi 1.1 · 15 November 2026 · Status: **M1 selesai (5/5 suite tes SQL lulus) · M2 berikutnya**
+Versi 1.2 · 15 November 2026 · Status: **M1 ✅ · M2 ✅ (APK debug di-build CI, 16 unit test lulus) · berikutnya M3 (player)**
 Repo: https://github.com/edulazycreator-beep/TVKu
 
 ---
@@ -87,7 +87,7 @@ feature/
 
 Keputusan teknis Android:
 - **minSdk 26** (Android 8.0): diperlukan untuk perilaku `ANDROID_ID` yang ter-scope per aplikasi (lihat D1) dan menyederhanakan PiP; cakupan perangkat tetap sangat luas.
-- **targetSdk / AGP / Kotlin / Compose BOM / Media3**: versi stabil terbaru, diverifikasi saat M2 dari dokumentasi resmi (tidak ditebak).
+- **Toolchain (diverifikasi dari repositori Maven resmi via `.github/workflows/dependency-versions.yml`, 15 Nov 2026):** Gradle 9.9.1, AGP 9.5.1 (Kotlin bawaan AGP), Kotlin 2.4.21, KSP 2.3.14, Hilt 2.60.1, Compose BOM 2026.09.00, Media3 1.11.1, compileSdk/targetSdk 37, JDK 21.
 - **Satu instance ExoPlayer** dikelola `PlayerManager` berumur proses, dilepas saat tidak dipakai — mencegah multi-instance dan kebocoran memori.
 - Status pemutar adalah *state machine* eksplisit: `Idle → Connecting → Buffering ⇄ Playing → RecoverableError → (retry backoff) → Unavailable / GeoRestricted / UnsupportedFormat`. Badge **LIVE** hanya tampil saat `Player.isPlaying == true` dan frame pertama sudah dirender.
 
@@ -129,13 +129,15 @@ Publikasi = validation_status VERIFIED  AND  permission_status disetujui admin
 
 **D1 — Trial tidak reset saat "Clear data".**
 UUID acak per instalasi ikut terhapus saat data aplikasi dihapus, jadi UUID saja **tidak bisa** memenuhi aturan ini. Usulan: kirim juga `HMAC-SHA256(ANDROID_ID, pepper_server)` sebagai *sinyal anti-penyalahgunaan trial saja*. Sejak Android 8, `ANDROID_ID` ter-scope per kunci penandatangan aplikasi + pengguna + perangkat, bertahan saat clear data/reinstall, berubah saat factory reset. Ini **bukan** IMEI/serial/MAC, tidak bisa dipakai lintas aplikasi, dan hanya disimpan dalam bentuk hash. Wajib diungkap di kebijakan privasi. Alternatif tanpa ini: trial bisa diulang dengan clear data.
-→ *Rekomendasi: setujui.*
+→ ✅ **Disetujui pemilik produk (15 Nov 2026).** Diimplementasikan di `core:security` (`DeviceKeyHasher`) dan diungkap di layar onboarding privasi.
 
 **D2 — Rahasia instalasi.** UUID muncul di pesan WhatsApp, jadi UUID tidak boleh menjadi kredensial. Saat registrasi server memberi `installation_secret` acak (disimpan hanya hash-nya di DB, di Android disimpan terenkripsi Keystore). Pesan WhatsApp memakai kode pendek `TVK-XXXX-XXXX`, bukan UUID penuh.
 
-**D3 — Dataset awal yang disetujui bisa berjumlah 0.** Saya bisa mengumpulkan kandidat dan bukti (mis. stream yang di-embed di situs resmi penyiar publik), tetapi keputusan izin hukum adalah keputusan Anda sebagai pemilik produk. Tidak ada channel yang dipublikasikan tanpa review admin.
+**D3 — Dataset awal yang disetujui bisa berjumlah 0.** → Pemilik produk minta kandidat dikumpulkan: lihat `docs/CHANNEL_CANDIDATES_D3.md` (684 kandidat domain resmi dari 11.502 entri). Saya bisa mengumpulkan kandidat dan bukti (mis. stream yang di-embed di situs resmi penyiar publik), tetapi keputusan izin hukum adalah keputusan Anda sebagai pemilik produk. Tidak ada channel yang dipublikasikan tanpa review admin.
 
 **D4 — Sudut pandang geo.** Runner GitHub Actions berlokasi di AS; status `GEO_RESTRICTED` hanya valid dari lokasi itu. Untuk Asia Tenggara, validator bisa juga dijalankan dari mesin/VPS Anda (skrip yang sama).
+
+**D5 — Stream HTTP tanpa enkripsi.** Aplikasi saat ini HTTPS-only. Rekomendasi: tetap HTTPS-only untuk rilis pertama (623 dari 684 kandidat sudah HTTPS).
 
 ---
 
@@ -144,8 +146,8 @@ UUID acak per instalasi ikut terhapus saat data aplikasi dihapus, jadi UUID saja
 | # | Milestone | Isi | Diverifikasi dengan | Bergantung pada |
 |---|---|---|---|---|
 | M0 | Fondasi rencana | Inspeksi, arsitektur, roadmap | Dokumen ini | — |
-| **M1** | **Skema backend & keamanan** | Migrasi SQL, enum, index, RLS, fungsi trial/donasi/premium server-side, seed config | Tes SQL nyata di Postgres 16 lokal | — |
-| M2 | Kerangka Android + design system | Proyek Gradle multi-modul, version catalog, tema, navigasi, splash, onboarding, CI | Workflow GitHub Actions hijau (build + unit test + lint) | **Repo GitHub** |
+| M1 ✅ | Skema backend & keamanan | Migrasi SQL, enum, index, RLS, fungsi trial/donasi/premium server-side, seed config | Tes SQL nyata di Postgres 16 lokal | — |
+| M2 ✅ | Kerangka Android + design system | Proyek Gradle multi-modul, version catalog, tema, navigasi, splash, onboarding, CI | Workflow GitHub Actions hijau (build + unit test + lint) | **Repo GitHub** |
 | M3 | Inti streaming | PlayerManager Media3, HLS/DASH, state machine, retry/backoff, track subtitle/audio, fullscreen, PiP | Unit test state machine + instrumented test di emulator CI dengan stream uji milik sendiri | M2 |
 | M4 | Discovery | Parser M3U + importer iptv-org → `DISCOVERED`, dedupe, normalisasi negara/kategori/bahasa | Unit test parser; laporan jumlah *discovered* | M1 |
 | M5 | Validasi stream | Tier A (TS/Deno + ffprobe, SSRF guard) & Tier B (Media3 di emulator), laporan validasi | Tes terhadap fixture HLS/DASH lokal (valid, 404, timeout, manifest rusak, segmen hilang, codec tak didukung) | M1, M3, repo |
