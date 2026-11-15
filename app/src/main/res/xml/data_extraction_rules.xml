@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The installation identity must never be backed up or transferred: its secret is
+     encrypted with a device-bound Keystore key, and a copied identity would let two
+     devices share one installation. Preferences (onboarding, theme) may be restored. -->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="file" path="datastore/installation_identity.preferences_pb" />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="file" path="datastore/installation_identity.preferences_pb" />
+    </device-transfer>
+</data-extraction-rules>

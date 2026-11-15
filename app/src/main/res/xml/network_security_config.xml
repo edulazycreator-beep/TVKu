@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- HTTPS only. Whether plain-HTTP broadcaster streams are allowed is an open
+     product decision (see docs/ARCHITECTURE_AND_ROADMAP.md); until then cleartext
+     traffic is refused. -->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

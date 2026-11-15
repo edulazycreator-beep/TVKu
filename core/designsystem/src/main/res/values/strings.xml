@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ds_availability_verified">Available</string>
+    <string name="ds_availability_degraded">Unstable</string>
+    <string name="ds_availability_testing">Checking</string>
+    <string name="ds_availability_geo">Region limited</string>
+    <string name="ds_availability_offline">Offline</string>
+    <string name="ds_availability_unknown">Status unknown</string>
+</resources>

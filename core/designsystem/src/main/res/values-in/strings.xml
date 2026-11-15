@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ds_availability_verified">Tersedia</string>
+    <string name="ds_availability_degraded">Tidak stabil</string>
+    <string name="ds_availability_testing">Sedang dicek</string>
+    <string name="ds_availability_geo">Terbatas wilayah</string>
+    <string name="ds_availability_offline">Offline</string>
+    <string name="ds_availability_unknown">Status tidak diketahui</string>
+</resources>

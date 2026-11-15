@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="onboarding_skip">Skip</string>
+    <string name="onboarding_next">Continue</string>
+    <string name="onboarding_start">Start watching</string>
+    <string name="onboarding_page_indicator">Page %1$d of %2$d</string>
+
+    <string name="onboarding_welcome_title">Your World. Your Television.</string>
+    <string name="onboarding_welcome_body">Live television from around the world, in one calm and simple app.</string>
+
+    <string name="onboarding_global_title">Television from every corner</string>
+    <string name="onboarding_global_body">Browse channels by country, language and category. No playlists to find, no files to download, nothing to configure.</string>
+
+    <string name="onboarding_verified_title">Free channels, verified</string>
+    <string name="onboarding_verified_body">Free channels stay free. Every channel comes from an approved source and is tested for real playback before it appears. If a channel is unstable or offline, TVKu tells you.</string>
+
+    <string name="onboarding_premium_title">Premium, supported by you</string>
+    <string name="onboarding_premium_body">You get 5 hours of premium features to try. After that, free channels remain available. Optional donations via WhatsApp keep TVKu running and unlock premium after an admin verifies them. There are no automatic payments.</string>
+
+    <string name="onboarding_privacy_title">Your privacy</string>
+    <string name="onboarding_privacy_body">TVKu creates a random installation ID and stores a one-way hash of this device\'s app-specific Android ID, only to keep the 5-hour trial fair. TVKu does not access your contacts, messages, location, phone number or storage, and does not track you for advertising.</string>
+</resources>

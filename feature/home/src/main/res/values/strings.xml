@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_catalog_unavailable_title">No channels yet</string>
+    <string name="home_catalog_unavailable_body">This development build is not connected to the TVKu channel catalog yet. Verified channels will appear here once the catalog goes online.</string>
+</resources>

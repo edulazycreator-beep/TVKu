@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_catalog_unavailable_title">Belum ada channel</string>
+    <string name="home_catalog_unavailable_body">Build pengembangan ini belum terhubung ke katalog channel TVKu. Channel terverifikasi akan muncul di sini setelah katalog online.</string>
+</resources>

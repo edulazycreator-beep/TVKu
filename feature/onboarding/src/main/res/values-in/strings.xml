@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="onboarding_skip">Lewati</string>
+    <string name="onboarding_next">Lanjut</string>
+    <string name="onboarding_start">Mulai menonton</string>
+    <string name="onboarding_page_indicator">Halaman %1$d dari %2$d</string>
+
+    <string name="onboarding_welcome_title">Duniamu. Televisimu.</string>
+    <string name="onboarding_welcome_body">Siaran televisi dari seluruh dunia, dalam satu aplikasi yang tenang dan sederhana.</string>
+
+    <string name="onboarding_global_title">Televisi dari segala penjuru</string>
+    <string name="onboarding_global_body">Jelajahi channel berdasarkan negara, bahasa, dan kategori. Tanpa mencari playlist, tanpa mengunduh file, tanpa pengaturan rumit.</string>
+
+    <string name="onboarding_verified_title">Channel gratis, terverifikasi</string>
+    <string name="onboarding_verified_body">Channel gratis tetap gratis. Setiap channel berasal dari sumber yang disetujui dan diuji pemutarannya sebelum ditampilkan. Jika channel tidak stabil atau offline, TVKu memberitahumu.</string>
+
+    <string name="onboarding_premium_title">Premium, didukung olehmu</string>
+    <string name="onboarding_premium_body">Kamu mendapat 5 jam fitur premium untuk dicoba. Setelah itu, channel gratis tetap tersedia. Donasi sukarela lewat WhatsApp membantu TVKu tetap berjalan dan membuka premium setelah diverifikasi admin. Tidak ada pembayaran otomatis.</string>
+
+    <string name="onboarding_privacy_title">Privasimu</string>
+    <string name="onboarding_privacy_body">TVKu membuat ID instalasi acak dan menyimpan hash satu arah dari Android ID khusus aplikasi di perangkat ini, hanya agar trial 5 jam tetap adil. TVKu tidak mengakses kontak, pesan, lokasi, nomor telepon, atau penyimpanan, dan tidak melacakmu untuk iklan.</string>
+</resources>
