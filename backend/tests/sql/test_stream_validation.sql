@@ -1,4 +1,7 @@
 -- Stream health state machine.
+-- Isolate from the discovery seed (rolled back with the test transaction).
+delete from public.channels where external_source in ('iptv-org', 'tvku-curated');
+
 do $$
 declare
   v_ch  uuid := tests.make_channel('state-machine');

@@ -1,0 +1,35 @@
+{
+  "_comment": "Hand-curated leads. Every entry is imported as DISCOVERED / UNREVIEWED and is never shown in the app until it passes validation AND an admin approves the licensing. 'handle_confirmed' says whether the YouTube handle was confirmed from an independent public listing; unconfirmed handles are resolved and pinned by the validator and must be checked by the admin during review.",
+  "sources": [
+    {
+      "key": "kompastv", "channel_name": "KompasTV", "country": "ID", "category": "news", "languages": ["ind"],
+      "kind": "youtube", "channel_ref": "@kompastv", "handle_confirmed": true,
+      "evidence": "Handle @kompastv listed for KOMPASTV by Socialblade and HypeAuditor; Kompas TV says it streams on its official YouTube channel."
+    },
+    {
+      "key": "metrotv", "channel_name": "Metro TV", "country": "ID", "category": "news", "languages": ["ind"],
+      "kind": "youtube", "channel_ref": "@metrotvnews", "handle_confirmed": true,
+      "evidence": "Handle @metrotvnews listed for METRO TV by HypeAuditor; Metro TV broadcast area includes worldwide via YouTube."
+    },
+    {
+      "key": "metrotv", "channel_name": "Metro TV", "country": "ID", "category": "news", "languages": ["ind"],
+      "kind": "hls", "url": "https://edge.medcom.id/live-edge/smil:metro.smil/playlist.m3u8",
+      "evidence": "Served from medcom.id, the Media Group digital property that carries Metro TV (metrotvnews) branding; stream listed in iptv-org."
+    },
+    {
+      "key": "inews", "channel_name": "iNews", "country": "ID", "category": "news", "languages": ["ind"],
+      "kind": "youtube", "channel_ref": "@OfficialiNews", "handle_confirmed": true,
+      "evidence": "Handle @OfficialiNews listed for Official iNews by HypeAuditor."
+    },
+    {
+      "key": "tvone", "channel_name": "tvOne", "country": "ID", "category": "news", "languages": ["ind"],
+      "kind": "youtube", "channel_ref": "@tvOneNews", "handle_confirmed": false,
+      "evidence": "tvOneNews is listed as the official tvOne YouTube channel by Feedspot; handle not independently confirmed."
+    },
+    {
+      "key": "cnnindonesia", "channel_name": "CNN Indonesia", "country": "ID", "category": "news", "languages": ["ind"],
+      "kind": "youtube", "channel_ref": "@CNNIndonesiaOfficial", "handle_confirmed": false,
+      "evidence": "CNN Indonesia streams live on YouTube; handle not independently confirmed."
+    }
+  ]
+}

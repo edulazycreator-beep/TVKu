@@ -18,6 +18,14 @@ Exclusion reasons (never imported):
   unsupported_scheme  not HTTP(S) (rtmp, rtsp, srt, mms): not playable by the app
   no_channel_id       entry not linked to a known channel
   unknown_channel     tvg-id not in the iptv-org channel database
+  raw_ip_host         stream served from a bare IP address (ownership unverifiable)
+  suspected_relay     host known to re-broadcast other people's channels
+  premium_rights      sports/entertainment brand sold by subscription; never free to redistribute
+
+Candidate kinds (all still need licensing review + playback validation):
+  candidate_official_domain    stream host on the broadcaster's own website domain
+  candidate_government_domain  stream host on a government domain (public broadcasters)
+  candidate_brand_domain       stream domain contains the channel's distinctive name
 
 Usage:
   python3 discover_iptv_org.py --data DIR --out DIR
@@ -49,6 +57,19 @@ TOKEN_PARAMS = re.compile(
 )
 TOKEN_PATH = re.compile(r"(token=|hdnts=|wmsAuthSign|/exp=|/hmac=|Signature=)", re.I)
 REDIRECTORS = {"jmp2.uk", "bit.ly", "tinyurl.com", "is.gd"}
+RELAY_DOMAINS = {
+    "pages.dev", "githubusercontent.com", "sqn.at", "mediacdn.ru", "vip-acasatv.online", "iptv-24.net",
+    "mangeinde4.lat", "aynascope.net", "aynaott.com", "boldmss.com", "smartplaytv.in", "thaimomo.com",
+    "cdn-redge.media", "alwaysdata.net", "cinerama.uz", "tvorb.net", "antik.sk", "mcquack.net",
+}
+PREMIUM_BRANDS = re.compile(
+    r"\b(espn|bein|dazn|tnt sports|eurosport|fox sports|sky sports|nba tv|nfl network|mlb network|nhl network|"
+    r"golf channel|canal\+|supersport|astro|setanta|premier sports|sportv|movistar|spotv|hbo|cinemax|showtime|starz|"
+    r"formula 1|f1|nhl|nba|nfl|ufc|uefa|antenaplay events)\b",
+    re.I,
+)
+GENERIC_TOKENS = {"tv", "channel", "news", "live", "sport", "sports", "hd", "the", "media", "net", "radio", "televisi", "televisión", "television", "network", "plus"}
+IPV4 = re.compile(r"^\d{1,3}(\.\d{1,3}){3}$")
 # iptv-org uses "UK"; TVKu stores ISO 3166-1 alpha-2.
 COUNTRY_FIXES = {"UK": "GB"}
 
@@ -84,8 +105,14 @@ def classify(entry, channels, blocklist) -> tuple[str, dict]:
     host = (parts.hostname or "").lower()
     if not host:
         return "invalid_url", {}
+    if IPV4.match(host) or host.startswith("["):
+        return "raw_ip_host", {}
     if registrable(host) in REDIRECTORS:
         return "redirector", {}
+    if registrable(host) in RELAY_DOMAINS:
+        return "suspected_relay", {}
+    if PREMIUM_BRANDS.search(ch.get("name", "")) or "/promo/" in parts.path:
+        return "premium_rights", {}
     if any(TOKEN_PARAMS.match(k) for k in parse_qs(parts.query)) or TOKEN_PATH.search(entry.url):
         return "tokenized", {}
 
@@ -95,6 +122,14 @@ def classify(entry, channels, blocklist) -> tuple[str, dict]:
     info = {"stream_domain": stream_domain, "site_domain": site_domain, "scheme": parts.scheme}
     if site_domain and stream_domain == site_domain:
         return "candidate_official_domain", info
+    if re.search(r"\.(go\.id|gov|gov\.[a-z]{2}|gob\.[a-z]{2}|gouv\.[a-z]{2})$", stream_domain):
+        return "candidate_government_domain", info
+    label = stream_domain.split(".")[0]
+    name = ch.get("name", "").lower()
+    compact = re.sub(r"[^a-z0-9]", "", name)
+    tokens = [t for t in re.split(r"[^a-z0-9]+", name) if len(t) >= 4 and t not in GENERIC_TOKENS]
+    if (len(compact) >= 4 and compact in label) or any(t in label for t in tokens):
+        return "candidate_brand_domain", info
     return "needs_manual_evidence", info
 
 
@@ -122,7 +157,7 @@ def main() -> None:
         schemes[urlsplit(e.url).scheme] += 1
         reason, info = classify(e, channels, blocklist)
         reasons[reason] += 1
-        if reason == "candidate_official_domain":
+        if reason.startswith("candidate_"):
             ch = channels[e.channel_id]
             candidates.append({
                 "channel_id": e.channel_id,
@@ -136,9 +171,25 @@ def main() -> None:
                 "stream_url": e.url,
                 "scheme": info["scheme"],
                 "advertised_height": e.advertised_height or "",
-                "evidence": f"stream host is on the broadcaster's own domain ({info['stream_domain']})",
+                "evidence_kind": reason.removeprefix("candidate_"),
+                "evidence": {
+                    "candidate_official_domain": f"stream host is on the broadcaster's own website domain ({info['stream_domain']})",
+                    "candidate_government_domain": f"stream host is on a government domain ({info['stream_domain']})",
+                    "candidate_brand_domain": f"stream domain {info['stream_domain']} contains the channel name; website {info['site_domain'] or 'unknown'}",
+                }[reason],
+                "languages": "",
             })
 
+    feeds = {(f["channel"], f["id"]): f for f in load_csv(args.data / "database_master_data_feeds.csv")}
+    main_feed = {}
+    for (cid, _), f in feeds.items():
+        if f.get("is_main", "").upper() == "TRUE" or cid not in main_feed:
+            main_feed[cid] = f
+    for c in candidates:
+        f = feeds.get((c["channel_id"], c["feed"])) or main_feed.get(c["channel_id"], {})
+        c["languages"] = f.get("languages", "")
+        c["feed_name"] = f.get("name", "")
+        c["feed_is_main"] = f.get("is_main", "TRUE").upper() == "TRUE"
     args.out.mkdir(parents=True, exist_ok=True)
     candidates.sort(key=lambda c: (c["country"], c["name"]))
     with (args.out / "review_candidates.csv").open("w", newline="", encoding="utf-8") as f:
@@ -155,7 +206,10 @@ def main() -> None:
         "unique_urls": len(seen_urls),
         "url_schemes": dict(schemes),
         "classification": dict(reasons.most_common()),
-        "candidates_official_domain": len(candidates),
+        "candidates_total": len(candidates),
+        "candidates_by_evidence": dict(collections.Counter(c["evidence_kind"] for c in candidates)),
+        "candidates_indonesia": sum(1 for c in candidates if c["country"] == "ID"),
+        "candidates_sports": sum(1 for c in candidates if "sports" in c["categories"]),
         "candidates_https": https_candidates,
         "candidate_channels": len({c["channel_id"] for c in candidates}),
         "candidate_countries": len(by_country),

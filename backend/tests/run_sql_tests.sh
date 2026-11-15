@@ -32,13 +32,12 @@ for f in "$BACKEND"/supabase/migrations/*.sql; do
   "${PSQL[@]}" "$TEST_URL" -f "$f"
 done
 
+SEEDS=(reference_data.sql base_config.sql candidates_discovered.sql)
 echo "==> Seed"
-"${PSQL[@]}" "$TEST_URL" -f "$BACKEND/supabase/seed/reference_data.sql"
-"${PSQL[@]}" "$TEST_URL" -f "$BACKEND/supabase/seed/base_config.sql"
+for s in "${SEEDS[@]}"; do "${PSQL[@]}" "$TEST_URL" -f "$BACKEND/supabase/seed/$s"; done
 
 echo "==> Re-applying seed (idempotency)"
-"${PSQL[@]}" "$TEST_URL" -f "$BACKEND/supabase/seed/reference_data.sql"
-"${PSQL[@]}" "$TEST_URL" -f "$BACKEND/supabase/seed/base_config.sql"
+for s in "${SEEDS[@]}"; do "${PSQL[@]}" "$TEST_URL" -f "$BACKEND/supabase/seed/$s"; done
 
 echo "==> Test helpers"
 "${PSQL[@]}" "$TEST_URL" -f "$HERE/sql/_helpers.sql"
