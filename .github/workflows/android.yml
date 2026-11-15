@@ -61,3 +61,37 @@ jobs:
             **/build/reports/
             **/build/test-results/
           retention-days: 14
+
+  # Publishes the tested debug APK as a pre-release so it can be downloaded
+  # straight to a phone. Only after the build job (tests + lint) succeeded on main.
+  publish-dev-build:
+    name: Publish dev build
+    needs: build
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v7
+        with:
+          name: tvku-debug-apk
+          path: apk
+
+      - name: Replace the dev-latest pre-release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          SHORT="${GITHUB_SHA::7}"
+          SRC="$(ls apk/*.apk | head -n1)"
+          APK="apk/TVKu-dev-${SHORT}.apk"
+          mv "$SRC" "$APK"
+          sha256sum "$APK" | tee "$APK.sha256"
+          gh release delete dev-latest --yes --cleanup-tag || true
+          gh release create dev-latest "$APK" "$APK.sha256" \
+            --prerelease \
+            --target "$GITHUB_SHA" \
+            --title "TVKu dev build ${SHORT}" \
+            --notes "Development build from commit ${GITHUB_SHA}. Debug-signed, for testing only. Built and unit-tested by the Android workflow run ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}. The channel catalog is not connected yet (needs the Supabase project), so the home screen shows no channels."
