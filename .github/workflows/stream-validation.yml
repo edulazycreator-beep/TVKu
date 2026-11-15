@@ -92,7 +92,7 @@ jobs:
   tier-b:
     name: Tier B playback (shard ${{ matrix.shard }})
     needs: [plan, build]
-    if: needs.plan.outputs.matrix != '' && needs.plan.outputs.matrix != '{"shard": []}'
+    if: ${{ needs.plan.outputs.matrix != '' && !contains(needs.plan.outputs.matrix, '[]') }}
     runs-on: ubuntu-24.04
     timeout-minutes: 100
     strategy:
