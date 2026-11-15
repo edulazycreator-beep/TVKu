@@ -93,11 +93,12 @@ class AppSmokeTest {
         // Official YouTube channel (KompasTV), scrolled into view.
         var swipes = 0
         while (device.findObject(By.text("KompasTV")) == null && swipes < 80) {
-            device.swipe(device.displayWidth / 2, device.displayHeight * 3 / 4, device.displayWidth / 2, device.displayHeight / 4, 12)
+            device.swipe(device.displayWidth / 2, device.displayHeight * 3 / 4, device.displayWidth / 2, device.displayHeight / 4, 40)
             SystemClock.sleep(250)
             swipes++
         }
         Log.i(TAG, "scrolled $swipes times to reach KompasTV")
+        SystemClock.sleep(1_500) // let the list settle: a tap during a fling only stops the fling
         if (!clickText("KompasTV")) fail("KompasTV not found. Visible: ${visibleTexts()}")
         SystemClock.sleep(20_000)
         shot("05-youtube-player")
