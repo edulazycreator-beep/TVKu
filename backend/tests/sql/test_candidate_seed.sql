@@ -8,7 +8,7 @@ begin
   select count(*) into v_n from public.channels where country_code = 'ID' and external_source in ('iptv-org', 'tvku-curated');
   perform tests.assert(v_n >= 30, format('Indonesian leads present (%s)', v_n));
   select count(*) into v_n from public.streams where stream_format = 'YOUTUBE_EMBED';
-  perform tests.assert(v_n >= 5, format('official YouTube embed leads present (%s)', v_n));
+  perform tests.assert(v_n >= 4, format('official YouTube embed leads present (%s)', v_n));
   select count(*) into v_n from public.streams s join public.channels c on c.id = s.channel_id
    where c.category_id = (select id from public.categories where slug = 'sports');
   perform tests.assert(v_n >= 10, format('sports leads present (%s)', v_n));

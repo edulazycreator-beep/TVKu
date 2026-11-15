@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="player_back">Back</string>
+    <string name="player_retry">Try again</string>
+    <string name="player_live">LIVE</string>
+    <string name="player_channel_missing_title">Channel not available</string>
+    <string name="player_channel_missing_body">This channel is no longer in the channel list.</string>
+    <string name="player_status_connecting">Connecting to the broadcaster\'s live channel…</string>
+    <string name="player_status_ready">Player ready. Waiting for the live broadcast…</string>
+    <string name="player_status_playing">Playing the broadcaster\'s current live broadcast.</string>
+    <string name="player_status_buffering">Buffering…</string>
+    <string name="player_status_paused">Paused.</string>
+    <string name="player_status_ended">The live broadcast has ended.</string>
+    <string name="player_status_not_live">This channel is not broadcasting live right now.</string>
+    <string name="player_status_embed_not_allowed">The broadcaster does not allow this live stream to be played outside YouTube.</string>
+    <string name="player_status_identity">YouTube could not verify the player. Please update TVKu.</string>
+    <string name="player_status_error">The player could not play this broadcast.</string>
+    <string name="player_status_timeout">Playback has not started. The channel may not be live, or the connection is slow.</string>
+    <string name="player_source_note">Shown with YouTube\'s official player from the broadcaster\'s official channel. TVKu does not host or re-stream video.</string>
+</resources>

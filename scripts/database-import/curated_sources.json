@@ -1,5 +1,5 @@
 {
-  "_comment": "Hand-curated leads. Every entry is imported as DISCOVERED / UNREVIEWED and is never shown in the app until it passes validation AND an admin approves the licensing. 'handle_confirmed' says whether the YouTube handle was confirmed from an independent public listing; unconfirmed handles are resolved and pinned by the validator and must be checked by the admin during review. kind 'link' = channel is only streamed inside the broadcaster's own platform (login/DRM/region); TVKu only opens that official page, it never plays or embeds it.",
+  "_comment": "Hand-curated sources. 'approved' records the product owner's licensing decision for the interim catalog (scripts/catalog/build_catalog.py publishes only approved youtube/link entries). HLS streams are never published from here: they need the Media3 playback validator first. All entries are also seeded into the database as DISCOVERED/UNREVIEWED.",
   "sources": [
     {
       "key": "kompastv",
@@ -10,9 +10,14 @@
         "ind"
       ],
       "kind": "youtube",
-      "channel_ref": "@kompastv",
+      "channel_ref": "UC5BMIWZe9isJXLZZWPWvBlg",
       "handle_confirmed": true,
-      "evidence": "Handle @kompastv listed for KOMPASTV by Socialblade and HypeAuditor; Kompas TV says it streams on its official YouTube channel."
+      "evidence": "Channel ID UC5BMIWZe9isJXLZZWPWvBlg listed for KOMPASTV (joined 2013-08-23) by vidIQ; handle @kompastv per Socialblade.",
+      "handle": "@kompastv",
+      "approved": true,
+      "approved_by": "product owner",
+      "approved_at": "2026-11-15",
+      "approval_note": "Owner instructed in chat to build the app with these channels (official YouTube embed or official-platform link)."
     },
     {
       "key": "metrotv",
@@ -23,9 +28,14 @@
         "ind"
       ],
       "kind": "youtube",
-      "channel_ref": "@metrotvnews",
+      "channel_ref": "UCzl0OrB3-ehunyotIQvK77A",
       "handle_confirmed": true,
-      "evidence": "Handle @metrotvnews listed for METRO TV by HypeAuditor; Metro TV broadcast area includes worldwide via YouTube."
+      "evidence": "Channel ID UCzl0OrB3-ehunyotIQvK77A and handle @metrotvnews listed for METRO TV by FindAChannel; created 2007-10-09 per Socialblade.",
+      "handle": "@metrotvnews",
+      "approved": true,
+      "approved_by": "product owner",
+      "approved_at": "2026-11-15",
+      "approval_note": "Owner instructed in chat to build the app with these channels (official YouTube embed or official-platform link)."
     },
     {
       "key": "metrotv",
@@ -37,7 +47,8 @@
       ],
       "kind": "hls",
       "url": "https://edge.medcom.id/live-edge/smil:metro.smil/playlist.m3u8",
-      "evidence": "Served from medcom.id, the Media Group digital property that carries Metro TV (metrotvnews) branding; stream listed in iptv-org."
+      "evidence": "Served from medcom.id, the Media Group digital property that carries Metro TV (metrotvnews) branding; stream listed in iptv-org.",
+      "approved": false
     },
     {
       "key": "inews",
@@ -48,9 +59,14 @@
         "ind"
       ],
       "kind": "youtube",
-      "channel_ref": "@OfficialiNews",
+      "channel_ref": "UCoSkllfpgmFHtbVK835QaQg",
       "handle_confirmed": true,
-      "evidence": "Handle @OfficialiNews listed for Official iNews by HypeAuditor."
+      "evidence": "Channel ID UCoSkllfpgmFHtbVK835QaQg listed for Official iNews (joined 2015-06-10) by vidIQ; handle @officialinews per Socialblade.",
+      "handle": "@officialinews",
+      "approved": true,
+      "approved_by": "product owner",
+      "approved_at": "2026-11-15",
+      "approval_note": "Owner instructed in chat to build the app with these channels (official YouTube embed or official-platform link)."
     },
     {
       "key": "tvone",
@@ -60,10 +76,14 @@
       "languages": [
         "ind"
       ],
-      "kind": "youtube",
-      "channel_ref": "@tvOneNews",
-      "handle_confirmed": false,
-      "evidence": "tvOneNews is listed as the official tvOne YouTube channel by Feedspot; handle not independently confirmed."
+      "kind": "link",
+      "url": "https://www.tvonenews.com/live",
+      "platform": "tvOne",
+      "evidence": "Listed as tvOne's official live page in VCGamers' guide; YouTube channel ID could not be confirmed, so no embed.",
+      "approved": true,
+      "approved_by": "product owner",
+      "approved_at": "2026-11-15",
+      "approval_note": "Owner instructed in chat to build the app with these channels (official YouTube embed or official-platform link)."
     },
     {
       "key": "cnnindonesia",
@@ -74,9 +94,14 @@
         "ind"
       ],
       "kind": "youtube",
-      "channel_ref": "@CNNIndonesiaOfficial",
-      "handle_confirmed": false,
-      "evidence": "CNN Indonesia streams live on YouTube; handle not independently confirmed."
+      "channel_ref": "UCKII0Ml9S5wneKbHswmUrIQ",
+      "handle_confirmed": true,
+      "evidence": "Channel ID UCKII0Ml9S5wneKbHswmUrIQ listed for CNN Indonesia (joined 2014-02-20) by vidIQ; handle @cnnidofficial per Socialblade.",
+      "handle": "@cnnidofficial",
+      "approved": true,
+      "approved_by": "product owner",
+      "approved_at": "2026-11-15",
+      "approval_note": "Owner instructed in chat to build the app with these channels (official YouTube embed or official-platform link)."
     },
     {
       "key": "rcti",
@@ -89,7 +114,11 @@
       "kind": "link",
       "url": "https://www.rctiplus.com/tv/rcti",
       "platform": "RCTI+",
-      "evidence": "Listed as the official live page in VCGamers' 'cara nonton TV di laptop' guide."
+      "evidence": "Listed as the official live page in VCGamers' 'cara nonton TV di laptop' guide.",
+      "approved": true,
+      "approved_by": "product owner",
+      "approved_at": "2026-11-15",
+      "approval_note": "Owner instructed in chat to build the app with these channels (official YouTube embed or official-platform link)."
     },
     {
       "key": "mnctv",
@@ -102,7 +131,11 @@
       "kind": "link",
       "url": "https://www.rctiplus.com/tv/mnctv",
       "platform": "RCTI+",
-      "evidence": "Listed as the official live page in VCGamers' 'cara nonton TV di laptop' guide."
+      "evidence": "Listed as the official live page in VCGamers' 'cara nonton TV di laptop' guide.",
+      "approved": true,
+      "approved_by": "product owner",
+      "approved_at": "2026-11-15",
+      "approval_note": "Owner instructed in chat to build the app with these channels (official YouTube embed or official-platform link)."
     },
     {
       "key": "gtv",
@@ -115,7 +148,11 @@
       "kind": "link",
       "url": "https://www.rctiplus.com/tv/gtv",
       "platform": "RCTI+",
-      "evidence": "Listed as the official live page in VCGamers' 'cara nonton TV di laptop' guide."
+      "evidence": "Listed as the official live page in VCGamers' 'cara nonton TV di laptop' guide.",
+      "approved": true,
+      "approved_by": "product owner",
+      "approved_at": "2026-11-15",
+      "approval_note": "Owner instructed in chat to build the app with these channels (official YouTube embed or official-platform link)."
     },
     {
       "key": "sctv",
@@ -128,7 +165,11 @@
       "kind": "link",
       "url": "https://www.sctv.co.id/live-streaming/",
       "platform": "SCTV",
-      "evidence": "Listed as the official live page in VCGamers' 'cara nonton TV di laptop' guide."
+      "evidence": "Listed as the official live page in VCGamers' 'cara nonton TV di laptop' guide.",
+      "approved": true,
+      "approved_by": "product owner",
+      "approved_at": "2026-11-15",
+      "approval_note": "Owner instructed in chat to build the app with these channels (official YouTube embed or official-platform link)."
     },
     {
       "key": "indosiar",
@@ -141,7 +182,11 @@
       "kind": "link",
       "url": "https://www.vidio.com/live/indosiar",
       "platform": "Vidio",
-      "evidence": "Listed as the official live link in JournalArta's 2026 legal TV streaming list."
+      "evidence": "Listed as the official live link in JournalArta's 2026 legal TV streaming list.",
+      "approved": true,
+      "approved_by": "product owner",
+      "approved_at": "2026-11-15",
+      "approval_note": "Owner instructed in chat to build the app with these channels (official YouTube embed or official-platform link)."
     },
     {
       "key": "antv",
@@ -154,7 +199,11 @@
       "kind": "link",
       "url": "https://www.antvklik.com",
       "platform": "ANTV Klik",
-      "evidence": "Listed as the official live link in JournalArta's 2026 legal TV streaming list."
+      "evidence": "Listed as the official live link in JournalArta's 2026 legal TV streaming list.",
+      "approved": true,
+      "approved_by": "product owner",
+      "approved_at": "2026-11-15",
+      "approval_note": "Owner instructed in chat to build the app with these channels (official YouTube embed or official-platform link)."
     },
     {
       "key": "transtv",
@@ -167,7 +216,11 @@
       "kind": "link",
       "url": "https://www.transtv.co.id/live",
       "platform": "Trans TV",
-      "evidence": "Listed as the official live page in VCGamers' 'cara nonton TV di laptop' guide."
+      "evidence": "Listed as the official live page in VCGamers' 'cara nonton TV di laptop' guide.",
+      "approved": true,
+      "approved_by": "product owner",
+      "approved_at": "2026-11-15",
+      "approval_note": "Owner instructed in chat to build the app with these channels (official YouTube embed or official-platform link)."
     },
     {
       "key": "trans7",
@@ -180,7 +233,11 @@
       "kind": "link",
       "url": "https://www.trans7.co.id/live-streaming",
       "platform": "Trans7",
-      "evidence": "Listed as the official live page in VCGamers' 'cara nonton TV di laptop' guide."
+      "evidence": "Listed as the official live page in VCGamers' 'cara nonton TV di laptop' guide.",
+      "approved": true,
+      "approved_by": "product owner",
+      "approved_at": "2026-11-15",
+      "approval_note": "Owner instructed in chat to build the app with these channels (official YouTube embed or official-platform link)."
     },
     {
       "key": "nettv",
@@ -193,7 +250,11 @@
       "kind": "link",
       "url": "https://www.netmedia.co.id/live-streaming",
       "platform": "NET",
-      "evidence": "Listed as the official live page in VCGamers' 'cara nonton TV di laptop' guide."
+      "evidence": "Listed as the official live page in VCGamers' 'cara nonton TV di laptop' guide.",
+      "approved": true,
+      "approved_by": "product owner",
+      "approved_at": "2026-11-15",
+      "approval_note": "Owner instructed in chat to build the app with these channels (official YouTube embed or official-platform link)."
     },
     {
       "key": "btv",
@@ -206,7 +267,11 @@
       "kind": "link",
       "url": "https://www.beritasatu.com/btv-live-streaming",
       "platform": "BeritaSatu",
-      "evidence": "Listed as the official live page in VCGamers' 'cara nonton TV di laptop' guide."
+      "evidence": "Listed as the official live page in VCGamers' 'cara nonton TV di laptop' guide.",
+      "approved": true,
+      "approved_by": "product owner",
+      "approved_at": "2026-11-15",
+      "approval_note": "Owner instructed in chat to build the app with these channels (official YouTube embed or official-platform link)."
     },
     {
       "key": "tvrisport",
@@ -219,7 +284,11 @@
       "kind": "link",
       "url": "https://www.tvri.go.id/live",
       "platform": "TVRI",
-      "evidence": "TVRI's public live page (tvri.go.id/live) carries TVRI Sport per JournalArta; TVRI is the public broadcaster. Note: some events may be blocked on web streams for rights reasons."
+      "evidence": "TVRI's public live page (tvri.go.id/live) carries TVRI Sport per JournalArta; TVRI is the public broadcaster. Note: some events may be blocked on web streams for rights reasons.",
+      "approved": true,
+      "approved_by": "product owner",
+      "approved_at": "2026-11-15",
+      "approval_note": "Owner instructed in chat to build the app with these channels (official YouTube embed or official-platform link)."
     }
   ]
 }

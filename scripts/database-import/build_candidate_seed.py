@@ -104,9 +104,10 @@ def main() -> None:
         if s["kind"] == "youtube":
             ref = s["channel_ref"]
             url = f"https://www.youtube.com/{ref}" if ref.startswith("@") else f"https://www.youtube.com/channel/{ref}"
+            page = f"https://www.youtube.com/{s['handle']}" if s.get("handle") else url
             streams.append({"key": key, "url": url, "format": "YOUTUBE_EMBED", "embed_ref": ref,
                             "source_name": "Official YouTube channel" + ("" if s.get("handle_confirmed") else " (handle unconfirmed)"),
-                            "source_url": url, "notes": s["evidence"]})
+                            "source_url": page, "notes": s["evidence"]})
         elif s["kind"] == "link":
             streams.append({"key": key, "url": s["url"], "format": "EXTERNAL_LINK", "embed_ref": None,
                             "platform": s["platform"], "source_name": f"Official platform: {s['platform']}",

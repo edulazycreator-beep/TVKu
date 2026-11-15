@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="home_catalog_unavailable_title">Belum ada channel</string>
-    <string name="home_catalog_unavailable_body">Build pengembangan ini belum terhubung ke katalog channel TVKu. Channel terverifikasi akan muncul di sini setelah katalog online.</string>
+    <string name="home_catalog_unavailable_title">Channel tidak tersedia</string>
+    <string name="home_catalog_offline_body">TVKu tidak dapat memuat daftar channel. Periksa koneksi internet lalu coba lagi.</string>
+    <string name="home_catalog_invalid_body">Daftar channel yang diterima tidak valid, jadi TVKu tidak memakainya. Coba lagi nanti.</string>
+    <string name="home_retry">Coba lagi</string>
+    <string name="home_showing_saved_list">Offline: menampilkan daftar channel terakhir yang tersimpan.</string>
+    <string name="home_cannot_open_link">Tidak ada aplikasi di perangkat ini yang bisa membuka tautan ini.</string>
+
+    <string name="home_section_watch_in_app">Tonton di TVKu</string>
+    <string name="home_section_watch_in_app_hint">Siaran live resmi penyiar, diputar dengan player YouTube</string>
+    <string name="home_section_official">Di platform resmi</string>
+    <string name="home_section_official_hint">Penyiar ini hanya streaming di aplikasinya sendiri. TVKu membukakannya untukmu.</string>
+    <string name="home_badge_youtube_live">Live YouTube resmi</string>
+    <string name="home_badge_open_in">Dibuka di %1$s</string>
+    <string name="home_action_watch">Tonton %1$s</string>
+    <string name="home_action_open">Buka %1$s di %2$s</string>
+
+    <string name="category_news">Berita</string>
+    <string name="category_sports">Olahraga</string>
+    <string name="category_entertainment">Hiburan</string>
+    <string name="category_movies">Film</string>
+    <string name="category_music">Musik</string>
+    <string name="category_documentary">Dokumenter</string>
+    <string name="category_kids">Anak</string>
+    <string name="category_education">Edukasi</string>
+    <string name="category_religious">Religi</string>
+    <string name="category_general">Umum</string>
 </resources>

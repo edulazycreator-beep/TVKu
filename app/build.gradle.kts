@@ -10,8 +10,14 @@ android {
 
     defaultConfig {
         applicationId = "com.tvku.app"
-        versionCode = 1
-        versionName = "0.1.0"
+        versionCode = 2
+        versionName = "0.2.0"
+        // Interim public catalog published by .github/workflows/catalog.yml (until Supabase is online).
+        buildConfigField(
+            "String",
+            "CATALOG_URL",
+            "\"https://github.com/edulazycreator-beep/TVKu/releases/download/catalog/catalog-v1.json\"",
+        )
     }
 
     buildTypes {
@@ -39,6 +45,8 @@ dependencies {
     implementation(project(":core:datastore"))
     implementation(project(":core:security"))
     implementation(project(":core:player"))
+    implementation(project(":core:data"))
+    implementation(project(":feature:player"))
     implementation(project(":feature:onboarding"))
     implementation(project(":feature:home"))
 
