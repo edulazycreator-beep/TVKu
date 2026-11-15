@@ -1,0 +1,30 @@
+# Android / Gradle
+.gradle/
+build/
+local.properties
+*.iml
+.idea/
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+
+# Signing and secrets — never commit
+*.jks
+*.keystore
+keystore.properties
+google-services.json
+.env
+.env.*
+!.env.example
+supabase/.temp/
+backend/supabase/.temp/
+
+# Node / tooling
+node_modules/
+dist/
+coverage/
+.DS_Store
+__pycache__/
+*.pyc
