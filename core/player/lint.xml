@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Media3's documented way to opt in to its @UnstableApi surface module-wide
+  (https://developer.android.com/media/media3/exoplayer/troubleshooting).
+  The Kotlin sources already declare @file:OptIn(UnstableApi::class); lint only
+  understands androidx.annotation.OptIn, so the Media3 marker is accepted here.
+-->
+<lint>
+    <issue id="UnsafeOptInUsageError">
+        <ignore regexp="\(markerClass = androidx\.media3\.common\.util\.UnstableApi\.class\)" />
+    </issue>
+</lint>
