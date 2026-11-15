@@ -8,7 +8,7 @@
     <string name="home_cannot_open_link">Tidak ada aplikasi di perangkat ini yang bisa membuka tautan ini.</string>
 
     <string name="home_section_watch_in_app">Tonton di TVKu</string>
-    <string name="home_section_watch_in_app_hint">Siaran live resmi penyiar, diputar dengan player YouTube</string>
+    <string name="home_section_watch_in_app_hint">Siaran gratis penyiar yang lolos uji putar TVKu (%1$d channel)</string>
     <string name="home_section_official">Di platform resmi</string>
     <string name="home_section_official_hint">Penyiar ini hanya streaming di aplikasinya sendiri. TVKu membukakannya untukmu.</string>
     <string name="home_badge_youtube_live">Live YouTube resmi</string>
@@ -26,4 +26,5 @@
     <string name="category_education">Edukasi</string>
     <string name="category_religious">Religi</string>
     <string name="category_general">Umum</string>
+    <string name="home_badge_verified_stream">Stream terverifikasi</string>
 </resources>

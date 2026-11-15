@@ -32,6 +32,25 @@ class CatalogParserTest {
         assertEquals(1, channels[0].sources.size)
     }
 
+    @Test
+    fun `parses verified streams and rejects bad ones`() {
+        val text = """
+            {"schema":1,"channels":[
+              {"id":"tvri-id","name":"TVRI","country":"ID","category":"general","sources":[
+                {"type":"stream","url":"https://ott.example.go.id/live/master.m3u8","format":"HLS","height":720},
+                {"type":"stream","url":"http://plain.example/x.m3u8","format":"HLS"},
+                {"type":"stream","url":"https://x.example/x.m3u8","format":"RTMP"},
+                {"type":"stream","url":"https://x.example/y.mpd","format":"DASH","height":99999}
+              ]}
+            ]}
+        """.trimIndent()
+        val channel = CatalogParser.parse(text).single()
+        val stream = channel.streams.single()
+        assertEquals(ChannelSource.Stream.Format.HLS, stream.format)
+        assertEquals("HD", stream.qualityLabel)
+        assertEquals(stream, channel.playable)
+    }
+
     @Test(expected = CatalogFormatException::class)
     fun `rejects unknown schema`() {
         CatalogParser.parse("""{"schema":2,"channels":[]}""")

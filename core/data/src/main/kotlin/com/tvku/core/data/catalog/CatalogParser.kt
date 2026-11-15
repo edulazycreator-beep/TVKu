@@ -30,6 +30,8 @@ internal data class SourceDto(
     @SerialName("youtube_channel_id") val youtubeChannelId: String? = null,
     val url: String? = null,
     val platform: String? = null,
+    val format: String? = null,
+    val height: Int? = null,
 )
 
 class CatalogFormatException(message: String, cause: Throwable? = null) : Exception(message, cause)
@@ -71,6 +73,11 @@ object CatalogParser {
 
     private fun toSource(s: SourceDto): ChannelSource? = runCatching {
         when (s.type) {
+            "stream" -> ChannelSource.Stream(
+                url = requireNotNull(s.url),
+                format = ChannelSource.Stream.Format.valueOf(requireNotNull(s.format)),
+                heightPx = s.height,
+            )
             "youtube_live" -> ChannelSource.YouTubeLive(requireNotNull(s.youtubeChannelId))
             "official_link" -> ChannelSource.OfficialLink(requireNotNull(s.url), requireNotNull(s.platform))
             else -> null

@@ -1,0 +1,50 @@
+{
+  "_comment": "Owner policy for publishing iptv-org discovered streams in TVKu. A stream is only ever published after it passes Tier B playback validation; this file decides which candidates may be validated at all. Domain evidence is not a licence: broadcasters can ask for removal at any time (see docs/CHANNEL_CANDIDATES_D3.md, takedown).",
+  "approved_evidence_kinds": ["official_domain", "government_domain"],
+  "_approved_brand_domain_comment": "brand_domain = the stream host contains the channel's brand but is not the listed website. Approved only per channel after owner review.",
+  "approved_brand_domain_channels": [
+    "DAAITV.id",
+    "JogjaTV.id",
+    "LingkarTV.id",
+    "RinjaniTV.id",
+    "RodjaTV.id"
+  ],
+  "_excluded_comment": "Conservative default: channels owned or operated by broadcasters under US/EU sanctions, or broadcasting from sanctioned territories, are not distributed by TVKu. The owner can change this list.",
+  "excluded_owner_patterns": [
+    "IRIB",
+    "Islamic Republic of Iran Broadcasting",
+    "Gazprom",
+    "VGTRK",
+    "ВГТРК"
+  ],
+  "excluded_host_suffixes": [
+    "presstv.ir",
+    "alalam.ir",
+    "ntv.ru",
+    "smotrim.ru",
+    "1tvcrimea.ru",
+    "mrtvott.com",
+    "mrtv.gov.mm"
+  ],
+  "excluded_channel_id_patterns": [
+    "^MRTV",
+    "Crimea",
+    "Krym"
+  ],
+  "_distribution_feed_comment": "Feeds made for a specific distribution partner (FAST platforms) are not the broadcaster's public stream.",
+  "excluded_url_markers": [
+    "samsungtvplus",
+    "samsung-tv-plus",
+    "pluto",
+    "roku",
+    "xumo",
+    "tubi",
+    "lgchannels",
+    "distro.tv",
+    "vizio",
+    "plex.tv",
+    "rakuten"
+  ],
+  "priority_countries": ["ID"],
+  "secondary_countries": ["MY", "SG", "BN", "TH", "PH", "VN", "KH", "LA", "TL", "AU", "IN", "JP", "KR"]
+}

@@ -27,7 +27,7 @@ jobs:
         run: |
           set -euo pipefail
           for d in scripts/playlist-parser scripts/stream-validation scripts/catalog; do
-            (cd "$d" && python3 -m unittest -v 2>&1 | tail -n 3)
+            (cd "$d" && python3 -m unittest -v 2>&1 | tail -n 3; exit "${PIPESTATUS[0]}")
           done
 
   publish:
@@ -40,8 +40,17 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v7
+      - name: Fetch verified streams (Stream validation workflow)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh release download stream-validation --pattern verified-streams.json --clobber \
+            || echo "::warning title=Catalog::no verified-streams.json yet; publishing without streams"
       - name: Build catalog (with official link checks)
-        run: python3 scripts/catalog/build_catalog.py --curated scripts/database-import/curated_sources.json --out catalog-v1.json --check-links
+        run: >
+          python3 scripts/catalog/build_catalog.py --curated scripts/database-import/curated_sources.json
+          --verified-streams verified-streams.json --out catalog-v1.json --check-links
       - name: Publish release asset
         env:
           GH_TOKEN: ${{ github.token }}

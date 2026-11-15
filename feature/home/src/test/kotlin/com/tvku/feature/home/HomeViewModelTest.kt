@@ -42,8 +42,21 @@ class HomeViewModelTest {
         val vm = HomeViewModel(repo { catalog })
         backgroundScope.launch { vm.uiState.collect {} }
         val state = vm.uiState.first { !it.isRefreshing && !it.isEmpty }
-        assertEquals(listOf("kompastv-id"), state.watchInApp.map { it.id })
+        assertEquals(listOf("kompastv-id"), state.countries.flatMap { it.channels }.map { it.id })
         assertEquals(listOf("indosiar-id"), state.officialPlatforms.map { it.id })
+    }
+
+    @Test
+    fun `countries are ordered with pinned ones first then by size`() {
+        fun ch(id: String, country: String) = com.tvku.core.model.Channel(
+            id, id, country, com.tvku.core.model.ChannelCategory.NEWS, emptyList(),
+            listOf(com.tvku.core.model.ChannelSource.YouTubeLive("UC5BMIWZe9isJXLZZWPWvBlg")),
+        )
+        val sections = HomeViewModel.groupByCountry(
+            listOf(ch("a", "US"), ch("b", "FR"), ch("c", "FR"), ch("d", "ID"), ch("e", "BN")),
+            userCountry = "BN",
+        )
+        assertEquals(listOf("BN", "ID", "FR", "US"), sections.map { it.countryCode })
     }
 
     @Test

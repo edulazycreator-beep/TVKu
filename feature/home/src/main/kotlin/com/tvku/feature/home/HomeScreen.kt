@@ -44,6 +44,10 @@ import com.tvku.core.designsystem.theme.TvkuTheme
 import com.tvku.core.model.Channel
 import com.tvku.core.model.ChannelCategory
 import com.tvku.core.player.external.OfficialPlatformLauncher
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.testTagsAsResourceId
+import java.util.Locale
 
 @Composable
 fun HomeRoute(onWatch: (channelId: String) -> Unit, viewModel: HomeViewModel = hiltViewModel()) {
@@ -127,7 +131,8 @@ private fun ChannelList(
 ) {
     LazyColumn(
         contentPadding = PaddingValues(bottom = TvkuTheme.spacing.xl),
-        modifier = Modifier.fillMaxSize(),
+        // Test tags double as resource ids so UiAutomator end-to-end tests can find rows.
+        modifier = Modifier.fillMaxSize().semantics { testTagsAsResourceId = true },
     ) {
         if (state.problem != null && state.showingCachedCopy) {
             item {
@@ -149,14 +154,25 @@ private fun ChannelList(
                 }
             }
         }
-        if (state.watchInApp.isNotEmpty()) {
-            item { SectionHeader(stringResource(R.string.home_section_watch_in_app), stringResource(R.string.home_section_watch_in_app_hint)) }
-            items(state.watchInApp, key = { it.id }) { channel ->
+        if (state.countries.isNotEmpty()) {
+            item {
+                SectionHeader(
+                    stringResource(R.string.home_section_watch_in_app),
+                    stringResource(R.string.home_section_watch_in_app_hint, state.playableCount),
+                )
+            }
+        }
+        state.countries.forEach { section ->
+            item(key = "country-${section.countryCode}") { CountryHeader(section.countryCode, section.channels.size) }
+            items(section.channels, key = { it.id }) { channel ->
+                val stream = channel.streams.firstOrNull()
                 ChannelRow(
                     channel = channel,
-                    badge = stringResource(R.string.home_badge_youtube_live),
+                    badge = if (stream != null) stream.qualityLabel ?: stringResource(R.string.home_badge_verified_stream)
+                    else stringResource(R.string.home_badge_youtube_live),
                     actionDescription = stringResource(R.string.home_action_watch, channel.name),
                     onClick = { onWatch(channel.id) },
+                    testTag = if (stream != null) "channel-stream" else "channel-youtube",
                 )
             }
         }
@@ -186,10 +202,34 @@ private fun SectionHeader(title: String, hint: String) {
 }
 
 @Composable
-private fun ChannelRow(channel: Channel, badge: String, actionDescription: String, onClick: () -> Unit, external: Boolean = false) {
+private fun CountryHeader(countryCode: String, count: Int) {
+    val name = remember(countryCode) {
+        runCatching { Locale.Builder().setRegion(countryCode).build().displayCountry }.getOrNull()?.ifBlank { null } ?: countryCode
+    }
     Row(
         Modifier
             .fillMaxWidth()
+            .padding(start = TvkuTheme.spacing.pageMargin, end = TvkuTheme.spacing.pageMargin, top = TvkuTheme.spacing.md, bottom = 2.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Text(name, style = TvkuTheme.typography.titleSmall, color = TvkuTheme.colors.accent, modifier = Modifier.weight(1f))
+        Text(count.toString(), style = TvkuTheme.typography.labelMedium, color = TvkuTheme.colors.textTertiary)
+    }
+}
+
+@Composable
+private fun ChannelRow(
+    channel: Channel,
+    badge: String,
+    actionDescription: String,
+    onClick: () -> Unit,
+    external: Boolean = false,
+    testTag: String = "channel-link",
+) {
+    Row(
+        Modifier
+            .fillMaxWidth()
+            .testTag(testTag)
             .clickable(role = Role.Button, onClickLabel = actionDescription, onClick = onClick)
             .padding(horizontal = TvkuTheme.spacing.pageMargin, vertical = TvkuTheme.spacing.sm),
         verticalAlignment = Alignment.CenterVertically,

@@ -18,4 +18,12 @@
     <string name="player_status_timeout">Pemutaran belum dimulai. Channel mungkin sedang tidak live, atau koneksi lambat.</string>
     <string name="player_source_note">Ditampilkan dengan player resmi YouTube dari channel resmi penyiar. TVKu tidak menyimpan atau menyiarkan ulang video.</string>
     <string name="player_open_youtube">Tonton di YouTube</string>
+    <string name="player_status_connecting_stream">Menghubungkan ke stream penyiar…</string>
+    <string name="player_status_playing_stream">Memutar siaran live penyiar.</string>
+    <string name="player_status_reconnecting">Koneksi terputus. Menyambung ulang…</string>
+    <string name="player_status_region_limited">Penyiar membatasi stream ini untuk wilayah tertentu. Tidak tersedia dari lokasi ini.</string>
+    <string name="player_status_offline">Stream ini sedang offline.</string>
+    <string name="player_status_unsupported">Perangkat ini tidak dapat memutar format stream ini.</string>
+    <string name="player_resolution">Resolusi: %1$dp</string>
+    <string name="player_source_note_stream">Stream gratis dari server penyiar sendiri. Sudah lolos uji putar TVKu; TVKu tidak menyimpan atau menyiarkan ulang video.</string>
 </resources>

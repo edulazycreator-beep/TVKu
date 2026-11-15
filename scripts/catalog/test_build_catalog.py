@@ -60,5 +60,33 @@ class BuildCatalogTest(unittest.TestCase):
                 self.assertIn(s["type"], ("youtube_live", "official_link"))
 
 
+
+class VerifiedStreamsTest(unittest.TestCase):
+    V = {"streams": [
+        {"channel_id": "TVRI.id", "feed": "Aceh", "feed_name": "Aceh", "feed_is_main": False, "name": "TVRI",
+         "country": "ID", "categories": ["general"], "languages": ["ind"], "evidence_kind": "official_domain",
+         "url": "https://ott-balancer.tvri.go.id/live/eds/Aceh/hls/Aceh.m3u8", "format": "HLS", "height": 720,
+         "verified_at": "2026-11-15T00:00:00+00:00"},
+        {"channel_id": "TVRIWorld.id", "feed": "SD", "feed_name": "SD", "feed_is_main": True, "name": "TVRI World",
+         "country": "ID", "categories": ["news", "general"], "languages": ["eng"], "evidence_kind": "government_domain",
+         "url": "https://ott-balancer.tvri.go.id/live/eds/TVRIWorld/hls/TVRIWorld.m3u8", "format": "HLS", "height": None,
+         "verified_at": "2026-11-15T00:00:00+00:00"},
+    ]}
+
+    def test_streams_become_channels_and_come_first(self):
+        cat = build({"sources": []}, dt.datetime(2026, 11, 15, tzinfo=dt.timezone.utc), verified=self.V)
+        ids = [c["id"] for c in cat["channels"]]
+        self.assertEqual(["tvri-world-id", "tvri-aceh-id"], ids)  # news before general
+        aceh = cat["channels"][1]
+        self.assertEqual("TVRI Aceh", aceh["name"])
+        self.assertEqual({"type", "url", "format", "verified_at", "evidence", "height"}, set(aceh["sources"][0]))
+        self.assertNotIn("height", cat["channels"][0]["sources"][0])
+
+    def test_rejects_cleartext_verified_stream(self):
+        bad = {"streams": [{**self.V["streams"][0], "url": "http://x/y.m3u8"}]}
+        with self.assertRaises(CatalogError):
+            build({"sources": []}, dt.datetime(2026, 11, 15, tzinfo=dt.timezone.utc), verified=bad)
+
+
 if __name__ == "__main__":
     unittest.main()

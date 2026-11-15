@@ -7,6 +7,8 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.By
 import androidx.test.uiautomator.UiDevice
+import androidx.test.uiautomator.UiScrollable
+import androidx.test.uiautomator.UiSelector
 import androidx.test.uiautomator.Until
 import org.junit.Assert.fail
 import org.junit.Rule
@@ -66,19 +68,37 @@ class AppSmokeTest {
         shot("02-privacy")
         if (!clickText("Start watching")) fail("'Start watching' not found. Visible: ${visibleTexts()}")
 
-        val homeLoaded = device.wait(Until.hasObject(By.text("KompasTV")), 45_000)
+        // Home: a verified broadcaster stream (if the catalog has any) and an official YouTube channel.
+        val homeLoaded = device.wait(Until.hasObject(By.res("channel-stream")), 45_000) ||
+            device.wait(Until.hasObject(By.res("channel-youtube")), 5_000)
         SystemClock.sleep(1_000)
         shot("03-home")
         Log.i(TAG, "home texts: ${visibleTexts()}")
-        if (!homeLoaded) fail("Home did not show KompasTV. Visible: ${visibleTexts()}")
+        if (!homeLoaded) fail("Home shows no playable channel. Visible: ${visibleTexts()}")
 
-        clickText("KompasTV")
-        SystemClock.sleep(8_000)
-        shot("04-player-8s")
-        SystemClock.sleep(15_000)
-        shot("05-player-23s")
+        val stream = device.findObject(By.res("channel-stream"))
+        if (stream != null) {
+            stream.click()
+            // Media3 player: LIVE is shown only once frames are actually rendered.
+            val live = device.wait(Until.hasObject(By.text("LIVE")), 40_000)
+            shot("04-stream-player")
+            val texts = visibleTexts()
+            Log.i(TAG, "stream player live=$live texts: $texts")
+            if (texts.any { it.contains("Channel not available") }) fail("player could not find the channel: $texts")
+            if (!live) fail("verified stream did not reach PLAYING within 40 s: $texts")
+            device.pressBack()
+            SystemClock.sleep(1_500)
+        } else {
+            Log.i(TAG, "catalog has no verified streams yet")
+        }
+
+        // Official YouTube channel (KompasTV), scrolled into view.
+        runCatching { UiScrollable(UiSelector().scrollable(true)).scrollTextIntoView("KompasTV") }
+        if (!clickText("KompasTV")) fail("KompasTV not found. Visible: ${visibleTexts()}")
+        SystemClock.sleep(20_000)
+        shot("05-youtube-player")
         val playerTexts = visibleTexts()
-        Log.i(TAG, "player texts: $playerTexts")
+        Log.i(TAG, "youtube player texts: $playerTexts")
         if (playerTexts.any { it.contains("Channel not available") }) fail("player could not find the channel: $playerTexts")
         if (playerTexts.none { it == "Watch on YouTube" }) fail("YouTube fallback action missing: $playerTexts")
     }

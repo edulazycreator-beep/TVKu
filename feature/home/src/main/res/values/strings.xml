@@ -9,7 +9,7 @@
     <string name="home_cannot_open_link">No app on this device can open this link.</string>
 
     <string name="home_section_watch_in_app">Watch in TVKu</string>
-    <string name="home_section_watch_in_app_hint">Broadcasters\' official live channels, played with YouTube\'s player</string>
+    <string name="home_section_watch_in_app_hint">Free broadcaster streams that passed TVKu\'s playback check (%1$d channels)</string>
     <string name="home_section_official">On official platforms</string>
     <string name="home_section_official_hint">These broadcasters stream only in their own apps. TVKu opens them for you.</string>
     <string name="home_badge_youtube_live">Official YouTube live</string>
@@ -27,4 +27,5 @@
     <string name="category_education">Education</string>
     <string name="category_religious">Religious</string>
     <string name="category_general">General</string>
+    <string name="home_badge_verified_stream">Verified stream</string>
 </resources>

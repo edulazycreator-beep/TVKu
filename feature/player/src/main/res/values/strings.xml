@@ -18,4 +18,12 @@
     <string name="player_status_timeout">Playback has not started. The channel may not be live, or the connection is slow.</string>
     <string name="player_source_note">Shown with YouTube\'s official player from the broadcaster\'s official channel. TVKu does not host or re-stream video.</string>
     <string name="player_open_youtube">Watch on YouTube</string>
+    <string name="player_status_connecting_stream">Connecting to the broadcaster\'s stream…</string>
+    <string name="player_status_playing_stream">Playing the broadcaster\'s live stream.</string>
+    <string name="player_status_reconnecting">Connection lost. Reconnecting…</string>
+    <string name="player_status_region_limited">The broadcaster limits this stream to some regions. It is not available from here.</string>
+    <string name="player_status_offline">This stream is offline right now.</string>
+    <string name="player_status_unsupported">This device cannot decode this stream\'s format.</string>
+    <string name="player_resolution">Resolution: %1$dp</string>
+    <string name="player_source_note_stream">Free stream from the broadcaster\'s own server. It passed TVKu\'s playback check; TVKu does not host or re-stream video.</string>
 </resources>

@@ -10,8 +10,8 @@ android {
 
     defaultConfig {
         applicationId = "com.tvku.app"
-        versionCode = 3
-        versionName = "0.2.1"
+        versionCode = 4
+        versionName = "0.3.0"
         // Interim public catalog published by .github/workflows/catalog.yml (until Supabase is online):
         // release asset first, then two mirrors of the same file.
         buildConfigField(

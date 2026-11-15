@@ -40,6 +40,8 @@ import com.tvku.core.designsystem.R as DsR
 import androidx.compose.ui.platform.LocalContext
 import com.tvku.core.model.ChannelSource
 import com.tvku.core.player.embed.YouTubeLivePlayer
+import com.tvku.core.player.media.MediaLivePlayer
+import com.tvku.core.player.media.MediaPlaybackStatus
 import com.tvku.core.player.external.OfficialPlatformLauncher
 import com.tvku.core.player.embed.YouTubePlayerStatus
 import androidx.compose.ui.res.painterResource
@@ -51,7 +53,8 @@ fun PlayerRoute(channelId: String, onBack: () -> Unit, viewModel: PlayerViewMode
     val context = LocalContext.current
     PlayerScreen(
         state = state,
-        onStatus = viewModel::onStatus,
+        onYouTubeStatus = viewModel::onYouTubeStatus,
+        onMediaStatus = viewModel::onMediaStatus,
         onRetry = viewModel::retry,
         onBack = onBack,
         onOpenYouTube = { url -> OfficialPlatformLauncher.open(context, ChannelSource.OfficialLink(url, "YouTube")) },
@@ -61,13 +64,14 @@ fun PlayerRoute(channelId: String, onBack: () -> Unit, viewModel: PlayerViewMode
 @Composable
 internal fun PlayerScreen(
     state: PlayerUiState,
-    onStatus: (YouTubePlayerStatus) -> Unit,
+    onYouTubeStatus: (YouTubePlayerStatus) -> Unit,
+    onMediaStatus: (MediaPlaybackStatus, Int?) -> Unit,
     onRetry: () -> Unit,
     onBack: () -> Unit,
     onOpenYouTube: (url: String) -> Unit,
 ) {
     val channel = state.channel
-    val source = channel?.playable
+    val source = state.source
     if (state.notFound || channel == null || source == null) {
         Box(Modifier.fillMaxSize().background(TvkuTheme.colors.background), contentAlignment = Alignment.Center) {
             TvkuEmptyState(
@@ -84,8 +88,15 @@ internal fun PlayerScreen(
     val landscape = LocalConfiguration.current.orientation == Configuration.ORIENTATION_LANDSCAPE
     // A new key recreates the WebView, which is how "retry" reloads the player.
     val player: @Composable (Modifier) -> Unit = { modifier ->
-        key(state.attempt) { YouTubeLivePlayer(youtubeChannelId = source.youtubeChannelId, onStatus = onStatus, modifier = modifier) }
+        key(state.attempt, state.streamIndex) {
+            when (source) {
+                is ChannelSource.Stream -> MediaLivePlayer(stream = source, onStatus = onMediaStatus, modifier = modifier)
+                is ChannelSource.YouTubeLive -> YouTubeLivePlayer(youtubeChannelId = source.youtubeChannelId, onStatus = onYouTubeStatus, modifier = modifier)
+                is ChannelSource.OfficialLink -> Unit
+            }
+        }
     }
+    val youtubePage = (source as? ChannelSource.YouTubeLive)?.livePageUrl
 
     if (landscape) {
         Box(Modifier.fillMaxSize().background(androidx.compose.ui.graphics.Color.Black), contentAlignment = Alignment.Center) {
@@ -107,23 +118,30 @@ internal fun PlayerScreen(
             }
             Spacer(Modifier.height(TvkuTheme.spacing.xs))
             Text(
-                statusText(state),
+                stringResource(state.statusText),
                 style = TvkuTheme.typography.bodyMedium,
-                color = if (state.status.isFinal || state.timedOut) TvkuTheme.colors.warning else TvkuTheme.colors.textSecondary,
+                color = if (state.failed) TvkuTheme.colors.warning else TvkuTheme.colors.textSecondary,
                 modifier = Modifier.semantics { liveRegion = LiveRegionMode.Polite },
             )
-            val failed = state.status.isFinal || state.timedOut
+            state.measuredHeightPx?.let { h ->
+                Spacer(Modifier.height(TvkuTheme.spacing.xxs))
+                Text(stringResource(R.string.player_resolution, h), style = TvkuTheme.typography.labelMedium, color = TvkuTheme.colors.textTertiary)
+            }
             Spacer(Modifier.height(TvkuTheme.spacing.md))
             Row(horizontalArrangement = Arrangement.spacedBy(TvkuTheme.spacing.sm)) {
-                if (failed) {
-                    TvkuPrimaryButton(stringResource(R.string.player_open_youtube), onClick = { onOpenYouTube(source.livePageUrl) })
+                if (state.failed) {
+                    if (youtubePage != null) TvkuPrimaryButton(stringResource(R.string.player_open_youtube), onClick = { onOpenYouTube(youtubePage) })
                     TvkuSecondaryButton(stringResource(R.string.player_retry), onClick = onRetry)
-                } else {
-                    TvkuTextButton(stringResource(R.string.player_open_youtube), onClick = { onOpenYouTube(source.livePageUrl) })
+                } else if (youtubePage != null) {
+                    TvkuTextButton(stringResource(R.string.player_open_youtube), onClick = { onOpenYouTube(youtubePage) })
                 }
             }
             Spacer(Modifier.height(TvkuTheme.spacing.lg))
-            Text(stringResource(R.string.player_source_note), style = TvkuTheme.typography.bodySmall, color = TvkuTheme.colors.textTertiary)
+            Text(
+                stringResource(if (source is ChannelSource.Stream) R.string.player_source_note_stream else R.string.player_source_note),
+                style = TvkuTheme.typography.bodySmall,
+                color = TvkuTheme.colors.textTertiary,
+            )
         }
     }
 }
@@ -139,23 +157,4 @@ private fun LiveBadge() {
         Box(Modifier.size(6.dp).background(androidx.compose.ui.graphics.Color.White, CircleShape))
         Text(label, style = TvkuTheme.typography.labelSmall, color = androidx.compose.ui.graphics.Color.White)
     }
-}
-
-@Composable
-private fun statusText(state: PlayerUiState): String = when {
-    state.timedOut -> stringResource(R.string.player_status_timeout)
-    else -> stringResource(
-        when (state.status) {
-            YouTubePlayerStatus.CONNECTING -> R.string.player_status_connecting
-            YouTubePlayerStatus.READY -> R.string.player_status_ready
-            YouTubePlayerStatus.PLAYING -> R.string.player_status_playing
-            YouTubePlayerStatus.BUFFERING -> R.string.player_status_buffering
-            YouTubePlayerStatus.PAUSED -> R.string.player_status_paused
-            YouTubePlayerStatus.ENDED -> R.string.player_status_ended
-            YouTubePlayerStatus.NOT_AVAILABLE -> R.string.player_status_not_live
-            YouTubePlayerStatus.EMBED_NOT_ALLOWED -> R.string.player_status_embed_not_allowed
-            YouTubePlayerStatus.CLIENT_IDENTITY_ERROR -> R.string.player_status_identity
-            YouTubePlayerStatus.ERROR -> R.string.player_status_error
-        },
-    )
 }
