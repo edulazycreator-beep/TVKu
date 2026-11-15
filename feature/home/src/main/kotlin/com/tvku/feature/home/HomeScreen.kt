@@ -89,7 +89,11 @@ internal fun HomeScreen(
             state.isEmpty && state.isRefreshing -> Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                 CircularProgressIndicator(color = TvkuTheme.colors.accent)
             }
-            state.isEmpty -> Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+            state.isEmpty -> Column(
+                Modifier.fillMaxSize(),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center,
+            ) {
                 TvkuEmptyState(
                     icon = painterResource(DsR.drawable.ic_tvku_tv),
                     title = stringResource(R.string.home_catalog_unavailable_title),
@@ -100,6 +104,14 @@ internal fun HomeScreen(
                     actionLabel = stringResource(R.string.home_retry),
                     onAction = onRetry,
                 )
+                state.problemDetail?.let { detail ->
+                    Text(
+                        stringResource(R.string.home_error_detail, detail),
+                        style = TvkuTheme.typography.bodySmall,
+                        color = TvkuTheme.colors.textTertiary,
+                        modifier = Modifier.padding(horizontal = TvkuTheme.spacing.xl).widthIn(max = 420.dp),
+                    )
+                }
             }
             else -> ChannelList(state, onRetry, onWatch, onOpenOfficial)
         }

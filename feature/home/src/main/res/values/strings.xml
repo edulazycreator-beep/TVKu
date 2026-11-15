@@ -3,6 +3,7 @@
     <string name="home_catalog_unavailable_title">Channels unavailable</string>
     <string name="home_catalog_offline_body">TVKu could not load the channel list. Check your internet connection and try again.</string>
     <string name="home_catalog_invalid_body">The channel list received was not valid, so TVKu did not use it. Please try again later.</string>
+    <string name="home_error_detail" translatable="false">Detail: %1$s</string>
     <string name="home_retry">Try again</string>
     <string name="home_showing_saved_list">Offline: showing the last saved channel list.</string>
     <string name="home_cannot_open_link">No app on this device can open this link.</string>

@@ -18,6 +18,7 @@ data class HomeUiState(
     val officialPlatforms: List<Channel> = emptyList(),
     val isRefreshing: Boolean = true,
     val problem: CatalogState.Problem? = null,
+    val problemDetail: String? = null,
     val showingCachedCopy: Boolean = false,
 ) {
     val isEmpty: Boolean get() = watchInApp.isEmpty() && officialPlatforms.isEmpty()
@@ -34,6 +35,7 @@ class HomeViewModel @Inject constructor(
                 officialPlatforms = s.channels.filter { it.playable == null && it.officialLink != null },
                 isRefreshing = s.isRefreshing,
                 problem = s.lastError,
+                problemDetail = s.lastErrorDetail,
                 showingCachedCopy = s.origin == CatalogState.Origin.CACHE,
             )
         }
