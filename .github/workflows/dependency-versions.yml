@@ -50,14 +50,18 @@ jobs:
             "gradle-foojay": P + "org/gradle/toolchains/foojay-resolver-convention/org.gradle.toolchains.foojay-resolver-convention.gradle.plugin",
           }
           unstable = re.compile(r"(alpha|beta|rc|dev|eap|-M\d|snapshot|preview)", re.I)
+          lines = []
           for name, base in artifacts.items():
             try:
               xml = urllib.request.urlopen(base + "/maven-metadata.xml", timeout=30).read().decode()
               versions = re.findall(r"<version>([^<]+)</version>", xml)
               stable = [v for v in versions if not unstable.search(v)]
-              print(f"::notice title={name}::stable={stable[-1] if stable else '-'} latest={versions[-1]}")
+              lines.append(f"{name}: stable={stable[-1] if stable else '-'} latest={versions[-1]}")
             except Exception as e:
-              print(f"::warning title={name}::{e}")
+              lines.append(f"{name}: ERROR {e}")
+          print(*lines, sep="\n")
+          # GitHub keeps at most 10 annotations per step, so report as one.
+          print("::notice title=versions::" + "%0A".join(lines))
       - name: Gradle releases
         run: |
           curl -s https://services.gradle.org/versions/current | python3 -c "import sys,json; print('::notice title=gradle::stable=' + json.load(sys.stdin)['version'])"
