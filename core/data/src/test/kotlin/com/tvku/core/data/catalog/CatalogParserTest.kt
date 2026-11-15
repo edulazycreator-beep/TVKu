@@ -21,10 +21,10 @@ class CatalogParserTest {
         val text = """
             {"schema":1,"channels":[
               {"id":"bad-yt","name":"Bad","country":"ID","sources":[{"type":"youtube_live","youtube_channel_id":"@handle"}]},
-              {"id":"bad-link","name":"Bad","country":"ID","sources":[{"type":"official_link","url":"http://x.id","platform":"X"}]},
+              {"id":"bad-link","name":"Bad","country":"ID","sources":[{"type":"official_link","url":"http://x.id","platform":"Xtv"}]},
               {"id":"future","name":"Future","country":"ID","sources":[{"type":"hls","url":"https://x.id/a.m3u8"}]},
-              {"id":"Bad Id","name":"X","country":"ID","sources":[{"type":"official_link","url":"https://x.id","platform":"X"}]},
-              {"id":"ok","name":"Ok","country":"ID","sources":[{"type":"hls"},{"type":"official_link","url":"https://x.id","platform":"X"}]}
+              {"id":"Bad Id","name":"X","country":"ID","sources":[{"type":"official_link","url":"https://x.id","platform":"Xtv"}]},
+              {"id":"ok","name":"Ok","country":"ID","sources":[{"type":"hls"},{"type":"official_link","url":"https://x.id","platform":"Xtv"}]}
             ]}
         """.trimIndent()
         val channels = CatalogParser.parse(text)
