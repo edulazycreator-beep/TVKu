@@ -1,0 +1,63 @@
+name: Dependency versions
+
+# Reports the latest stable versions of the toolchain straight from the
+# official Maven repositories, as annotations on the run. Used to keep
+# gradle/libs.versions.toml current without guessing.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [".github/workflows/dependency-versions.yml"]
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Query maven-metadata
+        shell: python
+        run: |
+          import re, urllib.request
+          G = "https://dl.google.com/dl/android/maven2/"
+          C = "https://repo.maven.apache.org/maven2/"
+          P = "https://plugins.gradle.org/m2/"
+          artifacts = {
+            "agp": G + "com/android/tools/build/gradle",
+            "compose-bom": G + "androidx/compose/compose-bom",
+            "media3": G + "androidx/media3/media3-exoplayer",
+            "activity-compose": G + "androidx/activity/activity-compose",
+            "lifecycle": G + "androidx/lifecycle/lifecycle-runtime-compose",
+            "navigation-compose": G + "androidx/navigation/navigation-compose",
+            "core-ktx": G + "androidx/core/core-ktx",
+            "core-splashscreen": G + "androidx/core/core-splashscreen",
+            "room": G + "androidx/room/room-runtime",
+            "datastore": G + "androidx/datastore/datastore-preferences",
+            "hilt-navigation-compose": G + "androidx/hilt/hilt-navigation-compose",
+            "hilt-lifecycle-viewmodel-compose": G + "androidx/hilt/hilt-lifecycle-viewmodel-compose",
+            "junit-ext": G + "androidx/test/ext/junit",
+            "kotlin": C + "org/jetbrains/kotlin/kotlin-gradle-plugin",
+            "ksp": C + "com/google/devtools/ksp/symbol-processing-gradle-plugin",
+            "hilt": C + "com/google/dagger/hilt-android",
+            "coroutines": C + "org/jetbrains/kotlinx/kotlinx-coroutines-core",
+            "serialization": C + "org/jetbrains/kotlinx/kotlinx-serialization-json",
+            "okhttp": C + "com/squareup/okhttp3/okhttp",
+            "coil": C + "io/coil-kt/coil3/coil-compose",
+            "turbine": C + "app/cash/turbine/turbine",
+            "robolectric": C + "org/robolectric/robolectric",
+            "gradle-foojay": P + "org/gradle/toolchains/foojay-resolver-convention/org.gradle.toolchains.foojay-resolver-convention.gradle.plugin",
+          }
+          unstable = re.compile(r"(alpha|beta|rc|dev|eap|-M\d|snapshot|preview)", re.I)
+          for name, base in artifacts.items():
+            try:
+              xml = urllib.request.urlopen(base + "/maven-metadata.xml", timeout=30).read().decode()
+              versions = re.findall(r"<version>([^<]+)</version>", xml)
+              stable = [v for v in versions if not unstable.search(v)]
+              print(f"::notice title={name}::stable={stable[-1] if stable else '-'} latest={versions[-1]}")
+            except Exception as e:
+              print(f"::warning title={name}::{e}")
+      - name: Gradle releases
+        run: |
+          curl -s https://services.gradle.org/versions/current | python3 -c "import sys,json; print('::notice title=gradle::stable=' + json.load(sys.stdin)['version'])"
