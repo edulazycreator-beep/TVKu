@@ -1,6 +1,6 @@
 # TVKu — Arsitektur & Roadmap Pengembangan
 
-Versi 1.2 · 15 November 2026 · Status: **M1 ✅ · M2 ✅ (APK debug di-build CI, 16 unit test lulus) · berikutnya M3 (player)**
+Versi 1.3 · 15 November 2026 · Status: **M1 ✅ · M2 ✅ · Katalog sementara + player YouTube live ✅ (41 unit test Android lulus) · berikutnya: Supabase online, Media3 (M3)**
 Repo: https://github.com/edulazycreator-beep/TVKu
 
 ---
@@ -90,6 +90,19 @@ Keputusan teknis Android:
 - **Toolchain (diverifikasi dari repositori Maven resmi via `.github/workflows/dependency-versions.yml`, 15 Nov 2026):** Gradle 9.9.1, AGP 9.5.1 (Kotlin bawaan AGP), Kotlin 2.4.21, KSP 2.3.14, Hilt 2.60.1, Compose BOM 2026.09.00, Media3 1.11.1, compileSdk/targetSdk 37, JDK 21.
 - **Satu instance ExoPlayer** dikelola `PlayerManager` berumur proses, dilepas saat tidak dipakai — mencegah multi-instance dan kebocoran memori.
 - Status pemutar adalah *state machine* eksplisit: `Idle → Connecting → Buffering ⇄ Playing → RecoverableError → (retry backoff) → Unavailable / GeoRestricted / UnsupportedFormat`. Badge **LIVE** hanya tampil saat `Player.isPlaying == true` dan frame pertama sudah dirender.
+
+### 2.1a Katalog sementara (sebelum Supabase online)
+
+Supaya aplikasi sudah bisa dipakai tanpa backend dan tanpa API key:
+- `scripts/catalog/build_catalog.py` membangun `catalog-v1.json` dari `scripts/database-import/curated_sources.json`.
+- Yang masuk hanya sumber yang **disetujui pemilik produk**, dan hanya dua jenis:
+  - `youtube_live`: channel YouTube resmi milik penyiar, diputar lewat player resmi YouTube (`/embed/live_stream?channel=`).
+  - `official_link`: tautan ke platform milik penyiar sendiri.
+- Workflow `Catalog` menerbitkan file itu sebagai release asset `catalog` dan mengecek tautan resmi setiap 6 jam. Hasil pengecekan dicatat apa adanya, tidak dikarang.
+- Aplikasi (`core:data`) mengunduh lewat HTTPS, memvalidasi isinya dengan ketat, lalu menyimpan salinan terakhir yang valid untuk dipakai saat offline.
+- Status "LIVE" di player hanya tampil saat YouTube melaporkan video benar-benar sedang diputar.
+
+Stream HLS/DASH **tidak** diterbitkan lewat katalog ini sampai validator pemutaran Media3 (M5) berjalan. Saat Supabase online, `CatalogFetcher` diganti ke endpoint `/v1/channels` tanpa mengubah UI.
 
 ### 2.2 Backend
 
