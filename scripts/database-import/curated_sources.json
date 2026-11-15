@@ -1,35 +1,225 @@
 {
-  "_comment": "Hand-curated leads. Every entry is imported as DISCOVERED / UNREVIEWED and is never shown in the app until it passes validation AND an admin approves the licensing. 'handle_confirmed' says whether the YouTube handle was confirmed from an independent public listing; unconfirmed handles are resolved and pinned by the validator and must be checked by the admin during review.",
+  "_comment": "Hand-curated leads. Every entry is imported as DISCOVERED / UNREVIEWED and is never shown in the app until it passes validation AND an admin approves the licensing. 'handle_confirmed' says whether the YouTube handle was confirmed from an independent public listing; unconfirmed handles are resolved and pinned by the validator and must be checked by the admin during review. kind 'link' = channel is only streamed inside the broadcaster's own platform (login/DRM/region); TVKu only opens that official page, it never plays or embeds it.",
   "sources": [
     {
-      "key": "kompastv", "channel_name": "KompasTV", "country": "ID", "category": "news", "languages": ["ind"],
-      "kind": "youtube", "channel_ref": "@kompastv", "handle_confirmed": true,
+      "key": "kompastv",
+      "channel_name": "KompasTV",
+      "country": "ID",
+      "category": "news",
+      "languages": [
+        "ind"
+      ],
+      "kind": "youtube",
+      "channel_ref": "@kompastv",
+      "handle_confirmed": true,
       "evidence": "Handle @kompastv listed for KOMPASTV by Socialblade and HypeAuditor; Kompas TV says it streams on its official YouTube channel."
     },
     {
-      "key": "metrotv", "channel_name": "Metro TV", "country": "ID", "category": "news", "languages": ["ind"],
-      "kind": "youtube", "channel_ref": "@metrotvnews", "handle_confirmed": true,
+      "key": "metrotv",
+      "channel_name": "Metro TV",
+      "country": "ID",
+      "category": "news",
+      "languages": [
+        "ind"
+      ],
+      "kind": "youtube",
+      "channel_ref": "@metrotvnews",
+      "handle_confirmed": true,
       "evidence": "Handle @metrotvnews listed for METRO TV by HypeAuditor; Metro TV broadcast area includes worldwide via YouTube."
     },
     {
-      "key": "metrotv", "channel_name": "Metro TV", "country": "ID", "category": "news", "languages": ["ind"],
-      "kind": "hls", "url": "https://edge.medcom.id/live-edge/smil:metro.smil/playlist.m3u8",
+      "key": "metrotv",
+      "channel_name": "Metro TV",
+      "country": "ID",
+      "category": "news",
+      "languages": [
+        "ind"
+      ],
+      "kind": "hls",
+      "url": "https://edge.medcom.id/live-edge/smil:metro.smil/playlist.m3u8",
       "evidence": "Served from medcom.id, the Media Group digital property that carries Metro TV (metrotvnews) branding; stream listed in iptv-org."
     },
     {
-      "key": "inews", "channel_name": "iNews", "country": "ID", "category": "news", "languages": ["ind"],
-      "kind": "youtube", "channel_ref": "@OfficialiNews", "handle_confirmed": true,
+      "key": "inews",
+      "channel_name": "iNews",
+      "country": "ID",
+      "category": "news",
+      "languages": [
+        "ind"
+      ],
+      "kind": "youtube",
+      "channel_ref": "@OfficialiNews",
+      "handle_confirmed": true,
       "evidence": "Handle @OfficialiNews listed for Official iNews by HypeAuditor."
     },
     {
-      "key": "tvone", "channel_name": "tvOne", "country": "ID", "category": "news", "languages": ["ind"],
-      "kind": "youtube", "channel_ref": "@tvOneNews", "handle_confirmed": false,
+      "key": "tvone",
+      "channel_name": "tvOne",
+      "country": "ID",
+      "category": "news",
+      "languages": [
+        "ind"
+      ],
+      "kind": "youtube",
+      "channel_ref": "@tvOneNews",
+      "handle_confirmed": false,
       "evidence": "tvOneNews is listed as the official tvOne YouTube channel by Feedspot; handle not independently confirmed."
     },
     {
-      "key": "cnnindonesia", "channel_name": "CNN Indonesia", "country": "ID", "category": "news", "languages": ["ind"],
-      "kind": "youtube", "channel_ref": "@CNNIndonesiaOfficial", "handle_confirmed": false,
+      "key": "cnnindonesia",
+      "channel_name": "CNN Indonesia",
+      "country": "ID",
+      "category": "news",
+      "languages": [
+        "ind"
+      ],
+      "kind": "youtube",
+      "channel_ref": "@CNNIndonesiaOfficial",
+      "handle_confirmed": false,
       "evidence": "CNN Indonesia streams live on YouTube; handle not independently confirmed."
+    },
+    {
+      "key": "rcti",
+      "channel_name": "RCTI",
+      "country": "ID",
+      "category": "entertainment",
+      "languages": [
+        "ind"
+      ],
+      "kind": "link",
+      "url": "https://www.rctiplus.com/tv/rcti",
+      "platform": "RCTI+",
+      "evidence": "Listed as the official live page in VCGamers' 'cara nonton TV di laptop' guide."
+    },
+    {
+      "key": "mnctv",
+      "channel_name": "MNCTV",
+      "country": "ID",
+      "category": "entertainment",
+      "languages": [
+        "ind"
+      ],
+      "kind": "link",
+      "url": "https://www.rctiplus.com/tv/mnctv",
+      "platform": "RCTI+",
+      "evidence": "Listed as the official live page in VCGamers' 'cara nonton TV di laptop' guide."
+    },
+    {
+      "key": "gtv",
+      "channel_name": "GTV",
+      "country": "ID",
+      "category": "entertainment",
+      "languages": [
+        "ind"
+      ],
+      "kind": "link",
+      "url": "https://www.rctiplus.com/tv/gtv",
+      "platform": "RCTI+",
+      "evidence": "Listed as the official live page in VCGamers' 'cara nonton TV di laptop' guide."
+    },
+    {
+      "key": "sctv",
+      "channel_name": "SCTV",
+      "country": "ID",
+      "category": "entertainment",
+      "languages": [
+        "ind"
+      ],
+      "kind": "link",
+      "url": "https://www.sctv.co.id/live-streaming/",
+      "platform": "SCTV",
+      "evidence": "Listed as the official live page in VCGamers' 'cara nonton TV di laptop' guide."
+    },
+    {
+      "key": "indosiar",
+      "channel_name": "Indosiar",
+      "country": "ID",
+      "category": "entertainment",
+      "languages": [
+        "ind"
+      ],
+      "kind": "link",
+      "url": "https://www.vidio.com/live/indosiar",
+      "platform": "Vidio",
+      "evidence": "Listed as the official live link in JournalArta's 2026 legal TV streaming list."
+    },
+    {
+      "key": "antv",
+      "channel_name": "ANTV",
+      "country": "ID",
+      "category": "entertainment",
+      "languages": [
+        "ind"
+      ],
+      "kind": "link",
+      "url": "https://www.antvklik.com",
+      "platform": "ANTV Klik",
+      "evidence": "Listed as the official live link in JournalArta's 2026 legal TV streaming list."
+    },
+    {
+      "key": "transtv",
+      "channel_name": "Trans TV",
+      "country": "ID",
+      "category": "entertainment",
+      "languages": [
+        "ind"
+      ],
+      "kind": "link",
+      "url": "https://www.transtv.co.id/live",
+      "platform": "Trans TV",
+      "evidence": "Listed as the official live page in VCGamers' 'cara nonton TV di laptop' guide."
+    },
+    {
+      "key": "trans7",
+      "channel_name": "Trans7",
+      "country": "ID",
+      "category": "entertainment",
+      "languages": [
+        "ind"
+      ],
+      "kind": "link",
+      "url": "https://www.trans7.co.id/live-streaming",
+      "platform": "Trans7",
+      "evidence": "Listed as the official live page in VCGamers' 'cara nonton TV di laptop' guide."
+    },
+    {
+      "key": "nettv",
+      "channel_name": "NET TV",
+      "country": "ID",
+      "category": "entertainment",
+      "languages": [
+        "ind"
+      ],
+      "kind": "link",
+      "url": "https://www.netmedia.co.id/live-streaming",
+      "platform": "NET",
+      "evidence": "Listed as the official live page in VCGamers' 'cara nonton TV di laptop' guide."
+    },
+    {
+      "key": "btv",
+      "channel_name": "BTV (BeritaSatu)",
+      "country": "ID",
+      "category": "news",
+      "languages": [
+        "ind"
+      ],
+      "kind": "link",
+      "url": "https://www.beritasatu.com/btv-live-streaming",
+      "platform": "BeritaSatu",
+      "evidence": "Listed as the official live page in VCGamers' 'cara nonton TV di laptop' guide."
+    },
+    {
+      "key": "tvrisport",
+      "channel_name": "TVRI Sport",
+      "country": "ID",
+      "category": "sports",
+      "languages": [
+        "ind"
+      ],
+      "kind": "link",
+      "url": "https://www.tvri.go.id/live",
+      "platform": "TVRI",
+      "evidence": "TVRI's public live page (tvri.go.id/live) carries TVRI Sport per JournalArta; TVRI is the public broadcaster. Note: some events may be blocked on web streams for rights reasons."
     }
   ]
 }

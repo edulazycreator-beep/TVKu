@@ -20,4 +20,16 @@ sealed interface PlaybackSource {
             val VIDEO_ID = Regex("^[A-Za-z0-9_-]{11}$")
         }
     }
+
+    /**
+     * Channel that is streamed only inside the broadcaster's own platform
+     * (e.g. Vidio, RCTI+). TVKu does not play it; it opens the official page,
+     * which Android hands to the platform's app when it is installed.
+     */
+    data class ExternalLink(val url: String, val platformName: String) : PlaybackSource {
+        init {
+            require(url.startsWith("https://") && url.length <= 2048 && url.none { it.isWhitespace() }) { "official links must be https" }
+            require(platformName.length in 2..60) { "platform name required" }
+        }
+    }
 }

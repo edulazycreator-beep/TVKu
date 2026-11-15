@@ -107,6 +107,10 @@ def main() -> None:
             streams.append({"key": key, "url": url, "format": "YOUTUBE_EMBED", "embed_ref": ref,
                             "source_name": "Official YouTube channel" + ("" if s.get("handle_confirmed") else " (handle unconfirmed)"),
                             "source_url": url, "notes": s["evidence"]})
+        elif s["kind"] == "link":
+            streams.append({"key": key, "url": s["url"], "format": "EXTERNAL_LINK", "embed_ref": None,
+                            "platform": s["platform"], "source_name": f"Official platform: {s['platform']}",
+                            "source_url": s["url"], "notes": s["evidence"]})
         else:
             streams.append({"key": key, "url": s["url"], "format": stream_format(s["url"]), "embed_ref": None,
                             "source_name": "Curated lead", "source_url": None, "notes": s["evidence"]})
@@ -144,13 +148,13 @@ def main() -> None:
         "join public.channels ch on ch.external_source = v.src and ch.external_id = v.ext",
         "on conflict do nothing;",
         "",
-        "insert into public.streams (channel_id, stream_url, stream_format, source_name, source_url, embed_provider, embed_channel_ref)",
-        "select ch.id, v.url, v.fmt::public.stream_format, v.source_name, v.source_url, v.provider, v.ref from (values",
+        "insert into public.streams (channel_id, stream_url, stream_format, source_name, source_url, embed_provider, embed_channel_ref, external_platform)",
+        "select ch.id, v.url, v.fmt::public.stream_format, v.source_name, v.source_url, v.provider, v.ref, v.platform from (values",
         ",\n".join(
             f"  ({q(s['key'][0])}, {q(s['key'][1])}, {q(s['url'])}, {q(s['format'])}, {q(s['source_name'][:200])}, "
-            f"{q(s['source_url'])}, {q('youtube' if s['embed_ref'] else None)}, {q(s['embed_ref'])})"
+            f"{q(s['source_url'])}, {q('youtube' if s['embed_ref'] else None)}, {q(s['embed_ref'])}, {q(s.get('platform'))})"
             for s in streams),
-        ") as v(src, ext, url, fmt, source_name, source_url, provider, ref)",
+        ") as v(src, ext, url, fmt, source_name, source_url, provider, ref, platform)",
         "join public.channels ch on ch.external_source = v.src and ch.external_id = v.ext",
         "on conflict do nothing;",
         "commit;",

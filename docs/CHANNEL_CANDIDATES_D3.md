@@ -1,77 +1,112 @@
 # D3 — Kandidat Channel untuk Review Izin
 
-Versi 1 · 15 November 2026 · Sumber data: iptv-org (`index.m3u` + database), diambil hari ini dari raw.githubusercontent.com
-Skrip: `scripts/stream-discovery/discover_iptv_org.py` (bisa dijalankan ulang kapan saja)
+Versi 3 · 15 November 2026 · Sumber: iptv-org (`index.m3u` + database) dan daftar kurasi TVKu
+Skrip: `scripts/stream-discovery/discover_iptv_org.py` → `scripts/database-import/build_candidate_seed.py`
 
-> **Penting.** Dokumen ini berisi **petunjuk untuk review**, bukan daftar channel yang disetujui. Belum ada satu pun channel yang diuji pemutarannya (validator Tier B dibangun di M5) dan belum ada satu pun yang izinnya disetujui. Status semua kandidat di database tetap `DISCOVERED` / `UNREVIEWED` sampai Anda memutuskan.
+> **Penting.** Isinya adalah **petunjuk untuk direview**, bukan channel yang sudah disetujui. Semua kandidat masuk ke database sebagai `DISCOVERED` / `UNREVIEWED`, dengan channel dalam keadaan nonaktif. Tes otomatis (`test_candidate_seed.sql`) memastikan tidak satu pun kandidat yang tampil di aplikasi. Channel baru muncul setelah lolos pemeriksaan **dan** izinnya Anda setujui.
 
 ---
 
-## 1. Hasil discovery otomatis
+## 1. Tiga cara TVKu menampilkan channel
 
-| Kategori | Jumlah entri | Arti |
+| Jenis | Cara kerja di aplikasi | Bukti teknis yang dibutuhkan | Contoh |
+|---|---|---|---|
+| **Stream langsung** (HLS/DASH) | Diputar di player TVKu (Media3) | Tier B: diputar ≥ 60 detik, video dan audio terdekode, reconnect berhasil | TVRI regional, Metro TV |
+| **Embed YouTube resmi** | Player resmi YouTube di dalam TVKu | YouTube Data API: channel benar, sedang live, embed diizinkan | KompasTV, iNews, tvOne |
+| **Tautan platform resmi** | TVKu membuka aplikasi atau situs resmi (Vidio, RCTI+, dll.) | Halaman resmi merespons HTTP 2xx/3xx | Indosiar, SCTV, ANTV, RCTI |
+
+Ketiganya tetap harus melewati review izin oleh Anda. Di aplikasi, tautan platform resmi diberi label jelas, misalnya "Tonton di Vidio", dan tidak pernah ditampilkan seolah diputar di TVKu.
+
+---
+
+## 2. Hasil discovery
+
+| Kategori | Entri | Keterangan |
 |---|---:|---|
-| Total entri playlist iptv-org | **11.502** | Semua URL unik |
-| ❌ Lewat layanan redirect pihak ketiga (mis. `jmp2.uk`) | 1.170 | Bukan sumber penyiar; tidak diimpor |
-| ❌ Butuh User-Agent / Referer palsu | 830 | Indikasi stream dilindungi; tidak diimpor |
-| ❌ URL berisi token / tanda tangan / kedaluwarsa | 120 | Link bertoken; dilarang oleh aturan proyek |
-| ❌ Channel sudah tutup | 71 | — |
-| ❌ Protokol tak didukung (RTMP, RTSP, SRT, MMS) | 15 | Tidak bisa diputar aplikasi |
-| ⚠️ Perlu bukti manual | 8.612 | Host stream bukan domain penyiar (CDN atau pihak ketiga). Bisa resmi (mis. DW di Akamai), bisa juga relay tidak sah. Tidak bisa dibedakan otomatis. |
-| ✅ **Kandidat domain resmi** | **684** | Host stream berada di domain situs resmi penyiar itu sendiri |
+| Total entri iptv-org | **11.502** | |
+| ❌ Host berupa alamat IP mentah | 1.407 | Termasuk relay RCTI, SCTV, Indosiar, GTV, dan TVRI |
+| ❌ Lewat layanan redirect pihak ketiga | 1.170 | |
+| ❌ Butuh User-Agent atau Referer palsu | 830 | |
+| ❌ Host relay yang dikenal | 422 | |
+| ❌ Link bertoken atau berkedaluwarsa | 95 | |
+| ❌ Channel sudah tutup / protokol tidak didukung | 86 | |
+| ❌ **Hak siar berbayar atau acara** (ESPN, beIN, DAZN, F1, NHL, NBA, dll.) | 14 | Tidak dimasukkan dengan cara apa pun |
+| ⚠️ Perlu bukti manual | 6.478 | |
+| ✅ **Kandidat stream** | **1.000** | 682 di domain resmi, 310 di domain bermerek, 8 di domain pemerintah |
 
-Dari 684 kandidat: **623 HTTPS**, **616 channel**, **104 negara**. Daftar lengkap ada di file `review_candidates.csv` (dikirim terpisah, tidak di-commit ke repo publik).
-
-"Domain resmi" adalah **sinyal teknis terkuat yang bisa dideteksi otomatis**, tetapi **bukan izin**. Penyiar bisa saja menyediakan stream hanya untuk pemutar di situsnya sendiri, hanya untuk penonton dalam negeri, atau melarang penggunaan ulang di aplikasi pihak ketiga.
-
----
-
-## 2. Shortlist yang disarankan untuk direview lebih dulu
-
-Dipilih dari kandidat domain resmi + penyiar internasional yang diketahui menyiarkan gratis ke seluruh dunia. Kolom "Langkah izin" adalah apa yang perlu dilakukan sebelum status bisa diubah ke `OFFICIAL_PUBLIC_SOURCE` atau `EXPLICIT_PERMISSION`.
-
-### Prioritas A — penyiar internasional (target audiens global)
-
-| Channel | Negara | Bukti teknis | Langkah izin |
-|---|---|---|---|
-| France 24 (AR, ES) | FR | Stream di `live.france24.com` | Baca syarat penggunaan France Médias Monde; hubungi tim distribusi untuk izin tertulis penggunaan di aplikasi |
-| TV5Monde | FR | `ott.tv5monde.com` | Cek syarat; feed ini berlabel "France/Belgium/Switzerland/Monaco", kemungkinan dibatasi wilayah |
-| Al Arabiya, Al Arabiya Business | AE | `live.alarabiya.net` | Cek syarat penggunaan / minta izin ke MBC Group |
-| Asharq News | SA | `live-news.asharq.com` | Cek syarat / minta izin |
-| Sky News Arabia | AE | `stream.skynewsarabia.com` | Cek syarat / minta izin |
-| TVE Internacional (America / Asia-Oceania / Europe) | ES | `rtvelivestream*.rtve.es` | Feed internasional RTVE; cek syarat RTVE Play |
-| CGTN Spanish / Russian | CN | `*.cgtn.com` | Path URL berisi string panjang; perlu dicek apakah itu token sesi. Cek syarat CGTN |
-
-**Perlu bukti manual (bukan di domain sendiri, tapi penyiar internasional yang terkenal gratis):** DW, Al Jazeera English, NHK World-Japan, TRT World, Euronews, Arirang, CNA. Stream mereka umumnya di CDN (Akamai, dll.), jadi untuk masing-masing perlu dicatat bukti bahwa URL itu memang yang dipakai halaman live resmi mereka, lalu izinnya diperiksa.
-
-### Prioritas B — relevan untuk Asia Tenggara
-
-| Channel | Negara | Bukti teknis | Langkah izin |
-|---|---|---|---|
-| TVRI (30 feed: nasional dan regional) | ID | `ott-balancer.tvri.go.id` (domain pemerintah) | Lembaga Penyiaran Publik; minta izin tertulis ke TVRI untuk penggunaan di aplikasi |
-| Thai Parliament Television | TH | `tv-live.tpchannel.org` | Siaran parlemen; cek syarat |
-
-Untuk Brunei (RTB) tidak ditemukan kandidat domain resmi di data iptv-org; perlu dicari manual jika diinginkan.
-
-### Prioritas C — penyiar publik domestik (kemungkinan dibatasi wilayah atau lisensi)
-
-ARD-alpha, NDR (DE), La 1 / La 2 / 24 Horas (ES), stasiun anggota PBS (US). Stream di domain sendiri, tetapi umumnya ditujukan untuk penonton dalam negeri dan memuat program berlisensi. **Disarankan tidak diprioritaskan** kecuali ada izin tertulis.
-
-### Disarankan dikecualikan
-
-- **Stream promosi / acara olahraga** (mis. "Formula 1 AntenaPlay", "NHL AntenaPlay"): hak siar olahraga, risiko tinggi.
-- **Radio** (RNE, Radio 3, Fox News Radio): bukan channel TV.
-- **Media yang terkena sanksi atau larangan siar di sejumlah yurisdiksi** (beberapa media negara Rusia dan Iran ada di daftar kandidat): perlu cek hukum khusus; disarankan dikecualikan dari rilis pertama.
+Ditambah 22 entri kurasi, database diisi **1.016 channel** dan **1.017 sumber**.
 
 ---
 
-## 3. Alur dari kandidat ke channel publik
+## 3. Indonesia
 
-1. **Impor** kandidat ke database → `DISCOVERED` / `UNREVIEWED` (importer dibuat di M4; tidak ada yang tampil di aplikasi).
-2. **Validasi teknis** otomatis (M5): Tier A (HTTP, manifest, segmen) → Tier B (Media3, ≥ 60 detik, video + audio terdekode, reconnect) → `VERIFIED` hanya jika semuanya lolos.
-3. **Review izin** oleh Anda di dashboard admin (M9), dengan catatan bukti wajib → `OFFICIAL_PUBLIC_SOURCE` atau `EXPLICIT_PERMISSION`.
-4. Channel tampil di aplikasi **hanya** jika langkah 2 dan 3 sama-sama terpenuhi.
+### Stream langsung — 44 kandidat
+- **TVRI**: 30 feed regional dan nasional, ditambah TVRI World (domain pemerintah `tvri.go.id`).
+- **RRI Net** (`rri.go.id`) dan **Metro TV** (`edge.medcom.id`, Media Group).
+- Domain bermerek nama channel: Jogja TV, Rodja TV, DAAI TV, Lingkar TV, Rinjani TV.
+- Domain situs resmi: Al-Iman TV, Salira TV, Dens Food Channel, Biznet Adventure/Kids/Lifestyle.
+- TVKU Semarang (lihat bagian 6).
 
-## 4. Keputusan yang masih terbuka
+### Embed YouTube resmi — 5
+| Channel | Handle | Status handle |
+|---|---|---|
+| KompasTV | `@kompastv` | ✅ terkonfirmasi (Socialblade, HypeAuditor) |
+| Metro TV | `@metrotvnews` | ✅ terkonfirmasi (HypeAuditor) |
+| iNews | `@OfficialiNews` | ✅ terkonfirmasi (HypeAuditor) |
+| tvOne | `@tvOneNews` | ⚠️ belum terkonfirmasi |
+| CNN Indonesia | `@CNNIndonesiaOfficial` | ⚠️ belum terkonfirmasi |
 
-**D5 — Stream HTTP (tanpa enkripsi).** 2.394 dari 11.502 entri iptv-org memakai HTTP. Aplikasi saat ini **hanya mengizinkan HTTPS**. Di shortlist, hampir semua kandidat sudah HTTPS (623 dari 684), jadi rekomendasinya: **tetap HTTPS-only** untuk rilis pertama.
+### Tautan platform resmi — 11 (TV swasta besar)
+| Channel | Dibuka di | URL resmi |
+|---|---|---|
+| Indosiar | Vidio | `vidio.com/live/indosiar` |
+| SCTV | SCTV | `sctv.co.id/live-streaming/` |
+| ANTV | ANTV Klik | `antvklik.com` |
+| RCTI, MNCTV, GTV | RCTI+ | `rctiplus.com/tv/…` |
+| Trans TV | Trans TV | `transtv.co.id/live` |
+| Trans7 | Trans7 | `trans7.co.id/live-streaming` |
+| NET TV | NET | `netmedia.co.id/live-streaming` |
+| BTV | BeritaSatu | `beritasatu.com/btv-live-streaming` |
+| TVRI Sport | TVRI | `tvri.go.id/live` |
+
+**Mengapa Indosiar, SCTV, ANTV, RCTI, dan sejenisnya tidak bisa diputar langsung di TVKu:**
+- Live streaming resmi mereka hanya ada di platform milik grup masing-masing: Vidio (Emtek), RCTI+/MNC Now (MNC), dan situs Trans Media.
+- Platform tersebut memakai login, DRM, dan pembatasan wilayah.
+- Satu-satunya stream yang bisa diputar langsung di iptv-org berasal dari relay alamat IP tanpa izin.
+
+Memutar atau meng-embed siaran mereka di dalam TVKu butuh **perjanjian kerja sama** dengan grup media terkait. Sampai ada kerja sama, tautan ke platform resmi adalah cara yang legal.
+
+---
+
+## 4. Olahraga
+
+| Sumber | Jenis | Catatan |
+|---|---|---|
+| **TVRI Sport** | Tautan resmi (`tvri.go.id/live`) | Penyiar publik. Acara tertentu bisa diblokir di siaran web karena hak siar. |
+| MNB Sport (MN), TDM Sports (MO) | Stream | Penyiar publik, domain sendiri |
+| TJK TV 1/2 (TR), Trace Sport Stars (FR), Sportitalia Solocalcio, TR Sport (IT), dll. | Stream | Hak siar perlu dicek satu per satu |
+| MRTV Sports (MM) | Stream | ⚠️ Penyiar negara Myanmar; perlu cek sanksi. Disarankan dikecualikan. |
+
+ESPN, beIN, DAZN, TNT Sports, Eurosport, Fox Sports, serta stream acara seperti F1, NHL, dan NBA **dikecualikan otomatis**. Embed tidak mengubah status hukumnya.
+
+---
+
+## 5. Yang dibutuhkan untuk menjalankan pemeriksaan
+
+- **YouTube Data API key** sebagai GitHub Secret `YOUTUBE_API_KEY`. Satu pemeriksaan memakai 3 unit kuota.
+- **Proyek Supabase** untuk menyimpan hasil pemeriksaan dan mengaktifkan katalog.
+
+---
+
+## 6. Temuan penting: nama "TVKU" sudah dipakai
+
+Ada stasiun TV lokal bernama **TVKU** di Semarang (`tvku.tv`). Sebelum rilis di Play Store, sebaiknya cek apakah nama "TVKu" terdaftar sebagai merek di PDKI (pdki-indonesia.dgip.go.id).
+
+---
+
+## 7. Alur dari kandidat ke channel publik
+
+1. **Seed** (sudah ada): semua sumber masuk sebagai `DISCOVERED` / `UNREVIEWED`, channel nonaktif.
+2. **Pemeriksaan otomatis** sesuai jenis sumber (bagian 1). Status `VERIFIED` hanya diberikan berdasarkan bukti.
+3. **Review izin** oleh Anda dengan catatan bukti.
+4. **Aktifkan** channel → tampil di aplikasi.
