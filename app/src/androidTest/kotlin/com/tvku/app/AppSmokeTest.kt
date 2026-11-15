@@ -75,11 +75,12 @@ class AppSmokeTest {
         clickText("KompasTV")
         SystemClock.sleep(8_000)
         shot("04-player-8s")
-        SystemClock.sleep(30_000)
-        shot("05-player-38s")
+        SystemClock.sleep(15_000)
+        shot("05-player-23s")
         val playerTexts = visibleTexts()
         Log.i(TAG, "player texts: $playerTexts")
         if (playerTexts.any { it.contains("Channel not available") }) fail("player could not find the channel: $playerTexts")
+        if (playerTexts.none { it == "Watch on YouTube" }) fail("YouTube fallback action missing: $playerTexts")
     }
 
     private companion object {

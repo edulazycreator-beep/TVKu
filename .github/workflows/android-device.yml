@@ -46,6 +46,7 @@ jobs:
           arch: x86_64
           target: google_apis
           disable-animations: true
+          ram-size: 4096M
           emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           script: ./scripts/ci/device_tests.sh
 

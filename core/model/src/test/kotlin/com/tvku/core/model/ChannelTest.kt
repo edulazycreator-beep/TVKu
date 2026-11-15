@@ -17,6 +17,14 @@ class ChannelTest {
         assertNull(channel(link).playable)
     }
 
+    @Test
+    fun `youtube live page points at the official channel`() {
+        assertEquals(
+            "https://www.youtube.com/channel/UC5BMIWZe9isJXLZZWPWvBlg/live",
+            ChannelSource.YouTubeLive("UC5BMIWZe9isJXLZZWPWvBlg").livePageUrl,
+        )
+    }
+
     @Test(expected = IllegalArgumentException::class)
     fun `youtube channel id is validated`() {
         ChannelSource.YouTubeLive("@kompastv")

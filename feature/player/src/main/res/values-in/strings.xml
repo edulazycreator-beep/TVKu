@@ -12,9 +12,10 @@
     <string name="player_status_paused">Dijeda.</string>
     <string name="player_status_ended">Siaran live telah berakhir.</string>
     <string name="player_status_not_live">Channel ini sedang tidak siaran live.</string>
-    <string name="player_status_embed_not_allowed">Penyiar tidak mengizinkan siaran ini diputar di luar YouTube.</string>
+    <string name="player_status_embed_not_allowed">YouTube saat ini tidak mengizinkan siaran ini diputar di dalam TVKu. Anda bisa menontonnya di YouTube.</string>
     <string name="player_status_identity">YouTube tidak dapat memverifikasi player. Silakan perbarui TVKu.</string>
     <string name="player_status_error">Player tidak dapat memutar siaran ini.</string>
     <string name="player_status_timeout">Pemutaran belum dimulai. Channel mungkin sedang tidak live, atau koneksi lambat.</string>
     <string name="player_source_note">Ditampilkan dengan player resmi YouTube dari channel resmi penyiar. TVKu tidak menyimpan atau menyiarkan ulang video.</string>
+    <string name="player_open_youtube">Tonton di YouTube</string>
 </resources>

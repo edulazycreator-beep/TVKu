@@ -32,11 +32,15 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.tvku.core.designsystem.component.TvkuEmptyState
+import com.tvku.core.designsystem.component.TvkuPrimaryButton
 import com.tvku.core.designsystem.component.TvkuSecondaryButton
 import com.tvku.core.designsystem.component.TvkuTextButton
 import com.tvku.core.designsystem.theme.TvkuTheme
 import com.tvku.core.designsystem.R as DsR
+import androidx.compose.ui.platform.LocalContext
+import com.tvku.core.model.ChannelSource
 import com.tvku.core.player.embed.YouTubeLivePlayer
+import com.tvku.core.player.external.OfficialPlatformLauncher
 import com.tvku.core.player.embed.YouTubePlayerStatus
 import androidx.compose.ui.res.painterResource
 
@@ -44,7 +48,14 @@ import androidx.compose.ui.res.painterResource
 fun PlayerRoute(channelId: String, onBack: () -> Unit, viewModel: PlayerViewModel = hiltViewModel()) {
     LaunchedEffect(channelId) { viewModel.load(channelId) }
     val state by viewModel.state.collectAsStateWithLifecycle()
-    PlayerScreen(state = state, onStatus = viewModel::onStatus, onRetry = viewModel::retry, onBack = onBack)
+    val context = LocalContext.current
+    PlayerScreen(
+        state = state,
+        onStatus = viewModel::onStatus,
+        onRetry = viewModel::retry,
+        onBack = onBack,
+        onOpenYouTube = { url -> OfficialPlatformLauncher.open(context, ChannelSource.OfficialLink(url, "YouTube")) },
+    )
 }
 
 @Composable
@@ -53,6 +64,7 @@ internal fun PlayerScreen(
     onStatus: (YouTubePlayerStatus) -> Unit,
     onRetry: () -> Unit,
     onBack: () -> Unit,
+    onOpenYouTube: (url: String) -> Unit,
 ) {
     val channel = state.channel
     val source = channel?.playable
@@ -100,9 +112,15 @@ internal fun PlayerScreen(
                 color = if (state.status.isFinal || state.timedOut) TvkuTheme.colors.warning else TvkuTheme.colors.textSecondary,
                 modifier = Modifier.semantics { liveRegion = LiveRegionMode.Polite },
             )
-            if (state.status.isFinal || state.timedOut) {
-                Spacer(Modifier.height(TvkuTheme.spacing.md))
-                TvkuSecondaryButton(stringResource(R.string.player_retry), onClick = onRetry)
+            val failed = state.status.isFinal || state.timedOut
+            Spacer(Modifier.height(TvkuTheme.spacing.md))
+            Row(horizontalArrangement = Arrangement.spacedBy(TvkuTheme.spacing.sm)) {
+                if (failed) {
+                    TvkuPrimaryButton(stringResource(R.string.player_open_youtube), onClick = { onOpenYouTube(source.livePageUrl) })
+                    TvkuSecondaryButton(stringResource(R.string.player_retry), onClick = onRetry)
+                } else {
+                    TvkuTextButton(stringResource(R.string.player_open_youtube), onClick = { onOpenYouTube(source.livePageUrl) })
+                }
             }
             Spacer(Modifier.height(TvkuTheme.spacing.lg))
             Text(stringResource(R.string.player_source_note), style = TvkuTheme.typography.bodySmall, color = TvkuTheme.colors.textTertiary)

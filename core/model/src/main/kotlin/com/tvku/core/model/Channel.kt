@@ -36,6 +36,9 @@ sealed interface ChannelSource {
             require(CHANNEL_ID.matches(youtubeChannelId)) { "invalid YouTube channel id" }
         }
 
+        /** The channel's live page on YouTube itself (opens the YouTube app when installed). */
+        val livePageUrl: String get() = "https://www.youtube.com/channel/$youtubeChannelId/live"
+
         private companion object {
             val CHANNEL_ID = Regex("^UC[A-Za-z0-9_-]{22}$")
         }
