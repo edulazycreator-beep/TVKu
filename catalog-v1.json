@@ -1,0 +1,8202 @@
+{
+ "schema": 1,
+ "generated_at": "2026-11-28T07:37:28+00:00",
+ "publisher": "TVKu",
+ "notice": "Interim catalog. Streams come from broadcasters' own servers and passed TVKu's playback validation; other channels are official YouTube live channels or links to broadcasters' own platforms. TVKu does not host or re-stream any video. Broadcasters can request removal.",
+ "channels": [
+  {
+   "id": "24-horas-es",
+   "name": "24 Horas",
+   "country": "ES",
+   "category": "news",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://rtvelivestream.rtve.es/rtvesec/24h/24h_main_dvr.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "24-horas-catalunya-es",
+   "name": "24 Horas Catalunya",
+   "country": "ES",
+   "category": "news",
+   "languages": [
+    "cat",
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://rtvelivestream.rtve.es/rtvesec/cat/24h_cat_main_dvr.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "30a-georgia-hollywood-review-us",
+   "name": "30A Georgia Hollywood Review",
+   "country": "US",
+   "category": "news",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://30a-tv.com/gh.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "30a-investment-pitch-us",
+   "name": "30A Investment Pitch",
+   "country": "US",
+   "category": "news",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://30a-tv.com/feeds/xodglobal/30atv.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "afghanistan-international-gb",
+   "name": "Afghanistan International",
+   "country": "GB",
+   "category": "news",
+   "languages": [
+    "pus",
+    "ara",
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://hls.afintl.com/hls/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "al-arabiya-business-ae",
+   "name": "Al Arabiya Business",
+   "country": "AE",
+   "category": "news",
+   "languages": [
+    "ara"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.alarabiya.net/alarabiapublish/aswaaq.smil/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 240
+    }
+   ]
+  },
+  {
+   "id": "al-arabiya-programs-ae",
+   "name": "Al Arabiya Programs",
+   "country": "AE",
+   "category": "news",
+   "languages": [
+    "ara"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.alarabiya.net/alarabiapublish/aaprograms.smil/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "al-najah-news-ps",
+   "name": "Al Najah News",
+   "country": "PS",
+   "category": "news",
+   "languages": [
+    "ara"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://streaming.najah.edu:8443/hls/AlNajah.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "alarabiya-ae",
+   "name": "Alarabiya",
+   "country": "AE",
+   "category": "news",
+   "languages": [
+    "ara"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.alarabiya.net/alarabiapublish/alarabiya.smil/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "bloomberg-originals-us",
+   "name": "Bloomberg Originals",
+   "country": "US",
+   "category": "news",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://bloomberg.com/media-manifest/streams/qt.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "canal-i-ve",
+   "name": "Canal I",
+   "country": "VE",
+   "category": "news",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://streaming.canal-i.com/canal-i/live/master.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "cctv-2-cn",
+   "name": "CCTV+ 2",
+   "country": "CN",
+   "category": "news",
+   "languages": [
+    "zho"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL2.smil/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "cgtn-arabic-cn",
+   "name": "CGTN Arabic",
+   "country": "CN",
+   "category": "news",
+   "languages": [
+    "ara"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://arabic-liveali.cgtn.com/hls/LSveq57bErWLinBnxosqjisZ220802LSTefTAS9zc9mpU08y3np9TH220802cd/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "cgtn-russian-cn",
+   "name": "CGTN Russian",
+   "country": "CN",
+   "category": "news",
+   "languages": [
+    "rus"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://russian-liveali.cgtn.com/hls/LSvexABhNipibK5KRuUkvHZ7220802LSTeze9o8tdFXMHsb1VosgoT220802cd/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "cgtn-spanish-cn",
+   "name": "CGTN Spanish",
+   "country": "CN",
+   "category": "news",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://espanol-liveali.cgtn.com/hls/LSveOGBaBw41Ea7ukkVAUdKQ220802LSTexu6xAuFH8VZNBLE1ZNEa220802cd/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "channel8-iq",
+   "name": "Channel8",
+   "country": "IQ",
+   "category": "news",
+   "languages": [
+    "kur",
+    "ara",
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.channel8.com/Channel8-Kurdish/index.fmp4.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "dabanga-tv-sd",
+   "name": "Dabanga TV",
+   "country": "SD",
+   "category": "news",
+   "languages": [
+    "ara"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://hls.dabangasudan.org/hls/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "dc-council-hearing-room-120-us",
+   "name": "DC Council Hearing Room 120",
+   "country": "US",
+   "category": "news",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://video.oct.dc.gov/out/u/97_12.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "dcc-us",
+   "name": "DCC",
+   "country": "US",
+   "category": "news",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://video.oct.dc.gov/out/u/15_12.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "district-of-columbia-network-us",
+   "name": "District of Columbia Network",
+   "country": "US",
+   "category": "news",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://video.oct.dc.gov/out/u/DCN.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "dotto-tv-ro",
+   "name": "Dotto TV",
+   "country": "RO",
+   "category": "news",
+   "languages": [
+    "ron"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.dottotv.ro/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "dvb-tv-mm",
+   "name": "DVB TV",
+   "country": "MM",
+   "category": "news",
+   "languages": [
+    "mya"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live-stream.dvb.no/hls/stream_src/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "fox-news-radio-us",
+   "name": "Fox News Radio",
+   "country": "US",
+   "category": "news",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://radiovid.foxnews.com/hls/live/661547/RADIOVID/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 432
+    }
+   ]
+  },
+  {
+   "id": "govorit-moskva-ru",
+   "name": "Govorit Moskva",
+   "country": "RU",
+   "category": "news",
+   "languages": [
+    "rus"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://video.govoritmoskva.ru/rufm/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "hamdard-tv-ca",
+   "name": "Hamdard TV",
+   "country": "CA",
+   "category": "news",
+   "languages": [
+    "pan"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://tv.hamdardtv.com/hamdard/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "harbin-comprehensive-news-channel-cn",
+   "name": "Harbin Comprehensive News Channel",
+   "country": "CN",
+   "category": "news",
+   "languages": [
+    "zho"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.hrbtv.net/xwzh/playlist.m3u8?_upt=ef41dd531755913594",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 480
+    }
+   ]
+  },
+  {
+   "id": "iranefarda-tv-gb",
+   "name": "IraneFarda TV",
+   "country": "GB",
+   "category": "news",
+   "languages": [
+    "fas"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://iranefardalive.com/stream/live.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "jingmen-comprehensive-news-channel-cn",
+   "name": "Jingmen Comprehensive News Channel",
+   "country": "CN",
+   "category": "news",
+   "languages": [
+    "zho"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.jmtv.com.cn/xwzh/sd/live.m3u8?_upt=341f4b8e1791883036",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "ktv-kr",
+   "name": "KTV",
+   "country": "KR",
+   "category": "news",
+   "languages": [
+    "kor"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://hlive.ktv.go.kr/live/klive_h.stream/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "lenca-tv-hn",
+   "name": "Lenca TV",
+   "country": "HN",
+   "category": "news",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://lencatelevision.com/hls/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "mercurio-noticias-ar",
+   "name": "Mercurio Noticias",
+   "country": "AR",
+   "category": "news",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://videostream.shockmedia.com.ar/hls/mercuriotv/mercuriotv.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "monaco-info-mc",
+   "name": "Monaco Info",
+   "country": "MC",
+   "category": "news",
+   "languages": [
+    "fra"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://webtv.monacoinfo.com/live/prod/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "natick-government-channel-us",
+   "name": "Natick Government Channel",
+   "country": "US",
+   "category": "news",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://livestream.telvue.com/natickpegasus3/f7b44cfafd5c52223d5498196c8a2e7b.sdp/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "national-iranian-congress-tv-us",
+   "name": "National Iranian Congress TV",
+   "country": "US",
+   "category": "news",
+   "languages": [
+    "fas"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://tv.iraniancongress.com/stream/tv.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "nopola-news-fi",
+   "name": "Nopola News",
+   "country": "FI",
+   "category": "news",
+   "languages": [
+    "fin"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://virta2.nopolanews.fi:8443/live/smil:Stream1.smil/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "nw-info-tg",
+   "name": "NW Info",
+   "country": "TG",
+   "category": "news",
+   "languages": [
+    "fra"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://hls.newworldtv.com/nw-info/video/live.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "palestine-al-yawm-lb",
+   "name": "Palestine Al Yawm",
+   "country": "LB",
+   "category": "news",
+   "languages": [
+    "ara"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.paltodaytv.com/paltv/live/playlist_sfm4s.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 480
+    }
+   ]
+  },
+  {
+   "id": "palitra-news-ge",
+   "name": "Palitra News",
+   "country": "GE",
+   "category": "news",
+   "languages": [
+    "kat"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.palitranews.ge/hls/palitratv/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 480
+    }
+   ]
+  },
+  {
+   "id": "privesc-eu-tv-md",
+   "name": "Privesc.Eu TV",
+   "country": "MD",
+   "category": "news",
+   "languages": [
+    "ron"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://cachestar.privesc.eu/liniar/moldova/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "sahara-24-mr",
+   "name": "Sahara 24",
+   "country": "MR",
+   "category": "news",
+   "languages": [
+    "ara"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.saharamedias.net:3317/live/shara24live.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "shams-tv-iq",
+   "name": "Shams TV",
+   "country": "IQ",
+   "category": "news",
+   "languages": [
+    "ara"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.shams.tv/hls/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "sky-news-arabia-ae",
+   "name": "Sky News Arabia",
+   "country": "AE",
+   "category": "news",
+   "languages": [
+    "ara"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live-stream.skynewsarabia.com/c-horizontal-channel/horizontal-stream/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "sky-news-arabia-vertical-ae",
+   "name": "Sky News Arabia Vertical",
+   "country": "AE",
+   "category": "news",
+   "languages": [
+    "ara"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live-stream.skynewsarabia.com/c-vertical-channel/vertical-stream/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "top-news-th",
+   "name": "Top News",
+   "country": "TH",
+   "category": "news",
+   "languages": [
+    "tha"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.topnews.co.th/hls/topnews_a_720.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "tv-camara-br",
+   "name": "TV Camara",
+   "country": "BR",
+   "category": "news",
+   "languages": [
+    "por"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream3.camara.gov.br/tv1/manifest.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "government_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "tv-legislativa-ec",
+   "name": "TV Legislativa",
+   "country": "EC",
+   "category": "news",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://streamingav.asambleanacional.gob.ec/hls/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 540
+    }
+   ]
+  },
+  {
+   "id": "tvk-stella-pl",
+   "name": "TVK Stella",
+   "country": "PL",
+   "category": "news",
+   "languages": [
+    "pol"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.tvkstella.pl/stella/stella.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 480
+    }
+   ]
+  },
+  {
+   "id": "vergina-tv-gr",
+   "name": "Vergina TV",
+   "country": "GR",
+   "category": "news",
+   "languages": [
+    "ell"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://verginanews.gr:8443/hls_live/stream1.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "visir-is",
+   "name": "Visir",
+   "country": "IS",
+   "category": "news",
+   "languages": [
+    "isl"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.visir.is/hls-live/visir.smil/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "yuma-channel-72-us",
+   "name": "Yuma Channel 72",
+   "country": "US",
+   "category": "news",
+   "languages": [
+    "eng",
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://livestream.telvue.com/yumaaz1/f7b44cfafd5c52223d5498196c8a2e7b.sdp/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "yuma-channel-73-us",
+   "name": "Yuma Channel 73",
+   "country": "US",
+   "category": "news",
+   "languages": [
+    "eng",
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://livestream.telvue.com/yumaaz2/f7b44cfafd5c52223d5498196c8a2e7b.sdp/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "zillarbarta-news-in",
+   "name": "ZillarBarta News",
+   "country": "IN",
+   "category": "news",
+   "languages": [
+    "ben"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://server.zillarbarta.com/zillarbarta/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "30a-we-love-cars-us",
+   "name": "30A We Love Cars",
+   "country": "US",
+   "category": "sports",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://30a-tv.com/feeds/vidaa/cars.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "ardb-tv-kh",
+   "name": "ARDB TV",
+   "country": "KH",
+   "category": "sports",
+   "languages": [
+    "khm"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ardbtv.ardb.com.kh:8443/tv-live/tv-online.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "astrahan-ru-sport-ru",
+   "name": "Astrahan.Ru Sport",
+   "country": "RU",
+   "category": "sports",
+   "languages": [
+    "rus"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://streaming.astrakhan.ru/astrakhanrusporthd/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "mnb-sport-mn",
+   "name": "MNB Sport",
+   "country": "MN",
+   "category": "sports",
+   "languages": [
+    "mon"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.mnb.mn/hls/mnb_sport.stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "shift-tv-hr",
+   "name": "Shift TV",
+   "country": "HR",
+   "category": "sports",
+   "languages": [
+    "hrv"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://hls.shift.tv/live/shifttv/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "swamiji-tv-american-at",
+   "name": "Swamiji TV American",
+   "country": "AT",
+   "category": "sports",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.swamiji.tv/YogaIPTV/smil:YogaStreamUS.smil/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 480
+    }
+   ]
+  },
+  {
+   "id": "swamiji-tv-australian-at",
+   "name": "Swamiji TV Australian",
+   "country": "AT",
+   "category": "sports",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.swamiji.tv/YogaIPTV/smil:YogaStreamAU.smil/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 480
+    }
+   ]
+  },
+  {
+   "id": "swamiji-tv-european-at",
+   "name": "Swamiji TV European",
+   "country": "AT",
+   "category": "sports",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.swamiji.tv/YogaIPTV/smil:YogaStream.smil/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 480
+    }
+   ]
+  },
+  {
+   "id": "tr-sport-it",
+   "name": "TR Sport",
+   "country": "IT",
+   "category": "sports",
+   "languages": [
+    "ita"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://livetr.teleromagna.it/mia/live/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "4-fun-kids-pl",
+   "name": "4 Fun Kids",
+   "country": "PL",
+   "category": "kids",
+   "languages": [
+    "pol"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.4fun.tv:8889/hls/4fk.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 576
+    }
+   ]
+  },
+  {
+   "id": "botflix-tv-us",
+   "name": "Botflix TV",
+   "country": "US",
+   "category": "kids",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://hls.botflix.tv/tv/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "cartoon-cartoons-us",
+   "name": "Cartoon Cartoons",
+   "country": "US",
+   "category": "kids",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://cartooncartoons.thatsoretro.com/hls/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "ebs-kids-kr",
+   "name": "EBS Kids",
+   "country": "KR",
+   "category": "kids",
+   "languages": [
+    "kor"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ebsonair.ebs.co.kr/ebsufamilypc/familypc1m/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 400
+    }
+   ]
+  },
+  {
+   "id": "etv-2-ee",
+   "name": "ETV 2",
+   "country": "EE",
+   "category": "kids",
+   "languages": [
+    "est"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://sb.err.ee/live/etv2.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "god-stands-kids-club-tv-pk",
+   "name": "God Stands Kids Club TV",
+   "country": "PK",
+   "category": "kids",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://online.godstands.tv:5443/WebRTCApp/streams/kidsenglish.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "japanimtv-be",
+   "name": "JapanimTV",
+   "country": "BE",
+   "category": "kids",
+   "languages": [
+    "fra"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://foxkidstv.be:3369/stream/play.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "pbs-kids-us",
+   "name": "PBS Kids",
+   "country": "US",
+   "category": "kids",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://livestream.pbskids.org/out/v1/14507d931bbe48a69287e4850e53443c/est.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 432
+    }
+   ]
+  },
+  {
+   "id": "zb-cartoon-in",
+   "name": "ZB Cartoon",
+   "country": "IN",
+   "category": "kids",
+   "languages": [
+    "ben"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://server.zillarbarta.com/zbcatun/video.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "30a-tv-classic-movies-us",
+   "name": "30A TV Classic Movies",
+   "country": "US",
+   "category": "movies",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://30a-tv.com/feeds/pzaz/30atvmovies.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "alankar-tv-in",
+   "name": "Alankar TV",
+   "country": "IN",
+   "category": "movies",
+   "languages": [
+    "ori"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://livetv.tarangplus.in/alankar-origin/live/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "alternatv-ar",
+   "name": "AlternaTV",
+   "country": "AR",
+   "category": "movies",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://tv.alterna.ar/stream/hls/live.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 576
+    }
+   ]
+  },
+  {
+   "id": "canal-cine-dios-co",
+   "name": "Canal Cine Dios",
+   "country": "CO",
+   "category": "movies",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://canal.mediaserver.com.co/live/cinedios.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "grand-cinema-tr",
+   "name": "Grand Cinema",
+   "country": "TR",
+   "category": "movies",
+   "languages": [
+    "fas"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://gcinemahls.wns.live/hls/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "harbin-movie-channel-cn",
+   "name": "Harbin Movie Channel",
+   "country": "CN",
+   "category": "movies",
+   "languages": [
+    "zho"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.hrbtv.net/yspd/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 480
+    }
+   ]
+  },
+  {
+   "id": "meta-film-tv-ir",
+   "name": "Meta Film TV",
+   "country": "IR",
+   "category": "movies",
+   "languages": [
+    "fas"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://metafilmhls.wns.live/hls/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "whiplash-cinema-us",
+   "name": "Whiplash Cinema",
+   "country": "US",
+   "category": "movies",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://cdn.whiplash.cc/whiplash-cinema/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "zb-cinema-in",
+   "name": "ZB Cinema",
+   "country": "IN",
+   "category": "movies",
+   "languages": [
+    "ben"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://server.zillarbarta.com/ZBCINEMA/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "4-music-fr",
+   "name": "4 Music",
+   "country": "FR",
+   "category": "music",
+   "languages": [
+    "fas"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://musichls.persiana.live/hls/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "4kurd-fr",
+   "name": "4Kurd",
+   "country": "FR",
+   "category": "music",
+   "languages": [
+    "kur",
+    "fas"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://4kuhls.persiana.live/hls/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "beattv-nl",
+   "name": "BEATTV",
+   "country": "NL",
+   "category": "music",
+   "languages": [
+    "nld"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://tv.beatfm.nl/live.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "boktv-za",
+   "name": "BOKTV",
+   "country": "ZA",
+   "category": "music",
+   "languages": [
+    "eng",
+    "afr"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://livestream2.bokradio.co.za/hls/Bok5c.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "botflix-radioo-us",
+   "name": "Botflix Radioo",
+   "country": "US",
+   "category": "music",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://hls.botflix.tv/radioo/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "buenisima-radio-tv-co",
+   "name": "Buenisima Radio TV",
+   "country": "CO",
+   "category": "music",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://canal.mediaserver.com.co/live/buenisimatv.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "city-tv-bg",
+   "name": "City TV",
+   "country": "BG",
+   "category": "music",
+   "languages": [
+    "bul"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://tv.city.bg/play/tshls/citytv/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 576
+    }
+   ]
+  },
+  {
+   "id": "dg-radio-au",
+   "name": "DG:Radio",
+   "country": "AU",
+   "category": "music",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://mdn.dg.church/683c0cb036885-1/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "folk-tv-mk",
+   "name": "Folk TV",
+   "country": "MK",
+   "category": "music",
+   "languages": [
+    "mkd"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.nasatv.com.mk/folktv/hls/folktv_live.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "imagen-fm-105-1-hn",
+   "name": "Imagen FM 105.1",
+   "country": "HN",
+   "category": "music",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://streaming.imagenfm105-1.com/hls/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "impact-tv-dance-ro",
+   "name": "Impact TV Dance",
+   "country": "RO",
+   "category": "music",
+   "languages": [
+    "ron"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://online.tvimpact.live/hls/dancetv.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "impact-tv-manele-ro",
+   "name": "Impact TV Manele",
+   "country": "RO",
+   "category": "music",
+   "languages": [
+    "ron"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://online.tvimpact.live/hls/impact_tv.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "jazz-tv-mk",
+   "name": "Jazz TV",
+   "country": "MK",
+   "category": "music",
+   "languages": [
+    "mkd"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.nasatv.com.mk/jazztv/hls/jazztv_live.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "k100-is",
+   "name": "K100",
+   "country": "IS",
+   "category": "music",
+   "languages": [
+    "isl"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://k100streymi.mbl.is/beint/k100/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 576
+    }
+   ]
+  },
+  {
+   "id": "livexlive-us",
+   "name": "LIVExLIVE",
+   "country": "US",
+   "category": "music",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://livestream.liveone.com/lc1/p1.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "love-tv-mk",
+   "name": "Love TV",
+   "country": "MK",
+   "category": "music",
+   "languages": [
+    "mkd"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.nasatv.com.mk/lovetv/hls/lovetv_live.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "metaleitor-tv-us",
+   "name": "Metaleitor TV",
+   "country": "US",
+   "category": "music",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://vs20.live.opencaster.com/metaleitortv_423d3342/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "oxygen-music-hu",
+   "name": "Oxygen Music",
+   "country": "HU",
+   "category": "music",
+   "languages": [
+    "hun"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://oxygenmusic.hu:2443/hls/oxygenmusic.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "power-dance-tr",
+   "name": "Power Dance",
+   "country": "TR",
+   "category": "music",
+   "languages": [
+    "tur"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://livetv.powerapp.com.tr/dance/dance.smil/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "power-love-tr",
+   "name": "Power Love",
+   "country": "TR",
+   "category": "music",
+   "languages": [
+    "tur"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://livetv.powerapp.com.tr/plove/love.smil/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "powerturk-akustik-tr",
+   "name": "PowerTurk Akustik",
+   "country": "TR",
+   "category": "music",
+   "languages": [
+    "tur"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://livetv.powerapp.com.tr/pturkakustik/akustik.smil/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "powerturk-slow-tr",
+   "name": "PowerTurk Slow",
+   "country": "TR",
+   "category": "music",
+   "languages": [
+    "tur"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://livetv.powerapp.com.tr/pturkslow/slow.smil/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "powerturk-taptaze-tr",
+   "name": "PowerTurk Taptaze",
+   "country": "TR",
+   "category": "music",
+   "languages": [
+    "tur"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://livetv.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "qmusic-nl",
+   "name": "Qmusic",
+   "country": "NL",
+   "category": "music",
+   "languages": [
+    "nld"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.qmusic.nl/qmusic/videohls.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "radio-ideal-hn",
+   "name": "Radio Ideal",
+   "country": "HN",
+   "category": "music",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://www.idealfm104-7.com/hls/0/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "radionl-tv-nl",
+   "name": "RadioNL TV",
+   "country": "NL",
+   "category": "music",
+   "languages": [
+    "nld"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.radionl.tv/radionltv/radionltv/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "rock-tv-mk",
+   "name": "Rock TV",
+   "country": "MK",
+   "category": "music",
+   "languages": [
+    "mkd"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.nasatv.com.mk/rocktv/hls/rocktv_live.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "romantic-fm-ro",
+   "name": "Romantic FM",
+   "country": "RO",
+   "category": "music",
+   "languages": [
+    "ron",
+    "eng",
+    "ita"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream1.antenaplay.ro/zurtv/rfmprem/chunklist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "rtl-gold-lu",
+   "name": "RTL Gold",
+   "country": "LU",
+   "category": "music",
+   "languages": [
+    "ltz"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.rtl.lu/data/live/tele/rtlgold/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "smash-radio-tt-tt",
+   "name": "Smash Radio TT",
+   "country": "TT",
+   "category": "music",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://nginx.smashradiott.com/hls/program/master.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "spirit-tv-us",
+   "name": "Spirit TV",
+   "country": "US",
+   "category": "music",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://cdnlive.myspirit.tv/LS-ATL-43240-2/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tarang-music-in",
+   "name": "Tarang Music",
+   "country": "IN",
+   "category": "music",
+   "languages": [
+    "ori"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://livetv.tarangplus.in/tarangmusic-origin/live/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tdi-radio-tv-rs",
+   "name": "TDI Radio TV",
+   "country": "RS",
+   "category": "music",
+   "languages": [
+    "srp"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://peer2.tdiradio.com/static/streaming-playlists/hls/8f5d84ce-e8ac-4109-9975-9665f5605557/master.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "tele7music-ro",
+   "name": "Tele7music",
+   "country": "RO",
+   "category": "music",
+   "languages": [
+    "ron"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.tele7music.ro/hls/stream/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "tequila-music-tv-ro",
+   "name": "Tequila Music TV",
+   "country": "RO",
+   "category": "music",
+   "languages": [
+    "ron"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.tequilamusic.net/hls/tequila_tv.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "tezaur-tv-md",
+   "name": "Tezaur TV",
+   "country": "MD",
+   "category": "music",
+   "languages": [
+    "ron"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://tezaurtv.md/stream/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "today-radio-lu",
+   "name": "Today Radio",
+   "country": "LU",
+   "category": "music",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.rtl.lu/data/live/tele/rtltodayradio/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tv-bozsike-hamburg-hd-de",
+   "name": "TV Bozsike Hamburg HD",
+   "country": "DE",
+   "category": "music",
+   "languages": [
+    "hun",
+    "deu"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://rtmp.radiobozsike.com/hls/stream1.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "tv-exitos-do",
+   "name": "TV Exitos",
+   "country": "DO",
+   "category": "music",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://streaming.grupomediosdelnorte.com:19360/tvexitos/tvexitos.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "vantage-rock-ee",
+   "name": "Vantage Rock",
+   "country": "EE",
+   "category": "music",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://hls.vantagetv.ee/vrock_stream/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "zb-music-in",
+   "name": "ZB Music",
+   "country": "IN",
+   "category": "music",
+   "languages": [
+    "ben"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://server.zillarbarta.com/zbmusic/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "atlas-us",
+   "name": "Atlas",
+   "country": "US",
+   "category": "documentary",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://cdn.whiplash.cc/whiplash-atlas/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "ard-alpha-de",
+   "name": "ARD-alpha",
+   "country": "DE",
+   "category": "education",
+   "languages": [
+    "deu"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://mcdn.br.de/br/fs/ard_alpha/hls/de/master.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "cloudflare-tv-us",
+   "name": "Cloudflare TV",
+   "country": "US",
+   "category": "education",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://cloudflare.tv/hls/live.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "dkn-us",
+   "name": "DKN",
+   "country": "US",
+   "category": "education",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://video.oct.dc.gov/out/u/DKN.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "dltv-1-th",
+   "name": "DLTV 1",
+   "country": "TH",
+   "category": "education",
+   "languages": [
+    "tha",
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://cdn-live.dltv.ac.th/dltv01.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "dltv-11-th",
+   "name": "DLTV 11",
+   "country": "TH",
+   "category": "education",
+   "languages": [
+    "tha",
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://cdn-live.dltv.ac.th/dltv11.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "dltv-12-th",
+   "name": "DLTV 12",
+   "country": "TH",
+   "category": "education",
+   "languages": [
+    "tha",
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://cdn-live.dltv.ac.th/dltv12.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "dltv-13-th",
+   "name": "DLTV 13",
+   "country": "TH",
+   "category": "education",
+   "languages": [
+    "tha",
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://cdn-live.dltv.ac.th/dltv13.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "dltv-14-th",
+   "name": "DLTV 14",
+   "country": "TH",
+   "category": "education",
+   "languages": [
+    "tha",
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://cdn-live.dltv.ac.th/dltv14.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "dltv-15-th",
+   "name": "DLTV 15",
+   "country": "TH",
+   "category": "education",
+   "languages": [
+    "tha",
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://cdn-live.dltv.ac.th/dltv15.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "dltv-2-th",
+   "name": "DLTV 2",
+   "country": "TH",
+   "category": "education",
+   "languages": [
+    "tha",
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://cdn-live.dltv.ac.th/dltv02.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "dltv-3-th",
+   "name": "DLTV 3",
+   "country": "TH",
+   "category": "education",
+   "languages": [
+    "tha",
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://cdn-live.dltv.ac.th/dltv03.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "dltv-5-th",
+   "name": "DLTV 5",
+   "country": "TH",
+   "category": "education",
+   "languages": [
+    "tha",
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://cdn-live.dltv.ac.th/dltv05.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "dltv-6-th",
+   "name": "DLTV 6",
+   "country": "TH",
+   "category": "education",
+   "languages": [
+    "tha",
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://cdn-live.dltv.ac.th/dltv06.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "dltv-7-th",
+   "name": "DLTV 7",
+   "country": "TH",
+   "category": "education",
+   "languages": [
+    "tha",
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://cdn-live.dltv.ac.th/dltv07.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "dltv-8-th",
+   "name": "DLTV 8",
+   "country": "TH",
+   "category": "education",
+   "languages": [
+    "tha",
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://cdn-live.dltv.ac.th/dltv08.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "dltv-9-th",
+   "name": "DLTV 9",
+   "country": "TH",
+   "category": "education",
+   "languages": [
+    "tha",
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://cdn-live.dltv.ac.th/dltv09.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "ebc-general-education-kh",
+   "name": "EBC General Education",
+   "country": "KH",
+   "category": "education",
+   "languages": [
+    "khm"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://iptv.ebc.edu.kh/iptv/channel/1.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "ebc-lifelong-learning-kh",
+   "name": "EBC Lifelong Learning",
+   "country": "KH",
+   "category": "education",
+   "languages": [
+    "khm"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://iptv.ebc.edu.kh/iptv/channel/2.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "ebs-1tv-kr",
+   "name": "EBS 1TV",
+   "country": "KR",
+   "category": "education",
+   "languages": [
+    "kor"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ebsonair.ebs.co.kr/ebs1familypc/familypc1m/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 400
+    }
+   ]
+  },
+  {
+   "id": "ebs-2tv-kr",
+   "name": "EBS 2TV",
+   "country": "KR",
+   "category": "education",
+   "languages": [
+    "kor"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ebsonair.ebs.co.kr/ebs2familypc/familypc1m/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 400
+    }
+   ]
+  },
+  {
+   "id": "ebs-plus-2-kr",
+   "name": "EBS Plus 2",
+   "country": "KR",
+   "category": "education",
+   "languages": [
+    "eng",
+    "kor"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ebsonair.ebs.co.kr/plus2familypc/familypc1m/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 400
+    }
+   ]
+  },
+  {
+   "id": "natick-education-channel-us",
+   "name": "Natick Education Channel",
+   "country": "US",
+   "category": "education",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://livestream.telvue.com/natickpegasus1/f7b44cfafd5c52223d5498196c8a2e7b.sdp/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "nrwision-de",
+   "name": "NRWision",
+   "country": "DE",
+   "category": "education",
+   "languages": [
+    "deu"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://fms.nrwision.de/live/ngrp:livestreamHD.stream/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "oun-kr",
+   "name": "OUN",
+   "country": "KR",
+   "category": "education",
+   "languages": [
+    "kor"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.knou.ac.kr/knou1/live1/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "pbs-us",
+   "name": "PBS",
+   "country": "US",
+   "category": "education",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://pbs.lls.cdn.pbs.org/est/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 432
+    }
+   ]
+  },
+  {
+   "id": "rinjani-tv-id",
+   "name": "Rinjani TV",
+   "country": "ID",
+   "category": "education",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://rinjanitv.cloud/hls/tvkabel.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "brand_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "al-mahdi-tv-us",
+   "name": "Al-Mahdi TV",
+   "country": "US",
+   "category": "religious",
+   "languages": [
+    "fas"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://iptv.almahditv.com/almahditv/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 270
+    }
+   ]
+  },
+  {
+   "id": "alabbassia-tv-iq",
+   "name": "Alabbassia TV",
+   "country": "IQ",
+   "category": "religious",
+   "languages": [
+    "ara"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.alabbassia.com/live/alabbassia/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "apostol-tv-hu",
+   "name": "Apostol TV",
+   "country": "HU",
+   "category": "religious",
+   "languages": [
+    "hun"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.apostoltv.hu/live/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "beitolabbas-tv-channel-iq",
+   "name": "BeitolAbbas TV Channel",
+   "country": "IQ",
+   "category": "religious",
+   "languages": [
+    "ara"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.beitolabbas.tv/live/beitolabbastv.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "bethel-tv-pe",
+   "name": "Bethel TV",
+   "country": "PE",
+   "category": "religious",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://alfa.betheltv.tv/srt/3_abr/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "bhagyam-tv-in",
+   "name": "Bhagyam TV",
+   "country": "IN",
+   "category": "religious",
+   "languages": [
+    "tam"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott.bhagyam.net/hls/bhagyamweb/index-1409148900-now.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "canal-oracion-con-son-co",
+   "name": "Canal Oracion Con Son",
+   "country": "CO",
+   "category": "religious",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://canal.mediaserver.com.co/live/oracionconson.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "canal-telesantiago-co",
+   "name": "Canal Telesantiago",
+   "country": "CO",
+   "category": "religious",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.canaltelesantiago.com:8000/play/TELESANTIAGO/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "cmb-television-co",
+   "name": "CMB Television",
+   "country": "CO",
+   "category": "religious",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://cdn1.cmbcolombia.tv/bethesda/video.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "conexion-positiva-television-cr",
+   "name": "Conexion Positiva Television",
+   "country": "CR",
+   "category": "religious",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://tvstream.conexionpositivaradio.com/memfs/69239c4d-4116-4f4f-b065-bf17e81b1411.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "daai-tv-id",
+   "name": "DAAI TV",
+   "country": "ID",
+   "category": "religious",
+   "languages": [
+    "zho"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://pull.daaiplus.com/live-DAAIPLUS/live-DAAIPLUS_HD.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "brand_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "dg-tv-au",
+   "name": "DG:TV",
+   "country": "AU",
+   "category": "religious",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://mdn.dg.church/673ac57a073a4-1/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "fortaleza-tv-cl",
+   "name": "Fortaleza TV",
+   "country": "CL",
+   "category": "religious",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://multimedia.fortalezatv.cl/video/video.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "frecuencia-f-tv-co",
+   "name": "Frecuencia F TV",
+   "country": "CO",
+   "category": "religious",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://tv.frecuenciaf.com/live/envivo_1080p4000kbs/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "god-stands-tv-pk",
+   "name": "God Stands TV",
+   "country": "PK",
+   "category": "religious",
+   "languages": [
+    "urd",
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://online.godstands.tv:5443/WebRTCApp/streams/mainlive.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "jaya-tv-lk",
+   "name": "Jaya TV",
+   "country": "LK",
+   "category": "religious",
+   "languages": [
+    "sin"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.jayatv.lk/hls/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "jtbs-classic-in",
+   "name": "JTBS Classic",
+   "country": "IN",
+   "category": "religious",
+   "languages": [
+    "ben",
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://jtbsclassic.dpdns.org/live.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 540
+    }
+   ]
+  },
+  {
+   "id": "kanshi-tv-gb",
+   "name": "Kanshi TV",
+   "country": "GB",
+   "category": "religious",
+   "languages": [
+    "hin"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.kanshitv.co.uk/mobile/kanshitvkey.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "madani-channel-urdu-pk",
+   "name": "Madani Channel Urdu",
+   "country": "PK",
+   "category": "religious",
+   "languages": [
+    "urd"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://streaming.madanichannel.tv/static/streaming-playlists/hls/b9790f10-cb0d-4e30-82bf-84a756234e58/master.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "mahdawiountv-iq",
+   "name": "MahdawiounTV",
+   "country": "IQ",
+   "category": "religious",
+   "languages": [
+    "ara"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.mahdawioun.tv/stream/mahdawioun/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "marjaeyat-tv-arabic-iq",
+   "name": "Marjaeyat TV Arabic",
+   "country": "IQ",
+   "category": "religious",
+   "languages": [
+    "ara"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://livefa.marjaeyattv.com/mtv_ar/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "marjaeyat-tv-english-iq",
+   "name": "Marjaeyat TV English",
+   "country": "IQ",
+   "category": "religious",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://livefa.marjaeyattv.com/mtv_en/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "mtna-tv-cl",
+   "name": "MTNA TV",
+   "country": "CL",
+   "category": "religious",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.mtna.tv/hls/mtna/mtna.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "parole-di-vita-it",
+   "name": "Parole di Vita",
+   "country": "IT",
+   "category": "religious",
+   "languages": [
+    "ita"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.paroledivita.org/paroledivita.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "rtv-pendimi-ch",
+   "name": "RTV Pendimi",
+   "country": "CH",
+   "category": "religious",
+   "languages": [
+    "sqi"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://www.rtvpendimi.com:19360/tvpendimi/tvpendimi.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "sangkem-tv-kh",
+   "name": "Sangkem TV",
+   "country": "KH",
+   "category": "religious",
+   "languages": [
+    "khm"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.sangkemtv.com/memfs/sangkem.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "sercem-tv-tr",
+   "name": "Sercem TV",
+   "country": "TR",
+   "category": "religious",
+   "languages": [
+    "tur",
+    "kur",
+    "zza"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://canli.sercemtv.com.tr/hls/0/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "tbn-espana-es",
+   "name": "TBN Espana",
+   "country": "ES",
+   "category": "religious",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://edge.xn--tbnespaa-j3a.es/LiveApp/streams/tbnlive.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "tv-cret-sv",
+   "name": "TV CRET",
+   "country": "SV",
+   "category": "religious",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://radiocret.net:8082/hls/tvcret.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "tv-universal-uruguay-uy",
+   "name": "TV Universal Uruguay",
+   "country": "UY",
+   "category": "religious",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.universal.org.uy/hls/0/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "zb-bhakti-in",
+   "name": "ZB Bhakti",
+   "country": "IN",
+   "category": "religious",
+   "languages": [
+    "ben"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://server.zillarbarta.com/zbbhakti/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "247-box-tv-ir",
+   "name": "247 Box TV",
+   "country": "IR",
+   "category": "entertainment",
+   "languages": [
+    "fas"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://hls.247box.live/hls/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "30a-luxe-life-discovered-us",
+   "name": "30A Luxe Life Discovered",
+   "country": "US",
+   "category": "entertainment",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://30a-tv.com/feeds/vidaa/luxelife.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "30a-ridiculous-tv-us",
+   "name": "30A Ridiculous TV",
+   "country": "US",
+   "category": "entertainment",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://30a-tv.com/feeds/720p/63.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "30a-sidewalks-us",
+   "name": "30A Sidewalks",
+   "country": "US",
+   "category": "entertainment",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://30a-tv.com/sidewalks.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "30a-television-channel-us",
+   "name": "30A Television Channel",
+   "country": "US",
+   "category": "entertainment",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://30a-tv.com/feeds/masters/30atv.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "30a-the-beach-show-us",
+   "name": "30A The Beach Show",
+   "country": "US",
+   "category": "entertainment",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://30a-tv.com/beachy.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "acces-direct-ro",
+   "name": "Acces Direct",
+   "country": "RO",
+   "category": "entertainment",
+   "languages": [
+    "ron"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live77cdn2.antenaplay.ro/live2_fast/ch6/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "asia-express-nonstop-ro",
+   "name": "Asia Express NonStop",
+   "country": "RO",
+   "category": "entertainment",
+   "languages": [
+    "ron"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live77cdn2.antenaplay.ro/live2_sport05/live2_sport05.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "atlantic-tv-tt",
+   "name": "Atlantic TV",
+   "country": "TT",
+   "category": "entertainment",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://trinicricket.com/hls/0/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "ava-family-ir",
+   "name": "AVA Family",
+   "country": "IR",
+   "category": "entertainment",
+   "languages": [
+    "fas"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://familyhls.avatv.live/hls/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "ava-series-ir",
+   "name": "AVA Series",
+   "country": "IR",
+   "category": "entertainment",
+   "languages": [
+    "fas"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://avaserieshls.wns.live/hls/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "bizz-tv-tt",
+   "name": "Bizz TV",
+   "country": "TT",
+   "category": "entertainment",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.bizzmedia.biz/bizz_tv/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "comedy-play-ro",
+   "name": "Comedy Play",
+   "country": "RO",
+   "category": "entertainment",
+   "languages": [
+    "ron"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream1.antenaplay.ro/live/ComedyPlay/chunklist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "dens-food-channel-id",
+   "name": "Dens Food Channel",
+   "country": "ID",
+   "category": "entertainment",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://op-flashcon-digdayahd-1.dens.tv/h/h221/02.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "doyel-tv-ca",
+   "name": "Doyel TV",
+   "country": "CA",
+   "category": "entertainment",
+   "languages": [
+    "ben"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://3d46w.doyeltv.com/memfs/aa3aa6f7-ec12-41a2-8183-a891e157bbf8.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "edessa-tv-tr",
+   "name": "Edessa TV",
+   "country": "TR",
+   "category": "entertainment",
+   "languages": [
+    "tur"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://canli.edessatv.com/hls/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "eldo-tv-lu",
+   "name": "eldo.TV",
+   "country": "LU",
+   "category": "entertainment",
+   "languages": [
+    "ltz"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.eldo.lu/data/live/tele/eldotv/1080p.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "fx-1-ir",
+   "name": "FX 1",
+   "country": "IR",
+   "category": "entertainment",
+   "languages": [
+    "fas"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://fxtvhls.wns.live/hls/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "fx-2-ir",
+   "name": "FX 2",
+   "country": "IR",
+   "category": "entertainment",
+   "languages": [
+    "fas"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://toonixhls.wns.live/hls/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "gs-my-shop-kr",
+   "name": "GS My Shop",
+   "country": "KR",
+   "category": "entertainment",
+   "languages": [
+    "kor"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://gstv-myshop.gsshop.com/myshop_hd/myshop_hd.stream/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "gs-shop-kr",
+   "name": "GS Shop",
+   "country": "KR",
+   "category": "entertainment",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://gstv-gsshop.gsshop.com/gsshop_hd/gsshop_hd.stream/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "in-puii-mei-ro",
+   "name": "In Puii Mei",
+   "country": "RO",
+   "category": "entertainment",
+   "languages": [
+    "ron"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live77cdn2.antenaplay.ro/live2_fast/ch7/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "inter-tv-ve",
+   "name": "Inter TV",
+   "country": "VE",
+   "category": "entertainment",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://streamtv.intervenhosting.net:3439/hybrid/play.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "iroast-ro",
+   "name": "iRoast",
+   "country": "RO",
+   "category": "entertainment",
+   "languages": [
+    "ron"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live77cdn2.antenaplay.ro/live2_fast/ch3/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "iumor-ro",
+   "name": "iUmor",
+   "country": "RO",
+   "category": "entertainment",
+   "languages": [
+    "ron"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live77cdn2.antenaplay.ro/live2_fast/ch2/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "lara-en-redes-ve",
+   "name": "Lara en Redes",
+   "country": "VE",
+   "category": "entertainment",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://streamtv.laraenredes.com:3020/hybrid/play.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 804
+    }
+   ]
+  },
+  {
+   "id": "lotte-home-shopping-kr",
+   "name": "Lotte Home Shopping",
+   "country": "KR",
+   "category": "entertainment",
+   "languages": [
+    "kor"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://pchlslivesw.lotteimall.com/live/livestream/lotteimalllive_mp4.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "lotte-onetv-kr",
+   "name": "Lotte OneTV",
+   "country": "KR",
+   "category": "entertainment",
+   "languages": [
+    "kor"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://onetvhlslive.lotteimall.com/lotteonetvlive/lotteonetvlive.mp4.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "luxembourg-global-radio-tv-lu",
+   "name": "Luxembourg Global Radio TV",
+   "country": "LU",
+   "category": "entertainment",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.globalradio.lu/lgr/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "mireasa-ro",
+   "name": "Mireasa",
+   "country": "RO",
+   "category": "entertainment",
+   "languages": [
+    "ron"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream1.antenaplay.ro/live/MireasaExtra/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 480
+    },
+    {
+     "type": "stream",
+     "url": "https://live77cdn2.antenaplay.ro/live2_mireasadoi/live2_mireasadoi.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "moy-mir-ru",
+   "name": "Moy mir",
+   "country": "RU",
+   "category": "entertainment",
+   "languages": [
+    "rus"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://moymir.ru/hls/onair.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "nw-magazine-tg",
+   "name": "NW Magazine",
+   "country": "TG",
+   "category": "entertainment",
+   "languages": [
+    "fra"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://hls.newworldtv.com/nw-magazine/video/live.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "oxir-tv-ir",
+   "name": "OXIR TV",
+   "country": "IR",
+   "category": "entertainment",
+   "languages": [
+    "fas"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://hls.oxir.live/hls/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "palm-beaches-tv-us",
+   "name": "Palm Beaches TV",
+   "country": "US",
+   "category": "entertainment",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.feed.thepalmbeaches.tv/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 480
+    }
+   ]
+  },
+  {
+   "id": "radio-3-es",
+   "name": "Radio 3",
+   "country": "ES",
+   "category": "entertainment",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://rtvelivestream.rtve.es/rtvesec/rne/rne3_main.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "rotv-valencia-es",
+   "name": "ROTV Valencia",
+   "country": "ES",
+   "category": "entertainment",
+   "languages": [
+    "ron"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://rotv.romediavalencia.com:3839/live/rotvlive.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "rtnb-divertissement-bi",
+   "name": "RTNB Divertissement",
+   "country": "BI",
+   "category": "entertainment",
+   "languages": [
+    "eng",
+    "fra",
+    "run",
+    "swa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://tv2-stream.rtnb.bi/hls/master.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "salira-tv-id",
+   "name": "Salira TV",
+   "country": "ID",
+   "category": "entertainment",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.salira.tv/p/3870/hybrid/play.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "shop-channel-jp",
+   "name": "Shop Channel",
+   "country": "JP",
+   "category": "entertainment",
+   "languages": [
+    "jpn"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream3.shopch.jp/HLS/master.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "shopping-nt-kr",
+   "name": "Shopping NT",
+   "country": "KR",
+   "category": "entertainment",
+   "languages": [
+    "kor"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.shoppingntmall.com/live/10011.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "soltv-gq",
+   "name": "SolTV",
+   "country": "GQ",
+   "category": "entertainment",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.solmediaeg.com/soltv/soltv.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "suyai-tv-cl",
+   "name": "Suyai TV",
+   "country": "CL",
+   "category": "entertainment",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://trun.suyaitv.cl/memfs/1255a743-cd41-40a8-86c4-d264ee16ebf3.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "tarang-tv-in",
+   "name": "Tarang TV",
+   "country": "IN",
+   "category": "entertainment",
+   "languages": [
+    "ori"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://livetv.tarangplus.in/tarangtv-origin/live/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "television-caribe-us",
+   "name": "Television Caribe",
+   "country": "US",
+   "category": "entertainment",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://televisioncaribe.com/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 480
+    }
+   ]
+  },
+  {
+   "id": "tv-canal-sur-do",
+   "name": "TV Canal Sur",
+   "country": "DO",
+   "category": "entertainment",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://streamtvs.tvcanalsur.com.do/hls/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "tve-star-es",
+   "name": "TVE Star",
+   "country": "ES",
+   "category": "entertainment",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://rtvelivestream-rtveplayplus.rtve.es/rtvesec/int/star_main_576.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 576
+    }
+   ]
+  },
+  {
+   "id": "tvk-smnt-pl",
+   "name": "TVK SMNT",
+   "country": "PL",
+   "category": "entertainment",
+   "languages": [
+    "pol"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://tvk.smnt.pl/memfs/cf3a66ef-133a-4579-86da-5995ab23ae2a.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "28-kanala-es",
+   "name": "28 kanala",
+   "country": "ES",
+   "category": "general",
+   "languages": [
+    "eus"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://streaming.28kanala.eus/hls/z.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "86-ru",
+   "name": "86",
+   "country": "RU",
+   "category": "general",
+   "languages": [
+    "rus"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://sitv.ru/hls/s86.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "a1-tv-nl",
+   "name": "A1 TV",
+   "country": "NL",
+   "category": "general",
+   "languages": [
+    "nld"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.a1mediagroep.nl/hls/a1tv.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "abn-kr",
+   "name": "ABN",
+   "country": "KR",
+   "category": "general",
+   "languages": [
+    "kor"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://vod2.abn.co.kr/IPHONE/abn.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "alawla-tv-iq",
+   "name": "Alawla TV",
+   "country": "IQ",
+   "category": "general",
+   "languages": [
+    "ara"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.alawla.tv/hls/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 480
+    }
+   ]
+  },
+  {
+   "id": "america-internacional-pe",
+   "name": "America Internacional",
+   "country": "PE",
+   "category": "general",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://api-ott.americatv.com.pe/loggingmediaurlpassthrough/a.m3u8?ads.gdpr=0&ap=1&app_name=Whale+TV%2B&app_store=Browser&brand_name=&cb=&content_categories=IAB19-29%2CIAB12&content_custom_1_param=OTTera&content_custom_2_param=F%2CM&content_custom_3_param=18-20%2C21-24%2C25-29%2C30-34%2C35-39%2C40-44%2C45-49%2C50-54%2C55-59&content_episode=&content_genre=News&content_id=&content_livestream=1&content_producer_name=OTTera_AmericaTV_AmericaTelevision&content_season=&content_series=&content_title=&coppa=0&device_make=&device_model=&did=&dnt=&dur=&gdpr=1&gdpr_consent=&h=&ic=IAB1&id=10&ip=&language=&lmt=&max_dur=30&min_dur=5&mute=0&partner=whaletv&placement=1&rating=12%2B&skip=0&tag_id=139913&tv_language=&tv_model=&tv_vendor=&ua=&url=&us_privacy=1YNN&version=12&w=&wtv_channel_id=0470",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "anand-tv-gb",
+   "name": "Anand TV",
+   "country": "GB",
+   "category": "general",
+   "languages": [
+    "mal"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live-anandtv.anandmedia.net/anandtvapp/anandtv/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "astrahan-ru-tv-ru",
+   "name": "Astrahan.Ru TV",
+   "country": "RU",
+   "category": "general",
+   "languages": [
+    "rus"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://streaming.astrakhan.ru/astrakhanrulivehd/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "baicheng-tv-cn",
+   "name": "Baicheng TV",
+   "country": "CN",
+   "category": "general",
+   "languages": [
+    "zho"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream2.jlntv.cn/baicheng1/sd/live.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 576
+    }
+   ]
+  },
+  {
+   "id": "banat-tv-ro",
+   "name": "Banat TV",
+   "country": "RO",
+   "category": "general",
+   "languages": [
+    "ron"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://www.btv.ro/hls/banat-tv.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 576
+    }
+   ]
+  },
+  {
+   "id": "bbs-tv-ug",
+   "name": "BBS TV",
+   "country": "UG",
+   "category": "general",
+   "languages": [
+    "lug"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://bbstv.ug/hls/ch01/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "bestclasicostv-cr",
+   "name": "BestClasicosTV",
+   "country": "CR",
+   "category": "general",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://acceso.mediosdecostarica.com:3873/hybrid/play.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 400
+    }
+   ]
+  },
+  {
+   "id": "big-civic-channel-us",
+   "name": "BIG Civic Channel",
+   "country": "US",
+   "category": "general",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://reflect-brookline-interactive-group.cablecast.tv/live-5/live/stream-2/live.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 540
+    }
+   ]
+  },
+  {
+   "id": "br-fernsehen-de",
+   "name": "BR Fernsehen",
+   "country": "DE",
+   "category": "general",
+   "languages": [
+    "deu"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://mcdn.br.de/br/fs/bfs_nord/hls/de/master.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "bread-tv-cn",
+   "name": "Bread TV",
+   "country": "CN",
+   "category": "general",
+   "languages": [
+    "cmn"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://video.bread-tv.com:8091/hls-live24/online/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "btn-tv-rw",
+   "name": "BTN TV",
+   "country": "RW",
+   "category": "general",
+   "languages": [
+    "kin"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://tv.btnrwanda.com:3973/live/btnv2live.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 480
+    }
+   ]
+  },
+  {
+   "id": "can-tho-tv-vn",
+   "name": "Can Tho TV",
+   "country": "VN",
+   "category": "general",
+   "languages": [
+    "vie"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.canthotv.vn/live/tv/chunklist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "canal-1-cr",
+   "name": "Canal 1",
+   "country": "CR",
+   "category": "general",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://vid.canal1cr.com:3424/multi_live/play_720.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "canal-5-tv-max-py",
+   "name": "Canal 5 TV Max",
+   "country": "PY",
+   "category": "general",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://tvmaxsa.com.py/hls/FB-430927919930380-0-AbzjnbAzAIR0NaFg.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "canal-56-es",
+   "name": "Canal 56",
+   "country": "ES",
+   "category": "general",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://videos.canal56.com/directe/stream/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "canal-del-sol-do",
+   "name": "Canal del Sol",
+   "country": "DO",
+   "category": "general",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.canaldelsol.com/sol26/live_1080.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "canal-uol-br",
+   "name": "Canal UOL",
+   "country": "BR",
+   "category": "general",
+   "languages": [
+    "por"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://video24.mais.uol.com.br/live/6146.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "cool-tv-mk",
+   "name": "Cool TV",
+   "country": "MK",
+   "category": "general",
+   "languages": [
+    "mkd"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.nasatv.com.mk/cooltv/hls/cooltv_live.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "dbs-tv-lc",
+   "name": "DBS TV",
+   "country": "LC",
+   "category": "general",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.dbstvstlucia.com/hls/dbstv_main.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "detroit-channel-68-us",
+   "name": "Detroit Channel 68",
+   "country": "US",
+   "category": "general",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://reflect-detroit-vod.cablecast.tv/live-10/live/stream-5/live.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "digital-channel-bj",
+   "name": "Digital Channel",
+   "country": "BJ",
+   "category": "general",
+   "languages": [
+    "fra"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.digitalchannel.bj/live/ds_64de185c18c9d786a760f01e0e592348.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "el-seis-6-do",
+   "name": "El Seis 6",
+   "country": "DO",
+   "category": "general",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.elseis.do/canal6/live_1080.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "etv-ee",
+   "name": "ETV",
+   "country": "EE",
+   "category": "general",
+   "languages": [
+    "est"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://sb.err.ee/live/etv.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    },
+    {
+     "type": "stream",
+     "url": "https://sb.err.ee/live/etvpluss.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "fortis-tv-ng",
+   "name": "Fortis TV",
+   "country": "NG",
+   "category": "general",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.fortistv.com/hls/fortis-news/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "guangzhou-tv-cn",
+   "name": "Guangzhou TV",
+   "country": "CN",
+   "category": "general",
+   "languages": [
+    "zho"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://tencentplaybusiness.gztv.com/live/zonghes.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "hechos-ecuador-ec",
+   "name": "Hechos Ecuador",
+   "country": "EC",
+   "category": "general",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://online.hechosecuador.com:5443/WebRTCApp/streams/hechosecuador.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "hlaj-dtv-kr",
+   "name": "HLAJ-DTV",
+   "country": "KR",
+   "category": "general",
+   "languages": [
+    "kor"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://wowza.jejumbc.com/live/tv_jejumbc/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 352
+    }
+   ]
+  },
+  {
+   "id": "hlan-dtv-kr",
+   "name": "HLAN-DTV",
+   "country": "KR",
+   "category": "general",
+   "languages": [
+    "kor"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.chmbc.co.kr/TV/myStream/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "hlcq-dtv-kr",
+   "name": "HLCQ-DTV",
+   "country": "KR",
+   "category": "general",
+   "languages": [
+    "kor"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ns1.tjmbc.co.kr/live/myStream.sdp/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "hldh-dtv-kr",
+   "name": "HLDH-DTV",
+   "country": "KR",
+   "category": "general",
+   "languages": [
+    "kor"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://vod.ikbc.co.kr/KBCTV/tv/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "hldp-dtv-kr",
+   "name": "HLDP-DTV",
+   "country": "KR",
+   "category": "general",
+   "languages": [
+    "kor"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.ubc.co.kr/hls/ubctvstream/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "huacho-peru-tv-pe",
+   "name": "Huacho Peru TV",
+   "country": "PE",
+   "category": "general",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://tv.huachotv.com/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "hunedoara-1-ro",
+   "name": "Hunedoara 1",
+   "country": "RO",
+   "category": "general",
+   "languages": [
+    "ron"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://netstreaming.eu/hd1.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 576
+    }
+   ]
+  },
+  {
+   "id": "ilke-tv-tr",
+   "name": "Ilke TV",
+   "country": "TR",
+   "category": "general",
+   "languages": [
+    "tur",
+    "kur",
+    "zza"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.ilketv.com.tr/hls/ilkecanli.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "interalmeria-tv-es",
+   "name": "Interalmeria TV",
+   "country": "ES",
+   "category": "general",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://interalmeria.tv/directo/live.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "intermedia-tv-ro",
+   "name": "Intermedia TV",
+   "country": "RO",
+   "category": "general",
+   "languages": [
+    "ron"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.intermediatv.ro/ram/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 540
+    }
+   ]
+  },
+  {
+   "id": "istoki-ru",
+   "name": "Istoki",
+   "country": "RU",
+   "category": "general",
+   "languages": [
+    "rus"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://istoki.tv/live/stream1/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 576
+    }
+   ]
+  },
+  {
+   "id": "itel-tv-canal-2-ar",
+   "name": "Itel TV Canal 2",
+   "country": "AR",
+   "category": "general",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://proxystream.iteltv.com.ar/output/iteltv/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "jc1-cz",
+   "name": "JC1",
+   "country": "CZ",
+   "category": "general",
+   "languages": [
+    "ces"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.jc1.cz/hls/jc1.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "kalu-tv-co",
+   "name": "Kalu TV",
+   "country": "CO",
+   "category": "general",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://tv.kaludecolombia.com/memfs/d71c0104-4752-4690-bdbf-19aa849da6c4.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "kanal-8-mk",
+   "name": "Kanal 8",
+   "country": "MK",
+   "category": "general",
+   "languages": [
+    "mkd"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://tv.kanal8.mk/live/kanal8.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "kanal-d-ro",
+   "name": "Kanal D",
+   "country": "RO",
+   "category": "general",
+   "languages": [
+    "ron"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream1.kanald.ro/iphone/knd-live.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 384
+    }
+   ]
+  },
+  {
+   "id": "ktv-ug",
+   "name": "KTV",
+   "country": "UG",
+   "category": "general",
+   "languages": [
+    "eng",
+    "lug"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.kingdommediaug.com/ktv/video.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "la-2-canarias-es",
+   "name": "La 2 Canarias",
+   "country": "ES",
+   "category": "general",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ztnr.rtve.es/ztnr/5468585.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "la-2-catalunya-es",
+   "name": "La 2 Catalunya",
+   "country": "ES",
+   "category": "general",
+   "languages": [
+    "cat",
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ztnr.rtve.es/ztnr/3987218.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "la-tremenda-tv-pe",
+   "name": "La Tremenda TV",
+   "country": "PE",
+   "category": "general",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://iptv.latremenda.pe/LaTremendaTv/tracks-v1a1/mono.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "latina-tv-ve",
+   "name": "Latina TV",
+   "country": "VE",
+   "category": "general",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://streamtv.latinamedios.com:3413/live/latinatvlive.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "mas-norte-tv-co",
+   "name": "Mas Norte TV",
+   "country": "CO",
+   "category": "general",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.arnoproducciones.com/hls/norte.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 614
+    }
+   ]
+  },
+  {
+   "id": "matele-be",
+   "name": "Matele",
+   "country": "BE",
+   "category": "general",
+   "languages": [
+    "fra"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.matele.be/hls/live.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "milenial-tv-pe",
+   "name": "Milenial TV",
+   "country": "PE",
+   "category": "general",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://www.milenial.news/salida/milenial.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "moldova-1-md",
+   "name": "Moldova 1",
+   "country": "MD",
+   "category": "general",
+   "languages": [
+    "ron",
+    "rus"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://v0.trm.md/static/streaming-playlists/hls/9b79338b-1870-4cd7-91d4-0f6ce5cac7ca/master.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "moldova-2-md",
+   "name": "Moldova 2",
+   "country": "MD",
+   "category": "general",
+   "languages": [
+    "ron",
+    "rus"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://v0.trm.md/static/streaming-playlists/hls/d5fafab0-9c37-4746-9e7a-b2d6c0427015/master.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "moldova-tv-md",
+   "name": "Moldova TV",
+   "country": "MD",
+   "category": "general",
+   "languages": [
+    "ron"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://moldovatv.ro/live-tv/live.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "mora-net-tv-hu",
+   "name": "Mora-Net TV",
+   "country": "HU",
+   "category": "general",
+   "languages": [
+    "hun"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.moranettv.hu/live/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 576
+    }
+   ]
+  },
+  {
+   "id": "mtc-us",
+   "name": "MTC",
+   "country": "US",
+   "category": "general",
+   "languages": [
+    "fas"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://mtchls.wns.live/hls/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "nar-tv-fi",
+   "name": "Nar-TV",
+   "country": "FI",
+   "category": "general",
+   "languages": [
+    "swe"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://streaming.nartv.fi/live/ngrp:NAR_TV.stream_all/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "nasa-tv-mk",
+   "name": "Nasa TV",
+   "country": "MK",
+   "category": "general",
+   "languages": [
+    "mkd"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.nasatv.com.mk/hls/nasatv_live.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "nasul-tv-ro",
+   "name": "Nasul TV",
+   "country": "RO",
+   "category": "general",
+   "languages": [
+    "ron"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.nasul.tv/live/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "natick-public-access-channel-us",
+   "name": "Natick Public Access Channel",
+   "country": "US",
+   "category": "general",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://livestream.telvue.com/natickpegasus2/f7b44cfafd5c52223d5498196c8a2e7b.sdp/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "ndr-fernsehen-de",
+   "name": "NDR Fernsehen",
+   "country": "DE",
+   "category": "general",
+   "languages": [
+    "deu"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://mcdn.ndr.de/ndr/hls/ndr_fs/ndr_hh/master.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "nea-tv-gr",
+   "name": "Nea TV",
+   "country": "GR",
+   "category": "general",
+   "languages": [
+    "ell"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.neatv.gr:8888/hls/neatv.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "norte-tv-ar",
+   "name": "Norte TV",
+   "country": "AR",
+   "category": "general",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ntvcanal7.com.ar:81/dash/stream.mpd",
+     "format": "DASH",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "nostv-bonaire-2-bq",
+   "name": "NosTV Bonaire 2",
+   "country": "BQ",
+   "category": "general",
+   "languages": [
+    "pap",
+    "nld"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream2.nostvbonaire.com/hls/0/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "novosadska-tv-rs",
+   "name": "Novosadska TV",
+   "country": "RS",
+   "category": "general",
+   "languages": [
+    "srp"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.novosadska.tv/hls/mystream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "ntd-tv-canada-us",
+   "name": "NTD TV Canada",
+   "country": "US",
+   "category": "general",
+   "languages": [
+    "zho",
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.ntdtv.com/mllive860/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "ntd-tv-china-us",
+   "name": "NTD TV China",
+   "country": "US",
+   "category": "general",
+   "languages": [
+    "zho"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.ntdtv.com/cnlive900/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 486
+    }
+   ]
+  },
+  {
+   "id": "ok-kiel-de",
+   "name": "OK Kiel",
+   "country": "DE",
+   "category": "general",
+   "languages": [
+    "deu"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live-cdn.oksh.de/play/hls/kieltv/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "onda-digital-pe",
+   "name": "ONDA DIGITAL",
+   "country": "PE",
+   "category": "general",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://tv.ondadigital.pe/ondadigital/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "polar-tv-cz",
+   "name": "Polar TV",
+   "country": "CZ",
+   "category": "general",
+   "languages": [
+    "ces"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.polar.cz/polar/polarlive-1/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "power-tv-tr",
+   "name": "Power TV",
+   "country": "TR",
+   "category": "general",
+   "languages": [
+    "tur"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://livetv.powerapp.com.tr/powerTV/powerhd.smil/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 480
+    }
+   ]
+  },
+  {
+   "id": "prarthana-life-in",
+   "name": "Prarthana Life",
+   "country": "IN",
+   "category": "general",
+   "languages": [
+    "ori"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://livetv.tarangplus.in/prarthana-origin/live/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "radio-tv-neuquen-ar",
+   "name": "Radio TV Neuquen",
+   "country": "AR",
+   "category": "general",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://media.neuquen.gov.ar/rtn/television/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "government_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "realitatea-plus-ro",
+   "name": "Realitatea Plus",
+   "country": "RO",
+   "category": "general",
+   "languages": [
+    "ron"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.realitatea.net/realitatea/plus_md/ts:playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "rne-para-todos-es",
+   "name": "RNE para todos",
+   "country": "ES",
+   "category": "general",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://rtvelivestream.rtve.es/rtvesec/rne/rne_para_todos_main.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "rodja-tv-id",
+   "name": "Rodja TV",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://rodjatv.com/rodjatv/live.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "brand_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "rtl-tele-letzebuerg-lu",
+   "name": "RTL Tele Letzebuerg",
+   "country": "LU",
+   "category": "general",
+   "languages": [
+    "ltz"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live-edge.rtl.lu/channel1/smil:channel1/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "rtl-web-radio-tv-lu",
+   "name": "RTL Web Radio TV",
+   "country": "LU",
+   "category": "general",
+   "languages": [
+    "ltz"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://rtlradio-streaming.rtl.lu/rtlradiowebtv/smil:rtlradiowebtv/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "rtl-zwee-lu",
+   "name": "RTL Zwee",
+   "country": "LU",
+   "category": "general",
+   "languages": [
+    "ltz",
+    "fra",
+    "deu"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live-edge.rtl.lu/channel2/smil:channel2/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "rtn-ar",
+   "name": "RTN",
+   "country": "AR",
+   "category": "general",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://media.neuquen.gov.ar/rtn/television/media.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "government_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "rtnb-tv-bi",
+   "name": "RTNB TV",
+   "country": "BI",
+   "category": "general",
+   "languages": [
+    "run",
+    "fra",
+    "swa",
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://tv1-stream.rtnb.bi/hls/master.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "rtrs-tv-ba",
+   "name": "RTRS TV",
+   "country": "BA",
+   "category": "general",
+   "languages": [
+    "srp"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://uzivo.rtrs.tv/tv/live/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "rtv-drenthe-nl",
+   "name": "RTV Drenthe",
+   "country": "NL",
+   "category": "general",
+   "languages": [
+    "nld"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://cdn.rtvdrenthe.nl/live/rtvdrenthe/tv/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "rtv-novi-pazar-rs",
+   "name": "RTV Novi Pazar",
+   "country": "RS",
+   "category": "general",
+   "languages": [
+    "srp"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://tv.rtvnp.rs/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "rtv-zenica-ba",
+   "name": "RTV Zenica",
+   "country": "BA",
+   "category": "general",
+   "languages": [
+    "bos"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.rtvze.ba/live/123/123.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "s1-ru",
+   "name": "S1",
+   "country": "RU",
+   "category": "general",
+   "languages": [
+    "rus"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://sitv.ru/hls/stv.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "sens-tv-ro",
+   "name": "Sens TV",
+   "country": "RO",
+   "category": "general",
+   "languages": [
+    "ron"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.senstv.ro/live/senstv_1080p/chunklist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "sigma-tv-cy",
+   "name": "Sigma TV",
+   "country": "CY",
+   "category": "general",
+   "languages": [
+    "ell"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://sl2.sigmatv.com/hls/live.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "simon-ua",
+   "name": "Simon",
+   "country": "UA",
+   "category": "general",
+   "languages": [
+    "ukr",
+    "rus"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://hls.simon.ua/live-HD/live/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "sohail-tv-ca",
+   "name": "Sohail TV",
+   "country": "CA",
+   "category": "general",
+   "languages": [
+    "prd"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://iptv.sohailtv.com/sohail/playlist/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 270
+    }
+   ]
+  },
+  {
+   "id": "solo-tv-cl",
+   "name": "Solo TV",
+   "country": "CL",
+   "category": "general",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://sproxy.solotv.cl/hls/live/fhd.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "sound-view-community-media-us",
+   "name": "Sound View Community Media",
+   "country": "US",
+   "category": "general",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://livestream.telvue.com/soundviewcmt2/f7b44cfafd5c52223d5498196c8a2e7b.sdp/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "stou-channel-th",
+   "name": "STOU Channel",
+   "country": "TH",
+   "category": "general",
+   "languages": [
+    "tha"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream1.stou.ac.th/live/stou_720p/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "streekstad-central-nl",
+   "name": "Streekstad Central",
+   "country": "NL",
+   "category": "general",
+   "languages": [
+    "nld"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://videostreams.streekstadcentraal.nl/hls/streekstad_alkmaar/streekstad_alkmaar.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "supreme-master-tv-tw",
+   "name": "Supreme Master TV",
+   "country": "TW",
+   "category": "general",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://lbs-us1.suprememastertv.com/720p.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "tam-tv-ve",
+   "name": "TAM TV",
+   "country": "VE",
+   "category": "general",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://rtmp.tamtv.com.ve/tmp_hls/stream/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "tbn-pacific-us",
+   "name": "TBN Pacific",
+   "country": "US",
+   "category": "general",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://broadcast.tbnpacific.org.au:4430/stream/TBNPacificTV/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 480
+    }
+   ]
+  },
+  {
+   "id": "tbs-tv-kr",
+   "name": "TBS TV",
+   "country": "KR",
+   "category": "general",
+   "languages": [
+    "kor"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://cdntv.tbs.seoul.kr/tbs/tbs_tv_web.smil/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tdtv-cr",
+   "name": "TDtv",
+   "country": "CR",
+   "category": "general",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://cloudvideo.servers10.com:8081/8230/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "tele-elx-es",
+   "name": "Tele Elx",
+   "country": "ES",
+   "category": "general",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://tvdirecto.teleelx.es/stream/teleelx.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "tele-poder-tv-do",
+   "name": "Tele Poder TV",
+   "country": "DO",
+   "category": "general",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://cdn.telepoder.online:3229/dash/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "telekanal-rai-ua",
+   "name": "Telekanal RAI",
+   "country": "UA",
+   "category": "general",
+   "languages": [
+    "ukr"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.rai.ua/rai/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 480
+    }
+   ]
+  },
+  {
+   "id": "teleromagna-it",
+   "name": "Teleromagna",
+   "country": "IT",
+   "category": "general",
+   "languages": [
+    "ita"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://livetr.teleromagna.it/teleromagna/live/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "telewizja-imperium-pl",
+   "name": "Telewizja Imperium",
+   "country": "PL",
+   "category": "general",
+   "languages": [
+    "pol"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://str10.imperiummedia.pl/TVIMPERIUM/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "thendral-tv-in",
+   "name": "Thendral TV",
+   "country": "IN",
+   "category": "general",
+   "languages": [
+    "tam"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://hls.thendraltv.in/thendraltv_1210b43d/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 576
+    }
+   ]
+  },
+  {
+   "id": "tito-tv-es",
+   "name": "Tito TV",
+   "country": "ES",
+   "category": "general",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://cloud.tvomix.com/TITOTV/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "tsv-md",
+   "name": "TSV",
+   "country": "MD",
+   "category": "general",
+   "languages": [
+    "rus"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://tsv.md/stream/hls/tsv-online/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "tv-pi-kanal-rs",
+   "name": "TV Pi Kanal",
+   "country": "RS",
+   "category": "general",
+   "languages": [
+    "srp"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.pikanal.rs/pikanal/pgm.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 576
+    }
+   ]
+  },
+  {
+   "id": "tv-senado-cl",
+   "name": "TV Senado",
+   "country": "CL",
+   "category": "general",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://janus-tv-ply.senado.cl/playlist/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 240
+    }
+   ]
+  },
+  {
+   "id": "tv-spravedliva-bulgariya-bg",
+   "name": "TV Spravedliva Bulgariya",
+   "country": "BG",
+   "category": "general",
+   "languages": [
+    "bul"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://tv.tvsb.bg/112.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "tvc-benin-bj",
+   "name": "TVC Benin",
+   "country": "BJ",
+   "category": "general",
+   "languages": [
+    "fra"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.tvcbenin.com/direct/729c37a1d3319ee21991227b1f84c687.sdp/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "tvlatinasat-br",
+   "name": "TVLatinaSat",
+   "country": "BR",
+   "category": "general",
+   "languages": [
+    "por"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://www.latinasat.com.br/hls/live/stream/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "tvri-world-id",
+   "name": "TVRI World",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott-balancer.tvri.go.id/live/eds/TVRIWorld/hls/TVRIWorld.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "government_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "ulytau-kz",
+   "name": "Ulytau",
+   "country": "KZ",
+   "category": "general",
+   "languages": [
+    "kaz",
+    "rus"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ulytau.tv/hls/master.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "univer-tv-ru",
+   "name": "Univer TV",
+   "country": "RU",
+   "category": "general",
+   "languages": [
+    "rus"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://cdn.universmotri.ru/live/smil:univer.smil/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "vidusdaugavas-televizija-lv",
+   "name": "Vidusdaugavas Televizija",
+   "country": "LV",
+   "category": "general",
+   "languages": [
+    "lav"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://straume.vdtv.lv/vdtv2/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 576
+    }
+   ]
+  },
+  {
+   "id": "vocea-basarabiei-tv-md",
+   "name": "Vocea Basarabiei TV",
+   "country": "MD",
+   "category": "general",
+   "languages": [
+    "ron"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://media.voceabasarabiei.md/vocea/bitrate_1080p.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "whiplash-ii-us",
+   "name": "Whiplash II",
+   "country": "US",
+   "category": "general",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://cdn.whiplash.cc/whiplash-2/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "window-tv-us",
+   "name": "Window TV",
+   "country": "US",
+   "category": "general",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://cdn.whiplash.cc/whiplash-windowtv/index.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "zarok-tv-tr",
+   "name": "Zarok TV",
+   "country": "TR",
+   "category": "general",
+   "languages": [
+    "kur",
+    "zza"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://zindikurmanci.zaroktv.com.tr/hls/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "zitata-tv-mq",
+   "name": "Zitata TV",
+   "country": "MQ",
+   "category": "general",
+   "languages": [
+    "fra"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.zitata.tv/direct-hls/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "bloomberg-tv-asia-us",
+   "name": "Bloomberg TV Asia",
+   "country": "US",
+   "category": "news",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://bloomberg.com/media-manifest/streams/asia.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "bloomberg-tv-asia-live-event-us",
+   "name": "Bloomberg TV Asia Live Event",
+   "country": "US",
+   "category": "news",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://bloomberg.com/media-manifest/streams/asia-event.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "bloomberg-tv-australia-us",
+   "name": "Bloomberg TV Australia",
+   "country": "US",
+   "category": "news",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://bloomberg.com/media-manifest/streams/aus.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "bloomberg-tv-emea-live-event-us",
+   "name": "Bloomberg TV EMEA Live Event",
+   "country": "US",
+   "category": "news",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://bloomberg.com/media-manifest/streams/eu-event.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "bloomberg-tv-europe-us",
+   "name": "Bloomberg TV Europe",
+   "country": "US",
+   "category": "news",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://bloomberg.com/media-manifest/streams/eu.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "bloomberg-tv-live-event-us",
+   "name": "Bloomberg TV Live Event",
+   "country": "US",
+   "category": "news",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://bloomberg.com/media-manifest/streams/us-event.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "bloomberg-tv-politics-live-event-us",
+   "name": "Bloomberg TV Politics Live Event",
+   "country": "US",
+   "category": "news",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://bloomberg.com/media-manifest/streams/politics.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "france-24-arabic-fr",
+   "name": "France 24 Arabic",
+   "country": "FR",
+   "category": "news",
+   "languages": [
+    "ara"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.france24.com/hls/live/2037222-b/F24_AR_HI_HLS/master_5000.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "france-24-spanish-fr",
+   "name": "France 24 Spanish",
+   "country": "FR",
+   "category": "news",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.france24.com/hls/live/2037220-b/F24_ES_HI_HLS/master_5000.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "sky-news-arabia-sd-ae",
+   "name": "Sky News Arabia SD",
+   "country": "AE",
+   "category": "news",
+   "languages": [
+    "ara"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.skynewsarabia.com/ott/ott.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "sky-news-arabia-vertical-sd-ae",
+   "name": "Sky News Arabia Vertical SD",
+   "country": "AE",
+   "category": "news",
+   "languages": [
+    "ara"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://stream.skynewsarabia.com/vertical/vertical.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "god-stands-kids-club-tv-arabic-pk",
+   "name": "God Stands Kids Club TV Arabic",
+   "country": "PK",
+   "category": "kids",
+   "languages": [
+    "ara"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://online.godstands.tv:5443/WebRTCApp/streams/KidsArabic.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "god-stands-kids-club-tv-chinese-pk",
+   "name": "God Stands Kids Club TV Chinese",
+   "country": "PK",
+   "category": "kids",
+   "languages": [
+    "zho"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://online.godstands.tv:5443/WebRTCApp/streams/KidsChinese.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "god-stands-kids-club-tv-urdu-pk",
+   "name": "God Stands Kids Club TV Urdu",
+   "country": "PK",
+   "category": "kids",
+   "languages": [
+    "urd"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://online.godstands.tv:5443/WebRTCApp/streams/KidsUrdu.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "albkanale-music-tv-hd-al",
+   "name": "AlbKanale Music TV HD",
+   "country": "AL",
+   "category": "music",
+   "languages": [
+    "sqi"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://albportal.net/albkanalemusic.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "divya-darshan-tv-hd-np",
+   "name": "Divya Darshan TV HD",
+   "country": "NP",
+   "category": "religious",
+   "languages": [
+    "nep",
+    "mai"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.divyadarshantv.com/hls/0/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "god-stands-tv-arabic-pk",
+   "name": "God Stands TV Arabic",
+   "country": "PK",
+   "category": "religious",
+   "languages": [
+    "ara"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://online.godstands.tv:5443/WebRTCApp/streams/Arabic.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "god-stands-tv-chinese-pk",
+   "name": "God Stands TV Chinese",
+   "country": "PK",
+   "category": "religious",
+   "languages": [
+    "zho"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://online.godstands.tv:5443/WebRTCApp/streams/chineselive.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "god-stands-tv-english-pk",
+   "name": "God Stands TV English",
+   "country": "PK",
+   "category": "religious",
+   "languages": [
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://online.godstands.tv:5443/WebRTCApp/streams/EnglishStreaming.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 720
+    }
+   ]
+  },
+  {
+   "id": "god-stands-tv-hindi-pk",
+   "name": "God Stands TV Hindi",
+   "country": "PK",
+   "category": "religious",
+   "languages": [
+    "hin"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://online.godstands.tv:5443/WebRTCApp/streams/HindiStreaming.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "god-stands-tv-punjabi-pk",
+   "name": "God Stands TV Punjabi",
+   "country": "PK",
+   "category": "religious",
+   "languages": [
+    "pan"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://online.godstands.tv:5443/WebRTCApp/streams/PunjabiStreaming.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "god-stands-tv-tagalog-pk",
+   "name": "God Stands TV Tagalog",
+   "country": "PK",
+   "category": "religious",
+   "languages": [
+    "tgl"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://online.godstands.tv:5443/WebRTCApp/streams/Tagalog.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "god-stands-tv-urdu-pk",
+   "name": "God Stands TV Urdu",
+   "country": "PK",
+   "category": "religious",
+   "languages": [
+    "urd"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://online.godstands.tv:5443/WebRTCApp/streams/UrduStreaming.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "tve-star-hd-es",
+   "name": "TVE Star HD",
+   "country": "ES",
+   "category": "entertainment",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://rtvelivestream-rtveplayplus.rtve.es/rtvesec/int/star_main_1080.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "br-fernsehen-sud-de",
+   "name": "BR Fernsehen Sud",
+   "country": "DE",
+   "category": "general",
+   "languages": [
+    "deu"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://mcdn.br.de/br/fs/bfs_sued/hls/de/master.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "btb-hd-pl",
+   "name": "BTB HD",
+   "country": "PL",
+   "category": "general",
+   "languages": [
+    "pol"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://emisja.btb.j00r.us/iptv/session/1/live.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 900
+    }
+   ]
+  },
+  {
+   "id": "ndr-fernsehen-mecklenburg-vorpommern-de",
+   "name": "NDR Fernsehen Mecklenburg Vorpommern",
+   "country": "DE",
+   "category": "general",
+   "languages": [
+    "deu"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://mcdn.ndr.de/ndr/hls/ndr_fs/ndr_mv/master.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "ndr-fernsehen-niedersachsen-de",
+   "name": "NDR Fernsehen Niedersachsen",
+   "country": "DE",
+   "category": "general",
+   "languages": [
+    "deu"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://mcdn.ndr.de/ndr/hls/ndr_fs/ndr_nds/master.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "ndr-fernsehen-schleswig-holstein-de",
+   "name": "NDR Fernsehen Schleswig Holstein",
+   "country": "DE",
+   "category": "general",
+   "languages": [
+    "deu"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://mcdn.ndr.de/ndr/hls/ndr_fs/ndr_sh/master.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "ntd-tv-canada-west-us",
+   "name": "NTD TV Canada West",
+   "country": "US",
+   "category": "general",
+   "languages": [
+    "zho",
+    "eng"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://live.ntdtv.com/cwlive220/playlist.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 216
+    }
+   ]
+  },
+  {
+   "id": "savoir-media-cftu-dt-ca",
+   "name": "Savoir media CFTU-DT",
+   "country": "CA",
+   "category": "general",
+   "languages": [
+    "fra"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://hls.savoir.media/live/stream.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tve-internacional-america-hd-es",
+   "name": "TVE Internacional America HD",
+   "country": "ES",
+   "category": "general",
+   "languages": [
+    "spa"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://rtvelivestream-rtveplayplus.rtve.es/rtvesec/int/tvei_ame_main_1080.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 1080
+    }
+   ]
+  },
+  {
+   "id": "tvri-aceh-id",
+   "name": "TVRI Aceh",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott-balancer.tvri.go.id/live/eds/Aceh/hls/Aceh.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tvri-bali-id",
+   "name": "TVRI Bali",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott-balancer.tvri.go.id/live/eds/Bali/hls/Bali.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tvri-bangka-belitung-id",
+   "name": "TVRI Bangka Belitung",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott-balancer.tvri.go.id/live/eds/Babel/hls/Babel.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tvri-bengkulu-id",
+   "name": "TVRI Bengkulu",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott-balancer.tvri.go.id/live/eds/Bengkulu/hls/Bengkulu.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 240
+    }
+   ]
+  },
+  {
+   "id": "tvri-central-java-id",
+   "name": "TVRI Central Java",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott-balancer.tvri.go.id/live/eds/Jateng/hls/Jateng.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tvri-central-kalimantan-id",
+   "name": "TVRI Central Kalimantan",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott-balancer.tvri.go.id/live/eds/Kalteng/hls/Kalteng.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tvri-central-sulawesi-id",
+   "name": "TVRI Central Sulawesi",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott-balancer.tvri.go.id/live/eds/Sulteng/hls/Sulteng.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tvri-east-java-id",
+   "name": "TVRI East Java",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "ind",
+    "jav"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott-balancer.tvri.go.id/live/eds/Jatim/hls/Jatim.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tvri-east-kalimantan-id",
+   "name": "TVRI East Kalimantan",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott-balancer.tvri.go.id/live/eds/Kaltim/hls/Kaltim.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tvri-east-nusa-tenggara-id",
+   "name": "TVRI East Nusa Tenggara",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott-balancer.tvri.go.id/live/eds/NTT/hls/NTT.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tvri-gorontalo-id",
+   "name": "TVRI Gorontalo",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott-balancer.tvri.go.id/live/eds/Gorontalo/hls/Gorontalo.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tvri-jakarta-id",
+   "name": "TVRI Jakarta",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott-balancer.tvri.go.id/live/eds/DKI/hls/DKI.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tvri-jambi-id",
+   "name": "TVRI Jambi",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott-balancer.tvri.go.id/live/eds/Jambi/hls/Jambi.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tvri-lampung-id",
+   "name": "TVRI Lampung",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott-balancer.tvri.go.id/live/eds/Lampung/hls/Lampung.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tvri-maluku-id",
+   "name": "TVRI Maluku",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott-balancer.tvri.go.id/live/eds/Ambon/hls/Ambon.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tvri-north-sulawesi-id",
+   "name": "TVRI North Sulawesi",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott-balancer.tvri.go.id/live/eds/Sulut/hls/Sulut.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tvri-north-sumatra-id",
+   "name": "TVRI North Sumatra",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott-balancer.tvri.go.id/live/eds/Sumut/hls/Sumut.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tvri-papua-id",
+   "name": "TVRI Papua",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott-balancer.tvri.go.id/live/eds/Papua/hls/Papua.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tvri-riau-id",
+   "name": "TVRI Riau",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott-balancer.tvri.go.id/live/eds/Riau/hls/Riau.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tvri-south-kalimantan-id",
+   "name": "TVRI South Kalimantan",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott-balancer.tvri.go.id/live/eds/Kalsel/hls/Kalsel.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tvri-south-sulawesi-id",
+   "name": "TVRI South Sulawesi",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott-balancer.tvri.go.id/live/eds/Sulsel/hls/Sulsel.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tvri-south-sumatra-id",
+   "name": "TVRI South Sumatra",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott-balancer.tvri.go.id/live/eds/Sumsel/hls/Sumsel.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tvri-southeast-sulawesi-id",
+   "name": "TVRI Southeast Sulawesi",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott-balancer.tvri.go.id/live/eds/Sultra/hls/Sultra.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tvri-west-java-id",
+   "name": "TVRI West Java",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott-balancer.tvri.go.id/live/eds/Jabar/hls/Jabar.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tvri-west-kalimantan-id",
+   "name": "TVRI West Kalimantan",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott-balancer.tvri.go.id/live/eds/Kalbar/hls/Kalbar.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tvri-west-nusa-tenggara-id",
+   "name": "TVRI West Nusa Tenggara",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott-balancer.tvri.go.id/live/eds/NTB/hls/NTB.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tvri-west-papua-id",
+   "name": "TVRI West Papua",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott-balancer.tvri.go.id/live/eds/Pabar/hls/Pabar.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tvri-west-sulawesi-id",
+   "name": "TVRI West Sulawesi",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott-balancer.tvri.go.id/live/eds/Sulbar/hls/Sulbar.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "tvri-west-sumatra-id",
+   "name": "TVRI West Sumatra",
+   "country": "ID",
+   "category": "general",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "stream",
+     "url": "https://ott-balancer.tvri.go.id/live/eds/Sumbar/hls/Sumbar.m3u8",
+     "format": "HLS",
+     "verified_at": "2026-11-23T04:10:55+00:00",
+     "evidence": "official_domain",
+     "height": 360
+    }
+   ]
+  },
+  {
+   "id": "cnnindonesia-id",
+   "name": "CNN Indonesia",
+   "country": "ID",
+   "category": "news",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "youtube_live",
+     "youtube_channel_id": "UCKII0Ml9S5wneKbHswmUrIQ",
+     "official_page": "https://www.youtube.com/@cnnidofficial"
+    }
+   ]
+  },
+  {
+   "id": "inews-id",
+   "name": "iNews",
+   "country": "ID",
+   "category": "news",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "youtube_live",
+     "youtube_channel_id": "UCoSkllfpgmFHtbVK835QaQg",
+     "official_page": "https://www.youtube.com/@officialinews"
+    }
+   ]
+  },
+  {
+   "id": "kompastv-id",
+   "name": "KompasTV",
+   "country": "ID",
+   "category": "news",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "youtube_live",
+     "youtube_channel_id": "UC5BMIWZe9isJXLZZWPWvBlg",
+     "official_page": "https://www.youtube.com/@kompastv"
+    }
+   ]
+  },
+  {
+   "id": "metrotv-id",
+   "name": "Metro TV",
+   "country": "ID",
+   "category": "news",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "youtube_live",
+     "youtube_channel_id": "UCzl0OrB3-ehunyotIQvK77A",
+     "official_page": "https://www.youtube.com/@metrotvnews"
+    }
+   ]
+  },
+  {
+   "id": "btv-id",
+   "name": "BTV (BeritaSatu)",
+   "country": "ID",
+   "category": "news",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "official_link",
+     "url": "https://www.beritasatu.com/btv-live-streaming",
+     "platform": "BeritaSatu",
+     "last_check": {
+      "checked_at": "2026-11-28T07:37:28+00:00",
+      "http_status": 200,
+      "ok": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "tvone-id",
+   "name": "tvOne",
+   "country": "ID",
+   "category": "news",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "official_link",
+     "url": "https://www.tvonenews.com/live",
+     "platform": "tvOne",
+     "last_check": {
+      "checked_at": "2026-11-28T07:37:28+00:00",
+      "http_status": 200,
+      "ok": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "tvrisport-id",
+   "name": "TVRI Sport",
+   "country": "ID",
+   "category": "sports",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "official_link",
+     "url": "https://www.tvri.go.id/live",
+     "platform": "TVRI",
+     "last_check": {
+      "checked_at": "2026-11-28T07:37:28+00:00",
+      "http_status": 468,
+      "ok": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "antv-id",
+   "name": "ANTV",
+   "country": "ID",
+   "category": "entertainment",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "official_link",
+     "url": "https://www.antvklik.com",
+     "platform": "ANTV Klik",
+     "last_check": {
+      "checked_at": "2026-11-28T07:37:28+00:00",
+      "http_status": 200,
+      "ok": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "gtv-id",
+   "name": "GTV",
+   "country": "ID",
+   "category": "entertainment",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "official_link",
+     "url": "https://www.rctiplus.com/tv/gtv",
+     "platform": "RCTI+",
+     "last_check": {
+      "checked_at": "2026-11-28T07:37:28+00:00",
+      "http_status": 200,
+      "ok": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "indosiar-id",
+   "name": "Indosiar",
+   "country": "ID",
+   "category": "entertainment",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "official_link",
+     "url": "https://www.vidio.com/live/indosiar",
+     "platform": "Vidio",
+     "last_check": {
+      "checked_at": "2026-11-28T07:37:28+00:00",
+      "http_status": 200,
+      "ok": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "mnctv-id",
+   "name": "MNCTV",
+   "country": "ID",
+   "category": "entertainment",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "official_link",
+     "url": "https://www.rctiplus.com/tv/mnctv",
+     "platform": "RCTI+",
+     "last_check": {
+      "checked_at": "2026-11-28T07:37:28+00:00",
+      "http_status": 200,
+      "ok": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "nettv-id",
+   "name": "NET TV",
+   "country": "ID",
+   "category": "entertainment",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "official_link",
+     "url": "https://www.netmedia.co.id/live-streaming",
+     "platform": "NET",
+     "last_check": {
+      "checked_at": "2026-11-28T07:37:28+00:00",
+      "http_status": null,
+      "ok": false,
+      "error": "URLError"
+     }
+    }
+   ]
+  },
+  {
+   "id": "rcti-id",
+   "name": "RCTI",
+   "country": "ID",
+   "category": "entertainment",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "official_link",
+     "url": "https://www.rctiplus.com/tv/rcti",
+     "platform": "RCTI+",
+     "last_check": {
+      "checked_at": "2026-11-28T07:37:28+00:00",
+      "http_status": 200,
+      "ok": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "sctv-id",
+   "name": "SCTV",
+   "country": "ID",
+   "category": "entertainment",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "official_link",
+     "url": "https://www.sctv.co.id/live-streaming/",
+     "platform": "SCTV",
+     "last_check": {
+      "checked_at": "2026-11-28T07:37:28+00:00",
+      "http_status": 503,
+      "ok": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "transtv-id",
+   "name": "Trans TV",
+   "country": "ID",
+   "category": "entertainment",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "official_link",
+     "url": "https://www.transtv.co.id/live",
+     "platform": "Trans TV",
+     "last_check": {
+      "checked_at": "2026-11-28T07:37:28+00:00",
+      "http_status": 200,
+      "ok": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "trans7-id",
+   "name": "Trans7",
+   "country": "ID",
+   "category": "entertainment",
+   "languages": [
+    "ind"
+   ],
+   "sources": [
+    {
+     "type": "official_link",
+     "url": "https://www.trans7.co.id/live-streaming",
+     "platform": "Trans7",
+     "last_check": {
+      "checked_at": "2026-11-28T07:37:28+00:00",
+      "http_status": 200,
+      "ok": true
+     }
+    }
+   ]
+  }
+ ]
+}
